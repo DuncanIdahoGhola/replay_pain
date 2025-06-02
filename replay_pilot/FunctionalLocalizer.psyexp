@@ -1,0 +1,790 @@
+﻿<?xml version="1.0" ?>
+<PsychoPy2experiment encoding="utf-8" version="2024.2.4">
+  <Settings>
+    <Param val="3" valType="str" updates="None" name="Audio latency priority"/>
+    <Param val="ptb" valType="str" updates="None" name="Audio lib"/>
+    <Param val="" valType="str" updates="None" name="Completed URL"/>
+    <Param val="auto" valType="str" updates="None" name="Data file delimiter"/>
+    <Param val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code" updates="None" name="Data filename"/>
+    <Param val="True" valType="bool" updates="None" name="Enable Escape"/>
+    <Param val="Thank you for your patience." valType="str" updates="None" name="End Message"/>
+    <Param val="{'participant': 'f&quot;{randint(0, 999999):06.0f}&quot;', 'session': '001'}" valType="code" updates="None" name="Experiment info"/>
+    <Param val="True" valType="bool" updates="None" name="Force stereo"/>
+    <Param val="True" valType="bool" updates="None" name="Full-screen window"/>
+    <Param val="" valType="str" updates="None" name="HTML path"/>
+    <Param val="" valType="str" updates="None" name="Incomplete URL"/>
+    <Param val="testMonitor" valType="str" updates="None" name="Monitor"/>
+    <Param val="[]" valType="list" updates="None" name="Resources"/>
+    <Param val="False" valType="bool" updates="None" name="Save csv file"/>
+    <Param val="False" valType="bool" updates="None" name="Save excel file"/>
+    <Param val="False" valType="bool" updates="None" name="Save hdf5 file"/>
+    <Param val="True" valType="bool" updates="None" name="Save log file"/>
+    <Param val="True" valType="bool" updates="None" name="Save psydat file"/>
+    <Param val="True" valType="bool" updates="None" name="Save wide csv file"/>
+    <Param val="1" valType="num" updates="None" name="Screen"/>
+    <Param val="True" valType="bool" updates="None" name="Show info dlg"/>
+    <Param val="False" valType="bool" updates="None" name="Show mouse"/>
+    <Param val="height" valType="str" updates="None" name="Units"/>
+    <Param val="" valType="str" updates="None" name="Use version"/>
+    <Param val="[1920, 1080]" valType="list" updates="None" name="Window size (pixels)"/>
+    <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+    <Param val="" valType="str" updates="None" name="backgroundImg"/>
+    <Param val="avg" valType="str" updates="None" name="blendMode"/>
+    <Param val="float" valType="str" updates="None" name="clockFormat"/>
+    <Param val="{'thisRow.t': 'priority.CRITICAL', 'expName': 'priority.LOW'}" valType="dict" updates="None" name="colPriority"/>
+    <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+    <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+    <Param val="warning" valType="code" updates="None" name="consoleLoggingLevel"/>
+    <Param val="default" valType="str" updates="None" name="ecSampleRate"/>
+    <Param val="100.1.1.1" valType="str" updates="None" name="elAddress"/>
+    <Param val="FILTER_LEVEL_2" valType="str" updates="None" name="elDataFiltering"/>
+    <Param val="FILTER_LEVEL_OFF" valType="str" updates="None" name="elLiveFiltering"/>
+    <Param val="EYELINK 1000 DESKTOP" valType="str" updates="None" name="elModel"/>
+    <Param val="ELLIPSE_FIT" valType="str" updates="None" name="elPupilAlgorithm"/>
+    <Param val="PUPIL_AREA" valType="str" updates="None" name="elPupilMeasure"/>
+    <Param val="1000" valType="num" updates="None" name="elSampleRate"/>
+    <Param val="False" valType="bool" updates="None" name="elSimMode"/>
+    <Param val="RIGHT_EYE" valType="str" updates="None" name="elTrackEyes"/>
+    <Param val="PUPIL_CR_TRACKING" valType="str" updates="None" name="elTrackingMode"/>
+    <Param val="FunctionalLocalizer" valType="str" updates="None" name="expName"/>
+    <Param val="on Sync" valType="str" updates="None" name="exportHTML"/>
+    <Param val="None" valType="str" updates="None" name="eyetracker"/>
+    <Param val="" valType="code" updates="None" name="frameRate"/>
+    <Param val="Attempting to measure frame rate of screen, please wait..." valType="str" updates="None" name="frameRateMsg"/>
+    <Param val="127.0.0.1" valType="str" updates="None" name="gpAddress"/>
+    <Param val="4242" valType="num" updates="None" name="gpPort"/>
+    <Param val="ioHub" valType="str" updates="None" name="keyboardBackend"/>
+    <Param val="info" valType="code" updates="None" name="logging level"/>
+    <Param val="True" valType="bool" updates="None" name="measureFrameRate"/>
+    <Param val="('MIDDLE_BUTTON',)" valType="list" updates="None" name="mgBlink"/>
+    <Param val="CONTINUOUS" valType="str" updates="None" name="mgMove"/>
+    <Param val="0.5" valType="num" updates="None" name="mgSaccade"/>
+    <Param val="neon.local" valType="str" updates="None" name="plCompanionAddress"/>
+    <Param val="8080" valType="num" updates="None" name="plCompanionPort"/>
+    <Param val="True" valType="bool" updates="None" name="plCompanionRecordingEnabled"/>
+    <Param val="0.6" valType="num" updates="None" name="plConfidenceThreshold"/>
+    <Param val="True" valType="bool" updates="None" name="plPupilCaptureRecordingEnabled"/>
+    <Param val="" valType="str" updates="None" name="plPupilCaptureRecordingLocation"/>
+    <Param val="127.0.0.1" valType="str" updates="None" name="plPupilRemoteAddress"/>
+    <Param val="50020" valType="num" updates="None" name="plPupilRemotePort"/>
+    <Param val="1000" valType="num" updates="None" name="plPupilRemoteTimeoutMs"/>
+    <Param val="False" valType="bool" updates="None" name="plPupillometryOnly"/>
+    <Param val="psychopy_iohub_surface" valType="str" updates="None" name="plSurfaceName"/>
+    <Param val="0" valType="code" updates="None" name="runMode"/>
+    <Param val="False" valType="bool" updates="None" name="rush"/>
+    <Param val="time" valType="str" updates="None" name="sortColumns"/>
+    <Param val="" valType="str" updates="None" name="tbLicenseFile"/>
+    <Param val="" valType="str" updates="None" name="tbModel"/>
+    <Param val="60" valType="num" updates="None" name="tbSampleRate"/>
+    <Param val="" valType="str" updates="None" name="tbSerialNo"/>
+    <Param val="pyglet" valType="str" updates="None" name="winBackend"/>
+  </Settings>
+  <Routines>
+    <Routine name="setup_experiment">
+      <RoutineSettingsComponent name="setup_experiment" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="setup_experiment" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <CodeComponent name="set_up" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="import random&amp;#10;&amp;#10;# For key counterbalancing (example: '1' for match, '2' for mismatch)&amp;#10;# This could be determined by participant number (expInfo['participant'])&amp;#10;&amp;#10;match_key = '1'&amp;#10;mismatch_key = '2'&amp;#10;&amp;#10;allowed_keys_list = [match_key, mismatch_key]&amp;#10;&amp;#10;# Store these for later use in routines&amp;#10;expInfo['match_key'] = match_key&amp;#10;expInfo['mismatch_key'] = mismatch_key&amp;#10;expInfo['allowed_keys_list'] = allowed_keys_list" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="import * as random from 'random';&amp;#10;match_key = &quot;1&quot;;&amp;#10;mismatch_key = &quot;2&quot;;&amp;#10;allowed_keys_list = [match_key, mismatch_key];&amp;#10;expInfo[&quot;match_key&quot;] = match_key;&amp;#10;expInfo[&quot;mismatch_key&quot;] = mismatch_key;&amp;#10;expInfo[&quot;allowed_keys_list&quot;] = allowed_keys_list;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="set_up" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <TextComponent name="instr_text" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="instr_text" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="You will see an image, then a blank screen, then a word. Press '1' if the word matches the image, and '2' if it does not. Press any space to start." valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <KeyboardComponent name="instr_resp" plugin="None">
+        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="instr_resp" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="block_msg">
+      <RoutineSettingsComponent name="block_msg" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="block_msg" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <TextComponent name="block_msg_text" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="block_msg_text" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="$f&quot;Starting Block {blocks_loop.thisN + 1} of {blocks_loop.nReps}. Press space to continue.&quot;" valType="str" updates="set every frame" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_block_msg" plugin="None">
+        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="key_resp_block_msg" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="inside_loop">
+      <RoutineSettingsComponent name="inside_loop" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="inside_loop" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+    </Routine>
+    <Routine name="feedback_routine">
+      <RoutineSettingsComponent name="feedback_routine" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="feedback_routine" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <TextComponent name="feedback_text_display" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="feedback_text_display" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="1.0" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="$feedback_message" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <CodeComponent name="feedback_code" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="if ((! show_feedback_flag)) {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="&amp;#10;#skip feedback if right answer&amp;#10;if not show_feedback_flag:&amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="feedback_code" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="iti_routine">
+      <RoutineSettingsComponent name="iti_routine" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="iti_routine" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <TextComponent name="iti_fixation" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="iti_fixation" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="$iti_duration" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="+" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="end">
+      <RoutineSettingsComponent name="end" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="end" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <TextComponent name="end_text" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="end_text" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="20" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val=" &quot;The experiment is now complete. Thank you for your participation!&quot;" valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_2" plugin="None">
+        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="key_resp_2" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="fixation_2">
+      <RoutineSettingsComponent name="fixation_2" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="fixation_2" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <TextComponent name="fixation" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="fixation" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="0.5" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="+" valType="str" updates="constant" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <CodeComponent name="trial_code" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="word_display_duration = 1.0;&amp;#10;total_response_time_allowed = 2.0;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="word_display_duration = 1.0&amp;#10;total_response_time_allowed = 2.0&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="trial_code" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="trials_image">
+      <RoutineSettingsComponent name="trials_image" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="trials_image" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <ImageComponent name="stim_image" plugin="None">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
+        <Param val="False" valType="bool" updates="constant" name="flipVert"/>
+        <Param val="$image_file" valType="file" updates="set every repeat" name="image"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="" valType="str" updates="constant" name="mask"/>
+        <Param val="stim_image" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="(0.5, 0.5)" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="1.0" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="128" valType="num" updates="constant" name="texture resolution"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+      </ImageComponent>
+    </Routine>
+    <Routine name="trials_word">
+      <RoutineSettingsComponent name="trials_word" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="trials_word" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <TextComponent name="stim_word" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="stim_word" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val=" 0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="$word_display_duration" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="$presented_word" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="trials_resp">
+      <RoutineSettingsComponent name="trials_resp" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="trials_resp" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+    </Routine>
+    <Routine name="blank">
+      <RoutineSettingsComponent name="blank" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="blank" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <TextComponent name="blank_interval" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="blank_interval" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="$time_of_blank" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <CodeComponent name="code_2" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="import * as random from 'random';&amp;#10;randomizer = Math.random.randint(0, 10);&amp;#10;time_of_blank = (1.0 + (randomizer / 10));&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="import random&amp;#10;randomizer = random.randint(0, 10)&amp;#10;&amp;#10;time_of_blank = 1.0 + (randomizer/10)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="code_2" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="response">
+      <RoutineSettingsComponent name="response" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="response" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <KeyboardComponent name="key_resp" plugin="None">
+        <Param val="$allowed_keys_list" valType="list" updates="set every repeat" name="allowedKeys"/>
+        <Param val="$corrAns" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="key_resp" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="$total_response_time_allowed" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="True" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+      <CodeComponent name="timer" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="t = routineTimer.getTime()&amp;#10;if t &gt; key_resp.tStart + total_response_time_allowed and not key_resp.keys: &amp;#10;    key_resp.corr = 0&amp;#10;    thisExp.addData('timeout', 1)&amp;#10;    continueRoutine = False" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="t = routineTimer.getTime();&amp;#10;if (((t &gt; (key_resp.tStart + total_response_time_allowed)) &amp;&amp; (! key_resp.keys))) {&amp;#10;    key_resp.corr = 0;&amp;#10;    psychoJS.experiment.addData(&quot;timeout&quot;, 1);&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="timer" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <CodeComponent name="save_data" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="psychoJS.experiment.addData(&quot;image_presented&quot;, image_file);&amp;#10;psychoJS.experiment.addData(&quot;word_presented&quot;, presented_word);&amp;#10;psychoJS.experiment.addData(&quot;is_match_condition&quot;, is_match);&amp;#10;psychoJS.experiment.addData(&quot;correct_answer_expected&quot;, corrAns);&amp;#10;if (key_resp.keys) {&amp;#10;    psychoJS.experiment.addData(&quot;response_given&quot;, key_resp.keys[0]);&amp;#10;    psychoJS.experiment.addData(&quot;response_correct&quot;, key_resp.corr);&amp;#10;    psychoJS.experiment.addData(&quot;response_rt&quot;, key_resp.rt);&amp;#10;} else {&amp;#10;    psychoJS.experiment.addData(&quot;response_given&quot;, null);&amp;#10;    psychoJS.experiment.addData(&quot;response_correct&quot;, 0);&amp;#10;    psychoJS.experiment.addData(&quot;response_rt&quot;, null);&amp;#10;}&amp;#10;feedback_message = &quot;&quot;;&amp;#10;show_feedback_flag = false;&amp;#10;if ((! key_resp.keys)) {&amp;#10;    feedback_message = &quot;Response timeout. Please answer promptly.&quot;;&amp;#10;    show_feedback_flag = true;&amp;#10;} else {&amp;#10;    if ((! key_resp.corr)) {&amp;#10;        feedback_message = &quot;Incorrect&quot;;&amp;#10;        show_feedback_flag = true;&amp;#10;    }&amp;#10;}&amp;#10;psychoJS.experiment.addData(&quot;feedback_message_to_show&quot;, feedback_message);&amp;#10;psychoJS.experiment.addData(&quot;show_feedback_flag_value&quot;, show_feedback_flag);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="# Store data&amp;#10;thisExp.addData('image_presented', image_file)&amp;#10;thisExp.addData('word_presented', presented_word)&amp;#10;thisExp.addData('is_match_condition', is_match) # from conditions file&amp;#10;thisExp.addData('correct_answer_expected', corrAns)&amp;#10;if key_resp.keys:&amp;#10;    thisExp.addData('response_given', key_resp.keys[0])&amp;#10;    thisExp.addData('response_correct', key_resp.corr)&amp;#10;    thisExp.addData('response_rt', key_resp.rt)&amp;#10;else: # Timeout&amp;#10;    thisExp.addData('response_given', None)&amp;#10;    thisExp.addData('response_correct', 0) # Mark as incorrect or a specific timeout code&amp;#10;    thisExp.addData('response_rt', None)&amp;#10;&amp;#10;# Determine feedback message&amp;#10;feedback_message = &quot;&quot;&amp;#10;show_feedback_flag = False&amp;#10;&amp;#10;if not key_resp.keys: # Timeout&amp;#10;    feedback_message = &quot;Response timeout. Please answer promptly.&quot;&amp;#10;    show_feedback_flag = True&amp;#10;elif not key_resp.corr: # Incorrect response&amp;#10;    feedback_message = &quot;Incorrect&quot; # Or the specific feedback from paper&amp;#10;    show_feedback_flag = True&amp;#10;# else: correct response, no feedback_message, show_feedback_flag remains False&amp;#10;&amp;#10;# To be used in the feedback routine&amp;#10;thisExp.addData('feedback_message_to_show', feedback_message)&amp;#10;thisExp.addData('show_feedback_flag_value', show_feedback_flag)" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="save_data" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <TextComponent name="text" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="text" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="$total_response_time_allowed" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="Press 1 or 2&amp;#10;" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+    </Routine>
+  </Routines>
+  <Flow>
+    <Routine name="setup_experiment"/>
+    <LoopInitiator loopType="TrialHandler" name="blocks_loop">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="sequential" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="num"/>
+      <Param name="name" updates="None" val="blocks_loop" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="block_msg"/>
+    <LoopInitiator loopType="TrialHandler" name="inside_loop_trials">
+      <Param name="Selected rows" updates="None" val="$f&quot;{blocks_loop.thisN * 72}:{ (blocks_loop.thisN + 1) * 72 }&quot;" valType="str"/>
+      <Param name="conditions" updates="None" val="[{'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.25, 'iti_duration': 2.3}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.17, 'iti_duration': 2.79}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.5, 'iti_duration': 2.59}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.79, 'iti_duration': 1.95}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.51, 'iti_duration': 1.91}, {'image_file': 'stimuli/face.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.39, 'iti_duration': 1.82}, {'image_file': 'stimuli/banana.png', 'presented_word': 'face', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.53, 'iti_duration': 2.61}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'face', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.86, 'iti_duration': 1.33}, {'image_file': 'stimuli/face.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.6, 'iti_duration': 2.46}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.55, 'iti_duration': 1.98}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.34, 'iti_duration': 1.42}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.3, 'iti_duration': 2.87}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.58, 'iti_duration': 1.92}, {'image_file': 'stimuli/banana.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.95, 'iti_duration': 2.82}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.67, 'iti_duration': 2.06}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'face', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.14, 'iti_duration': 1.68}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.42, 'iti_duration': 2.98}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.66, 'iti_duration': 2.22}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.71, 'iti_duration': 1.42}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.93, 'iti_duration': 2.25}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.94, 'iti_duration': 2.87}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.16, 'iti_duration': 2}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.9, 'iti_duration': 1.51}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.69, 'iti_duration': 1.78}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.98, 'iti_duration': 2.87}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'face', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.45, 'iti_duration': 2.65}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.28, 'iti_duration': 1.53}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.07, 'iti_duration': 1.03}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.51, 'iti_duration': 1.24}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.45, 'iti_duration': 2.33}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.89, 'iti_duration': 1.87}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'face', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.24, 'iti_duration': 1.56}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.57, 'iti_duration': 2.13}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.75, 'iti_duration': 2.9}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.79, 'iti_duration': 2.19}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.68, 'iti_duration': 1.94}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.14, 'iti_duration': 1.05}, {'image_file': 'stimuli/banana.png', 'presented_word': 'face', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.67, 'iti_duration': 1.88}, {'image_file': 'stimuli/banana.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.19, 'iti_duration': 1.59}, {'image_file': 'stimuli/banana.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.56, 'iti_duration': 1.38}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.96, 'iti_duration': 2.47}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.96, 'iti_duration': 1.06}, {'image_file': 'stimuli/face.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1, 'iti_duration': 2.26}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.88, 'iti_duration': 1.66}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.28, 'iti_duration': 1.38}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.08, 'iti_duration': 1.87}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.13, 'iti_duration': 2.58}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.81, 'iti_duration': 1.73}, {'image_file': 'stimuli/banana.png', 'presented_word': 'face', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.84, 'iti_duration': 2.96}, {'image_file': 'stimuli/banana.png', 'presented_word': 'face', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.97, 'iti_duration': 1.72}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.32, 'iti_duration': 1.29}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.51, 'iti_duration': 2.09}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.35, 'iti_duration': 2.71}, {'image_file': 'stimuli/face.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.48, 'iti_duration': 1.47}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.59, 'iti_duration': 1.36}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.09, 'iti_duration': 1.12}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.81, 'iti_duration': 2.09}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.75, 'iti_duration': 2.62}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.1, 'iti_duration': 1.83}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.4, 'iti_duration': 1.73}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'face', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.06, 'iti_duration': 1.63}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.04, 'iti_duration': 1.98}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.88, 'iti_duration': 1.59}, {'image_file': 'stimuli/banana.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.62, 'iti_duration': 1.2}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.36, 'iti_duration': 2}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.17, 'iti_duration': 2}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.21, 'iti_duration': 2.71}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.03, 'iti_duration': 1.76}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.64, 'iti_duration': 2.86}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.7, 'iti_duration': 1.19}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.08, 'iti_duration': 2.63}, {'image_file': 'stimuli/face.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.15, 'iti_duration': 2}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.97, 'iti_duration': 2.3}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.39, 'iti_duration': 1.08}, {'image_file': 'stimuli/banana.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.02, 'iti_duration': 2.06}, {'image_file': 'stimuli/banana.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.63, 'iti_duration': 1.13}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.57, 'iti_duration': 1.98}, {'image_file': 'stimuli/face.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.69, 'iti_duration': 1.99}, {'image_file': 'stimuli/face.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.01, 'iti_duration': 2.73}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.36, 'iti_duration': 1.2}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.93, 'iti_duration': 2.14}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.2, 'iti_duration': 2.26}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.19, 'iti_duration': 2.3}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.22, 'iti_duration': 1.1}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.49, 'iti_duration': 1.71}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.45, 'iti_duration': 2.2}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.69, 'iti_duration': 1.07}, {'image_file': 'stimuli/banana.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.88, 'iti_duration': 2.22}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.64, 'iti_duration': 2.57}, {'image_file': 'stimuli/face.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.31, 'iti_duration': 2.56}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.89, 'iti_duration': 1.73}, {'image_file': 'stimuli/banana.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.01, 'iti_duration': 1.76}, {'image_file': 'stimuli/banana.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.32, 'iti_duration': 1.68}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.28, 'iti_duration': 1.93}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.4, 'iti_duration': 2.03}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.55, 'iti_duration': 1.09}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.57, 'iti_duration': 1.22}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.05, 'iti_duration': 2.95}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.61, 'iti_duration': 2.23}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.05, 'iti_duration': 2.84}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.44, 'iti_duration': 1.58}, {'image_file': 'stimuli/face.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.73, 'iti_duration': 2.12}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.84, 'iti_duration': 2.51}, {'image_file': 'stimuli/banana.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.99, 'iti_duration': 1.85}, {'image_file': 'stimuli/face.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.68, 'iti_duration': 1.3}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.32, 'iti_duration': 2.2}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.93, 'iti_duration': 1.52}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.61, 'iti_duration': 2.84}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.34, 'iti_duration': 1.84}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.01, 'iti_duration': 2.14}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.28, 'iti_duration': 2}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'face', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.43, 'iti_duration': 1.85}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.82, 'iti_duration': 2.89}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.1, 'iti_duration': 2.21}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.74, 'iti_duration': 2.76}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'face', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.15, 'iti_duration': 2.26}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.22, 'iti_duration': 1.83}, {'image_file': 'stimuli/face.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.43, 'iti_duration': 1.08}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.35, 'iti_duration': 1.08}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.49, 'iti_duration': 1.69}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.98, 'iti_duration': 1.92}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.23, 'iti_duration': 2.89}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.52, 'iti_duration': 2.41}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'face', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.57, 'iti_duration': 1.55}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.62, 'iti_duration': 1.23}, {'image_file': 'stimuli/banana.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.91, 'iti_duration': 2.19}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.35, 'iti_duration': 2.91}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.4, 'iti_duration': 2.63}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.19, 'iti_duration': 2.42}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.18, 'iti_duration': 1.8}, {'image_file': 'stimuli/face.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.27, 'iti_duration': 1.55}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.55, 'iti_duration': 1.87}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.22, 'iti_duration': 2.68}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.59, 'iti_duration': 2.63}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.21, 'iti_duration': 2.05}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.44, 'iti_duration': 2.17}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.37, 'iti_duration': 1.92}, {'image_file': 'stimuli/face.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.51, 'iti_duration': 1.91}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.13, 'iti_duration': 1.52}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.92, 'iti_duration': 2.86}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.21, 'iti_duration': 2.46}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.5, 'iti_duration': 2.91}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'face', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.61, 'iti_duration': 2.94}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'face', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.03, 'iti_duration': 2.53}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.06, 'iti_duration': 2.82}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.31, 'iti_duration': 1.46}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'face', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.59, 'iti_duration': 1.2}, {'image_file': 'stimuli/face.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.11, 'iti_duration': 1.29}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'face', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.68, 'iti_duration': 1.84}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.46, 'iti_duration': 1.92}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.84, 'iti_duration': 1.7}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.86, 'iti_duration': 1.31}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.91, 'iti_duration': 2.94}, {'image_file': 'stimuli/banana.png', 'presented_word': 'face', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.84, 'iti_duration': 2.9}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.36, 'iti_duration': 1.28}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.58, 'iti_duration': 2.87}, {'image_file': 'stimuli/face.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.39, 'iti_duration': 1.21}, {'image_file': 'stimuli/banana.png', 'presented_word': 'face', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.44, 'iti_duration': 2.48}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'face', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.88, 'iti_duration': 2.86}, {'image_file': 'stimuli/face.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.41, 'iti_duration': 1.37}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.18, 'iti_duration': 1.28}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.03, 'iti_duration': 1.75}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'face', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.9, 'iti_duration': 1.1}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.93, 'iti_duration': 2.77}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.13, 'iti_duration': 2.34}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.7, 'iti_duration': 1.73}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.12, 'iti_duration': 2.74}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.26, 'iti_duration': 2.31}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.09, 'iti_duration': 2.26}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.61, 'iti_duration': 1.43}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.89, 'iti_duration': 1.37}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.73, 'iti_duration': 1.87}, {'image_file': 'stimuli/banana.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.69, 'iti_duration': 2.26}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.79, 'iti_duration': 1.65}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.58, 'iti_duration': 1.73}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.34, 'iti_duration': 1.88}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.16, 'iti_duration': 1.82}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.29, 'iti_duration': 2.62}, {'image_file': 'stimuli/face.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.36, 'iti_duration': 2.35}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.58, 'iti_duration': 2.27}, {'image_file': 'stimuli/face.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.92, 'iti_duration': 1.01}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.03, 'iti_duration': 1.22}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.38, 'iti_duration': 2.93}, {'image_file': 'stimuli/banana.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.56, 'iti_duration': 1.56}, {'image_file': 'stimuli/banana.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.7, 'iti_duration': 2.13}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.16, 'iti_duration': 1.42}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.78, 'iti_duration': 2.73}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.26, 'iti_duration': 2.48}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.16, 'iti_duration': 2.02}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.06, 'iti_duration': 2.01}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.26, 'iti_duration': 2.27}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.37, 'iti_duration': 1.96}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.75, 'iti_duration': 1.33}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.31, 'iti_duration': 1.1}, {'image_file': 'stimuli/face.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.3, 'iti_duration': 2.35}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.88, 'iti_duration': 2}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.02, 'iti_duration': 1.1}, {'image_file': 'stimuli/banana.png', 'presented_word': 'face', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.88, 'iti_duration': 1.71}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.05, 'iti_duration': 1.47}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'face', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.96, 'iti_duration': 2.19}, {'image_file': 'stimuli/face.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.27, 'iti_duration': 1.99}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.34, 'iti_duration': 1.12}, {'image_file': 'stimuli/banana.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.26, 'iti_duration': 1.47}, {'image_file': 'stimuli/face.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.84, 'iti_duration': 2.54}, {'image_file': 'stimuli/face.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.3, 'iti_duration': 1}, {'image_file': 'stimuli/banana.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.91, 'iti_duration': 2.9}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.81, 'iti_duration': 2.11}, {'image_file': 'stimuli/banana.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.02, 'iti_duration': 1.25}, {'image_file': 'stimuli/banana.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.41, 'iti_duration': 2.48}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.6, 'iti_duration': 2.16}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.01, 'iti_duration': 2.47}, {'image_file': 'stimuli/face.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.49, 'iti_duration': 2.09}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.96, 'iti_duration': 2.81}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.79, 'iti_duration': 1.02}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'face', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.8, 'iti_duration': 1.41}, {'image_file': 'stimuli/face.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.14, 'iti_duration': 2.99}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.63, 'iti_duration': 2.96}, {'image_file': 'stimuli/banana.png', 'presented_word': 'face', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.9, 'iti_duration': 2.24}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.49, 'iti_duration': 2.18}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.31, 'iti_duration': 2.34}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.7, 'iti_duration': 2.41}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'face', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.35, 'iti_duration': 2.87}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.32, 'iti_duration': 1.3}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.28, 'iti_duration': 1.54}, {'image_file': 'stimuli/banana.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.14, 'iti_duration': 2.78}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.39, 'iti_duration': 2.71}, {'image_file': 'stimuli/banana.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.39, 'iti_duration': 1.38}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.75, 'iti_duration': 2.09}, {'image_file': 'stimuli/face.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.1, 'iti_duration': 1.81}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.61, 'iti_duration': 2.89}, {'image_file': 'stimuli/banana.png', 'presented_word': 'face', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.74, 'iti_duration': 1.95}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.5, 'iti_duration': 1.65}, {'image_file': 'stimuli/banana.png', 'presented_word': 'face', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.74, 'iti_duration': 1.22}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.58, 'iti_duration': 2.07}, {'image_file': 'stimuli/banana.png', 'presented_word': 'face', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.98, 'iti_duration': 1.28}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.88, 'iti_duration': 1.89}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.78, 'iti_duration': 2.57}, {'image_file': 'stimuli/face.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.7, 'iti_duration': 2.12}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.4, 'iti_duration': 2.46}, {'image_file': 'stimuli/face.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.49, 'iti_duration': 2.74}, {'image_file': 'stimuli/face.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.29, 'iti_duration': 1.03}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.25, 'iti_duration': 2.22}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.97, 'iti_duration': 1.87}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.96, 'iti_duration': 2.87}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'face', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.45, 'iti_duration': 2.01}, {'image_file': 'stimuli/banana.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.1, 'iti_duration': 2.68}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.77, 'iti_duration': 2.54}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.63, 'iti_duration': 1.3}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.74, 'iti_duration': 1.89}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.6, 'iti_duration': 2.82}, {'image_file': 'stimuli/banana.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.93, 'iti_duration': 1.05}, {'image_file': 'stimuli/face.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.05, 'iti_duration': 2.21}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.2, 'iti_duration': 1.07}, {'image_file': 'stimuli/face.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.4, 'iti_duration': 1.11}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.89, 'iti_duration': 1.6}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.04, 'iti_duration': 2.11}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.61, 'iti_duration': 2.93}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.82, 'iti_duration': 1.92}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.89, 'iti_duration': 2.72}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.34, 'iti_duration': 1.07}, {'image_file': 'stimuli/banana.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.72, 'iti_duration': 2.23}, {'image_file': 'stimuli/face.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.53, 'iti_duration': 2.5}, {'image_file': 'stimuli/face.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.26, 'iti_duration': 2.19}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.75, 'iti_duration': 2.24}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.94, 'iti_duration': 2.01}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.35, 'iti_duration': 1.45}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.2, 'iti_duration': 2.43}, {'image_file': 'stimuli/banana.png', 'presented_word': 'banana', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.6, 'iti_duration': 2.9}, {'image_file': 'stimuli/face.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.5, 'iti_duration': 2.51}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.15, 'iti_duration': 2.03}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.69, 'iti_duration': 2.96}, {'image_file': 'stimuli/face.png', 'presented_word': 'face', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.11, 'iti_duration': 2.11}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.63, 'iti_duration': 2.57}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.34, 'iti_duration': 1.2}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.19, 'iti_duration': 2.28}, {'image_file': 'stimuli/face.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.98, 'iti_duration': 1.46}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.71, 'iti_duration': 2.73}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.69, 'iti_duration': 1.29}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'banana', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.21, 'iti_duration': 2.37}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.34, 'iti_duration': 1.95}, {'image_file': 'stimuli/face.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.62, 'iti_duration': 2.66}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.03, 'iti_duration': 1.55}, {'image_file': 'stimuli/face.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.68, 'iti_duration': 2.84}, {'image_file': 'stimuli/banana.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.23, 'iti_duration': 2.36}, {'image_file': 'stimuli/banana.png', 'presented_word': 'scissor', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.39, 'iti_duration': 2.87}, {'image_file': 'stimuli/zebra.png', 'presented_word': 'zebra', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.46, 'iti_duration': 1.57}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'scissor', 'is_match': 'match', 'corrAns': 1, 'blank_duration': 1.19, 'iti_duration': 1.78}, {'image_file': 'stimuli/scissor.png', 'presented_word': 'zebra', 'is_match': 'mismatch', 'corrAns': 2, 'blank_duration': 1.66, 'iti_duration': 2.74}]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="localizer_conditions.xlsx" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="num"/>
+      <Param name="name" updates="None" val="inside_loop_trials" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="fixation_2"/>
+    <Routine name="trials_image"/>
+    <Routine name="trials_word"/>
+    <Routine name="blank"/>
+    <Routine name="response"/>
+    <Routine name="feedback_routine"/>
+    <Routine name="iti_routine"/>
+    <LoopTerminator name="inside_loop_trials"/>
+    <LoopTerminator name="blocks_loop"/>
+    <Routine name="end"/>
+  </Flow>
+</PsychoPy2experiment>
