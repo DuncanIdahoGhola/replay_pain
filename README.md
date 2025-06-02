@@ -1,3 +1,2 @@
 # replay_pain
-
-This is the most updated version of the code, data and anything necessary to correctly run the replay_pain pilot experiment
+This is the most up-to-date version of the code, data, and everything needed to properly run the replay_pain pilot experiment.
