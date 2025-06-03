@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on June 02, 2025, at 14:00
+    on June 03, 2025, at 13:59
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -43,7 +43,7 @@ psychopyVersion = '2024.2.4'
 expName = 'FunctionalLocalizer'  # from the Builder filename that created this script
 # information about this experiment
 expInfo = {
-    'participant': f"{randint(0, 999999):06.0f}",
+    'participant': 'sub-000',
     'session': '001',
     'date|hid': data.getDateStr(),
     'expName|hid': expName,
@@ -126,7 +126,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\labmp\\Desktop\\replay_pilot\\FunctionalLocalizer_lastrun.py',
+        originPath='C:\\Users\\labmp\\Desktop\\git\\replay_pain\\replay_pilot\\FunctionalLocalizer_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -389,11 +389,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Run 'Begin Experiment' code from set_up
     import random
     
-    # For key counterbalancing (example: '1' for match, '2' for mismatch)
-    # This could be determined by participant number (expInfo['participant'])
+    #add counterbalance and match/mismatch keys
+    participant_id = expInfo['participant']
+    last_three_digits = int(participant_id[-3:])
     
-    match_key = '1'
-    mismatch_key = '2'
+    
+    if last_three_digits % 2 == 0:
+        match_key = '1'
+        mismatch_key = '2'
+        instr_message = "Vous verrez une image, puis un écran blanc, puis un mot. Appuyez sur '1' si le mot correspond à l’image, et sur '2' s’il ne correspond pas. Appuyez sur la barre d’espace pour commencer."
+    else : 
+        match_key = '2'
+        mismatch_key = '1'
+        instr_message = "Vous verrez une image, puis un écran blanc, puis un mot. Appuyez sur '2' si le mot correspond à l’image, et sur '1' s’il ne correspond pas. Appuyez sur la barre d’espace pour commencer."
+    
     
     allowed_keys_list = [match_key, mismatch_key]
     
@@ -401,8 +410,24 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     expInfo['match_key'] = match_key
     expInfo['mismatch_key'] = mismatch_key
     expInfo['allowed_keys_list'] = allowed_keys_list
+    
+    #open condition file to create list of match per trials
+    import pandas as pd
+    
+    condition_path = "C:\\Users\\labmp\\Desktop\\git\\replay_pain\\replay_pilot\\localizer_conditions.xlsx"
+    
+    df_condition = pd.read_excel(condition_path)
+    
+    if last_three_digits % 2 == 0:
+        df_condition['corrAns'] = df_condition['is_match'].map({'match': 1, 'mismatch': 2})
+        
+    else :
+        df_condition['corrAns'] = df_condition['is_match'].map({'match': 2, 'mismatch': 1})
+        
+    
+    df_condition.to_excel(condition_path, index=False)
     instr_text = visual.TextStim(win=win, name='instr_text',
-        text="You will see an image, then a blank screen, then a word. Press '1' if the word matches the image, and '2' if it does not. Press any space to start.",
+        text=instr_message,
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -487,7 +512,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "end" ---
     end_text = visual.TextStim(win=win, name='end_text',
-        text=' "The experiment is now complete. Thank you for your participation!"',
+        text=' La première partie de l’expérience est terminée.',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -759,7 +784,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # if block_msg_text is active this frame...
             if block_msg_text.status == STARTED:
                 # update params
-                block_msg_text.setText(f"Starting Block {blocks_loop.thisN + 1} of {blocks_loop.nReps}. Press space to continue.", log=False)
+                block_msg_text.setText(f"Début du bloc {blocks_loop.thisN + 1} sur {blocks_loop.nReps}. Appuyez sur la barre d’espace pour continuer.", log=False)
             
             # *key_resp_block_msg* updates
             waitOnFlip = False
@@ -1383,7 +1408,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # allowedKeys looks like a variable, so make sure it exists locally
             if 'allowed_keys_list' in globals():
                 allowed_keys_list = globals()['allowed_keys_list']
-            text.setText('1 - 2')
+            text.setText(f"Indiquer si le mot correspond à l'image précédente à l'aide de {allowed_keys_list}")
             # store start times for response
             response.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             response.tStart = globalClock.getTime(format='float')
@@ -1570,7 +1595,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             thisExp.addData('image_presented', image_file)
             thisExp.addData('word_presented', presented_word)
             thisExp.addData('is_match_condition', is_match) # from conditions file
-            thisExp.addData('correct_answer_expected', corrAns)
+            
             if key_resp.keys:
                 thisExp.addData('response_given', key_resp.keys[0])
                 thisExp.addData('response_correct', key_resp.corr)
@@ -1585,10 +1610,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             show_feedback_flag = False
             
             if not key_resp.keys: # Timeout
-                feedback_message = "Response timeout. Please answer promptly."
+                feedback_message = "Délai de réponse dépassé. Veuillez répondre rapidement."
                 show_feedback_flag = True
             elif not key_resp.corr: # Incorrect response
-                feedback_message = "Incorrect" # Or the specific feedback from paper
+                feedback_message = "Mauvaise réponse" 
                 show_feedback_flag = True
             # else: correct response, no feedback_message, show_feedback_flag remains False
             

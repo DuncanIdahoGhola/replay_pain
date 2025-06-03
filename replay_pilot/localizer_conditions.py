@@ -16,7 +16,6 @@ for img in images:
             'image_file': f'stimuli/{img}.png',
             'presented_word': img,
             'is_match': 'match',
-            'corrAns': 1,
             'blank_duration': round(random.uniform(1.0, 2.0), 2),
             'iti_duration': round(random.uniform(1.0, 3.0), 2)
         })
@@ -29,7 +28,6 @@ for img in images:
             'image_file': f'stimuli/{img}.png',
             'presented_word': word,
             'is_match': 'mismatch',
-            'corrAns': 2,
             'blank_duration': round(random.uniform(1.0, 2.0), 2),
             'iti_duration': round(random.uniform(1.0, 3.0), 2)
         })
