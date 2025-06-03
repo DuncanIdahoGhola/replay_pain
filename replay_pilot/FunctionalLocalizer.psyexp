@@ -100,8 +100,8 @@
       <CodeComponent name="set_up" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="import random&amp;#10;&amp;#10;#add counterbalance and match/mismatch keys&amp;#10;participant_id = expInfo['participant']&amp;#10;last_three_digits = int(participant_id[-3:])&amp;#10;&amp;#10;&amp;#10;if last_three_digits % 2 == 0:&amp;#10;    match_key = '1'&amp;#10;    mismatch_key = '2'&amp;#10;    instr_message = &quot;Vous verrez une image, puis un écran blanc, puis un mot. Appuyez sur '1' si le mot correspond à l’image, et sur '2' s’il ne correspond pas. Appuyez sur la barre d’espace pour commencer.&quot;&amp;#10;else : &amp;#10;    match_key = '2'&amp;#10;    mismatch_key = '1'&amp;#10;    instr_message = &quot;Vous verrez une image, puis un écran blanc, puis un mot. Appuyez sur '2' si le mot correspond à l’image, et sur '1' s’il ne correspond pas. Appuyez sur la barre d’espace pour commencer.&quot;&amp;#10;&amp;#10;&amp;#10;allowed_keys_list = [match_key, mismatch_key]&amp;#10;&amp;#10;# Store these for later use in routines&amp;#10;expInfo['match_key'] = match_key&amp;#10;expInfo['mismatch_key'] = mismatch_key&amp;#10;expInfo['allowed_keys_list'] = allowed_keys_list&amp;#10;&amp;#10;#open condition file to create list of match per trials&amp;#10;import pandas as pd&amp;#10;&amp;#10;condition_path = &quot;C:\\Users\\labmp\\Desktop\\git\\replay_pain\\replay_pilot\\localizer_conditions.xlsx&quot;&amp;#10;&amp;#10;df_condition = pd.read_excel(condition_path)&amp;#10;&amp;#10;if last_three_digits % 2 == 0:&amp;#10;    df_condition['corrAns'] = df_condition['is_match'].map({'match': 1, 'mismatch': 2})&amp;#10;    &amp;#10;else :&amp;#10;    df_condition['corrAns'] = df_condition['is_match'].map({'match': 2, 'mismatch': 1})&amp;#10;    &amp;#10;&amp;#10;df_condition.to_excel(condition_path, index=False)" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="import * as random from 'random';&amp;#10;import * as pd from 'pandas';&amp;#10;participant_id = expInfo[&quot;participant&quot;];&amp;#10;last_three_digits = Number.parseInt(participant_id.slice((- 3)));&amp;#10;if (((last_three_digits % 2) === 0)) {&amp;#10;    match_key = &quot;1&quot;;&amp;#10;    mismatch_key = &quot;2&quot;;&amp;#10;    instr_message = &quot;Vous verrez une image, puis un \u00e9cran blanc, puis un mot. Appuyez sur '1' si le mot correspond \u00e0 l\u2019image, et sur '2' s\u2019il ne correspond pas. Appuyez sur la barre d\u2019espace pour commencer.&quot;;&amp;#10;} else {&amp;#10;    match_key = &quot;2&quot;;&amp;#10;    mismatch_key = &quot;1&quot;;&amp;#10;    instr_message = &quot;Vous verrez une image, puis un \u00e9cran blanc, puis un mot. Appuyez sur '2' si le mot correspond \u00e0 l\u2019image, et sur '1' s\u2019il ne correspond pas. Appuyez sur la barre d\u2019espace pour commencer.&quot;;&amp;#10;}&amp;#10;allowed_keys_list = [match_key, mismatch_key];&amp;#10;expInfo[&quot;match_key&quot;] = match_key;&amp;#10;expInfo[&quot;mismatch_key&quot;] = mismatch_key;&amp;#10;expInfo[&quot;allowed_keys_list&quot;] = allowed_keys_list;&amp;#10;condition_path = &quot;C:\\Users\\labmp\\Desktop\\git\\replay_pain\\replay_pilot\\localizer_conditions.xlsx&quot;;&amp;#10;df_condition = pd.read_excel(condition_path);&amp;#10;if (((last_three_digits % 2) === 0)) {&amp;#10;    df_condition[&quot;corrAns&quot;] = df_condition[&quot;is_match&quot;].map({&quot;match&quot;: 1, &quot;mismatch&quot;: 2});&amp;#10;} else {&amp;#10;    df_condition[&quot;corrAns&quot;] = df_condition[&quot;is_match&quot;].map({&quot;match&quot;: 2, &quot;mismatch&quot;: 1});&amp;#10;}&amp;#10;df_condition.to_excel(condition_path, {&quot;index&quot;: false});&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="import random&amp;#10;&amp;#10;#add counterbalance and match/mismatch keys&amp;#10;participant_id = expInfo['participant']&amp;#10;last_three_digits = int(participant_id[-3:])&amp;#10;&amp;#10;&amp;#10;if last_three_digits % 2 == 0:&amp;#10;    match_key = '1'&amp;#10;    mismatch_key = '2'&amp;#10;    instr_message = &quot;Vous verrez une image, puis un écran blanc, puis un mot. Appuyez sur '1' si le mot correspond à l’image, et sur '2' s’il ne correspond pas. Appuyez sur la barre d’espace pour commencer.&quot;&amp;#10;else : &amp;#10;    match_key = '2'&amp;#10;    mismatch_key = '1'&amp;#10;    instr_message = &quot;Vous verrez une image, puis un écran blanc, puis un mot. Appuyez sur '2' si le mot correspond à l’image, et sur '1' s’il ne correspond pas. Appuyez sur la barre d’espace pour commencer.&quot;&amp;#10;&amp;#10;&amp;#10;allowed_keys_list = [match_key, mismatch_key]&amp;#10;&amp;#10;# Store these for later use in routines&amp;#10;expInfo['match_key'] = match_key&amp;#10;expInfo['mismatch_key'] = mismatch_key&amp;#10;expInfo['allowed_keys_list'] = allowed_keys_list&amp;#10;&amp;#10;#open condition file to create list of match per trials&amp;#10;import pandas as pd&amp;#10;&amp;#10;condition_path = &quot;C:\\Users\\labmp\\Desktop\\git\\replay_pain\\replay_pilot\\localizer_conditions.xlsx&quot;&amp;#10;&amp;#10;df_condition = pd.read_excel(condition_path)&amp;#10;&amp;#10;if last_three_digits % 2 == 0:&amp;#10;    df_condition['corrAns'] = df_condition['is_match'].map({'match': 1, 'mismatch': 2})&amp;#10;    &amp;#10;else :&amp;#10;    df_condition['corrAns'] = df_condition['is_match'].map({'match': 2, 'mismatch': 1})&amp;#10;    &amp;#10;&amp;#10;df_condition.to_excel(condition_path, index=False)&amp;#10;&amp;#10;&amp;#10;#add trials counter for break &amp;#10;&amp;#10;trials_counter= 0" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="import * as random from 'random';&amp;#10;import * as pd from 'pandas';&amp;#10;participant_id = expInfo[&quot;participant&quot;];&amp;#10;last_three_digits = Number.parseInt(participant_id.slice((- 3)));&amp;#10;if (((last_three_digits % 2) === 0)) {&amp;#10;    match_key = &quot;1&quot;;&amp;#10;    mismatch_key = &quot;2&quot;;&amp;#10;    instr_message = &quot;Vous verrez une image, puis un \u00e9cran blanc, puis un mot. Appuyez sur '1' si le mot correspond \u00e0 l\u2019image, et sur '2' s\u2019il ne correspond pas. Appuyez sur la barre d\u2019espace pour commencer.&quot;;&amp;#10;} else {&amp;#10;    match_key = &quot;2&quot;;&amp;#10;    mismatch_key = &quot;1&quot;;&amp;#10;    instr_message = &quot;Vous verrez une image, puis un \u00e9cran blanc, puis un mot. Appuyez sur '2' si le mot correspond \u00e0 l\u2019image, et sur '1' s\u2019il ne correspond pas. Appuyez sur la barre d\u2019espace pour commencer.&quot;;&amp;#10;}&amp;#10;allowed_keys_list = [match_key, mismatch_key];&amp;#10;expInfo[&quot;match_key&quot;] = match_key;&amp;#10;expInfo[&quot;mismatch_key&quot;] = mismatch_key;&amp;#10;expInfo[&quot;allowed_keys_list&quot;] = allowed_keys_list;&amp;#10;condition_path = &quot;C:\\Users\\labmp\\Desktop\\git\\replay_pain\\replay_pilot\\localizer_conditions.xlsx&quot;;&amp;#10;df_condition = pd.read_excel(condition_path);&amp;#10;if (((last_three_digits % 2) === 0)) {&amp;#10;    df_condition[&quot;corrAns&quot;] = df_condition[&quot;is_match&quot;].map({&quot;match&quot;: 1, &quot;mismatch&quot;: 2});&amp;#10;} else {&amp;#10;    df_condition[&quot;corrAns&quot;] = df_condition[&quot;is_match&quot;].map({&quot;match&quot;: 2, &quot;mismatch&quot;: 1});&amp;#10;}&amp;#10;df_condition.to_excel(condition_path, {&quot;index&quot;: false});&amp;#10;trials_counter = 0;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
@@ -466,8 +466,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="word_display_duration = 1.0;&amp;#10;total_response_time_allowed = 2.0;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="word_display_duration = 1.0&amp;#10;total_response_time_allowed = 2.0&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="image_display_dur = 1.0;&amp;#10;word_display_duration = 1.0;&amp;#10;total_response_time_allowed = 2.0;&amp;#10;trials_counter = (trials_counter + 1);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="image_display_dur = 1.0&amp;#10;word_display_duration = 1.0&amp;#10;total_response_time_allowed = 2.0&amp;#10;&amp;#10;trials_counter = trials_counter + 1&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -519,7 +519,7 @@
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="1.0" valType="code" updates="constant" name="stopVal"/>
+        <Param val="$image_display_dur" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
@@ -750,6 +750,68 @@
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
+    <Routine name="break_2">
+      <RoutineSettingsComponent name="break_2" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="break_2" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <TextComponent name="timer_text" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="timer_text" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="$text_clock" valType="str" updates="set every frame" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <CodeComponent name="break_code" plugin="None">
+        <Param val="import serial&amp;#10;timer = core.Clock()" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="import * as serial from 'serial';&amp;#10;timer = new util.Clock();&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;if (_pj.in_es6(trials_counter, [1, 128, 222])) {&amp;#10;    continueRoutine = true;&amp;#10;} else {&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;stimclock = new util.Clock();&amp;#10;starttime = stimclock.getTime();&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="if trials_counter in [1, 128, 222]:&amp;#10;    continueRoutine = True&amp;#10;else:&amp;#10;    continueRoutine = False&amp;#10;    &amp;#10;&amp;#10;stimclock = core.Clock()&amp;#10;starttime = stimclock.getTime()&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="remaining = str(60 - round(stimclock.getTime()- starttime))&amp;#10;text_clock = '      Bloc Terminé, pause '   +  remaining  + ' sec        ' + '           Appuyer sur p lorsque vous serez prêt pour le prochain bloc.    '&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="remaining = (60 - util.round((stimclock.getTime() - starttime))).toString();&amp;#10;text_clock = (((&quot;      Bloc Termin\u00e9, pause &quot; + remaining) + &quot; sec        &quot;) + &quot;           Appuyer sur p lorsque vous serez pr\u00eat pour le prochain bloc.    &quot;);&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="break_code" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+    </Routine>
   </Routines>
   <Flow>
     <Routine name="setup_experiment"/>
@@ -783,6 +845,7 @@
     <Routine name="response"/>
     <Routine name="feedback_routine"/>
     <Routine name="iti_routine"/>
+    <Routine name="break_2"/>
     <LoopTerminator name="inside_loop_trials"/>
     <LoopTerminator name="blocks_loop"/>
     <Routine name="end"/>

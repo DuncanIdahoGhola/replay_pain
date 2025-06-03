@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on June 03, 2025, at 13:59
+    on June 03, 2025, at 14:50
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -33,6 +33,9 @@ import sys  # to get file system encoding
 import psychopy.iohub as io
 from psychopy.hardware import keyboard
 
+# Run 'Before Experiment' code from break_code
+import serial
+timer = core.Clock()
 # --- Setup global variables (available in all functions) ---
 # create a device manager to handle hardware (keyboards, mice, mirophones, speakers, etc.)
 deviceManager = hardware.DeviceManager()
@@ -426,6 +429,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         
     
     df_condition.to_excel(condition_path, index=False)
+    
+    
+    #add trials counter for break 
+    
+    trials_counter= 0
     instr_text = visual.TextStim(win=win, name='instr_text',
         text=instr_message,
         font='Arial',
@@ -503,6 +511,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "iti_routine" ---
     iti_fixation = visual.TextStim(win=win, name='iti_fixation',
+        text='',
+        font='Arial',
+        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    
+    # --- Initialize components for Routine "break_2" ---
+    timer_text = visual.TextStim(win=win, name='timer_text',
         text='',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
@@ -908,8 +925,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             continueRoutine = True
             # update component parameters for each repeat
             # Run 'Begin Routine' code from trial_code
+            image_display_dur = 1.0
             word_display_duration = 1.0
             total_response_time_allowed = 2.0
+            
+            trials_counter = trials_counter + 1
+            
             
             # store start times for fixation_2
             fixation_2.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
@@ -1060,7 +1081,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if isinstance(inside_loop_trials, data.TrialHandler2) and thisInside_loop_trial.thisN != inside_loop_trials.thisTrial.thisN:
                 continueRoutine = False
             trials_image.forceEnded = routineForceEnded = not continueRoutine
-            while continueRoutine and routineTimer.getTime() < 1.0:
+            while continueRoutine:
                 # get current time
                 t = routineTimer.getTime()
                 tThisFlip = win.getFutureFlipTime(clock=routineTimer)
@@ -1091,7 +1112,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # if stim_image is stopping this frame...
                 if stim_image.status == STARTED:
                     # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > stim_image.tStartRefresh + 1.0-frameTolerance:
+                    if tThisFlipGlobal > stim_image.tStartRefresh + image_display_dur-frameTolerance:
                         # keep track of stop time/frame for later
                         stim_image.tStop = t  # not accounting for scr refresh
                         stim_image.tStopRefresh = tThisFlipGlobal  # on global time
@@ -1141,13 +1162,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             trials_image.tStop = globalClock.getTime(format='float')
             trials_image.tStopRefresh = tThisFlipGlobal
             thisExp.addData('trials_image.stopped', trials_image.tStop)
-            # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
-            if trials_image.maxDurationReached:
-                routineTimer.addTime(-trials_image.maxDuration)
-            elif trials_image.forceEnded:
-                routineTimer.reset()
-            else:
-                routineTimer.addTime(-1.000000)
+            # the Routine "trials_image" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
             
             # --- Prepare to start Routine "trials_word" ---
             # create an object to store info about Routine trials_word
@@ -1869,6 +1885,124 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             iti_routine.tStopRefresh = tThisFlipGlobal
             thisExp.addData('iti_routine.stopped', iti_routine.tStop)
             # the Routine "iti_routine" was not non-slip safe, so reset the non-slip timer
+            routineTimer.reset()
+            
+            # --- Prepare to start Routine "break_2" ---
+            # create an object to store info about Routine break_2
+            break_2 = data.Routine(
+                name='break_2',
+                components=[timer_text],
+            )
+            break_2.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # Run 'Begin Routine' code from break_code
+            if trials_counter in [1, 128, 222]:
+                continueRoutine = True
+            else:
+                continueRoutine = False
+                
+            
+            stimclock = core.Clock()
+            starttime = stimclock.getTime()
+            
+            # store start times for break_2
+            break_2.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            break_2.tStart = globalClock.getTime(format='float')
+            break_2.status = STARTED
+            thisExp.addData('break_2.started', break_2.tStart)
+            break_2.maxDuration = None
+            # keep track of which components have finished
+            break_2Components = break_2.components
+            for thisComponent in break_2.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "break_2" ---
+            # if trial has changed, end Routine now
+            if isinstance(inside_loop_trials, data.TrialHandler2) and thisInside_loop_trial.thisN != inside_loop_trials.thisTrial.thisN:
+                continueRoutine = False
+            break_2.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                
+                # *timer_text* updates
+                
+                # if timer_text is starting this frame...
+                if timer_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    timer_text.frameNStart = frameN  # exact frame index
+                    timer_text.tStart = t  # local t and not account for scr refresh
+                    timer_text.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(timer_text, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'timer_text.started')
+                    # update status
+                    timer_text.status = STARTED
+                    timer_text.setAutoDraw(True)
+                
+                # if timer_text is active this frame...
+                if timer_text.status == STARTED:
+                    # update params
+                    timer_text.setText(text_clock, log=False)
+                # Run 'Each Frame' code from break_code
+                remaining = str(60 - round(stimclock.getTime()- starttime))
+                text_clock = '      Bloc Terminé, pause '   +  remaining  + ' sec        ' + '           Appuyer sur p lorsque vous serez prêt pour le prochain bloc.    '
+                
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    break_2.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in break_2.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "break_2" ---
+            for thisComponent in break_2.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for break_2
+            break_2.tStop = globalClock.getTime(format='float')
+            break_2.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('break_2.stopped', break_2.tStop)
+            # the Routine "break_2" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             thisExp.nextEntry()
             
