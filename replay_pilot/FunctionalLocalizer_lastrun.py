@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on June 03, 2025, at 14:50
+    on June 03, 2025, at 14:52
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -525,7 +525,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=0.0);
+        depth=-1.0);
     
     # --- Initialize components for Routine "end" ---
     end_text = visual.TextStim(win=win, name='end_text',
@@ -1938,6 +1938,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 tThisFlipGlobal = win.getFutureFlipTime(clock=None)
                 frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
                 # update/draw components on each frame
+                # Run 'Each Frame' code from break_code
+                remaining = str(60 - round(stimclock.getTime()- starttime))
+                text_clock = '      Bloc Terminé, pause '   +  remaining  + ' sec        ' + '           Appuyer sur p lorsque vous serez prêt pour le prochain bloc.    '
+                
                 
                 # *timer_text* updates
                 
@@ -1958,10 +1962,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if timer_text.status == STARTED:
                     # update params
                     timer_text.setText(text_clock, log=False)
-                # Run 'Each Frame' code from break_code
-                remaining = str(60 - round(stimclock.getTime()- starttime))
-                text_clock = '      Bloc Terminé, pause '   +  remaining  + ' sec        ' + '           Appuyer sur p lorsque vous serez prêt pour le prochain bloc.    '
-                
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
