@@ -1,0 +1,4 @@
+pair_name,stim1_img,stim2_img
+A_B,stimuli/scissor.png,stimuli/face.png
+B_C,stimuli/face.png,stimuli/zebra.png
+C_D,stimuli/zebra.png,stimuli/banana.png
