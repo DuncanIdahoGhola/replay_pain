@@ -1,0 +1,270 @@
+4.2623 	DEBUG 	Fullscreen settings ignored as running in pilot mode.
+4.2628 	INFO 	Loaded monitor calibration from ['2025_05_21 13:58']
+4.5541 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001B32D32CB50>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001B32D32CBB0>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001B32E1834C0>, multiSample=False, name='window1', numSamples=2, pos=[560.0, 240.0], screen=0, size=array([800, 600]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+4.5542 	EXP 	window1: backgroundImage = ''
+4.5542 	EXP 	window1: backgroundFit = 'none'
+4.5579 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5583 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5587 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5592 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5596 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5599 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5602 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5607 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5609 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5611 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5615 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5618 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5622 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5625 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5628 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5632 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5635 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5637 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5640 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5646 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5648 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5650 	DEBUG 	Uploading Texture Font fontname to graphics card
+4.5661 	DEBUG 	Upload of Texture Font fontname complete
+4.5688 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5693 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5698 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.5699 	DEBUG 	Uploading Texture Font fontname to graphics card
+4.5703 	DEBUG 	Upload of Texture Font fontname complete
+4.5712 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+4.5712 	EXP 	window1: recordFrameIntervals = False
+4.6379 	EXP 	window1: recordFrameIntervals = True
+4.7144 	EXP 	Screen (0) actual frame rate measured at 144.12Hz
+4.7144 	EXP 	window1: recordFrameIntervals = False
+4.7188 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.7192 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.7199 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.7207 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.7213 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.7219 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.7222 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.7226 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.7231 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.7235 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+4.7237 	DEBUG 	Uploading Texture Font fontname to graphics card
+4.7240 	DEBUG 	Upload of Texture Font fontname complete
+4.7305 	WARNING 	launchHubServer: If using the iohub mouse or eyetracker devices, fullScr should be True.
+6.1878 	INFO 	keyboard.Keyboard is using iohub backend.
+6.1878 	INFO 	keyboard.Keyboard is using iohub backend.
+6.1878 	INFO 	keyboard.Keyboard is using iohub backend.
+6.1878 	INFO 	keyboard.Keyboard is using iohub backend.
+6.1878 	INFO 	keyboard.Keyboard is using iohub backend.
+6.1878 	EXP 	learn_probe: status = STARTED
+6.2298 	EXP 	Created instructions_main = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='instructions_main', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Add instructions here\n\nspace to end', units='height', win=Window(...), wrapWidth=1)
+6.2333 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+6.2345 	EXP 	Created fix_learn_cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='fix_learn_cross', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+6.2374 	EXP 	Created first_of_pair = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='first_of_pair', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128.0, units='height', win=Window(...))
+6.2379 	EXP 	Created break_random = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='break_random', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+6.2401 	EXP 	Created second_of_pair = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='second_of_pair', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128.0, units='height', win=Window(...))
+6.2407 	EXP 	Created five_s_break = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='five_s_break', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+6.2427 	EXP 	Created probe_instr_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='probe_instr_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Add probe instr\n\nSpace to qui', units='height', win=Window(...), wrapWidth=1)
+6.2448 	EXP 	Created probe_cue_1 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='probe_cue_1', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128.0, units='height', win=Window(...))
+6.2455 	EXP 	Created imagination_woot = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='imagination_woot', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+6.2477 	EXP 	Created prob_test_img = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, image='default.png', interpolate=True, mask=None, maskParams=None, name='prob_test_img', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([0.5, 0.5]), texRes=128.0, units='height', win=Window(...))
+0.0084 	INFO 	Keyboard events cleared
+0.0082 	EXP 	instructions_main: autoDraw = True
+0.4841 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+0.4848 	DATA 	Keypress: space
+0.4875 	INFO 	Keyboard events cleared
+0.4874 	EXP 	instructions_main: autoDraw = False
+0.4874 	EXP 	text: autoDraw = True
+1.0751 	DEBUG 	Read csv file with pandas: conditions_learning/learning_conditions_1.csv
+1.0756 	DEBUG 	Clearing unnamed columns from conditions_learning/learning_conditions_1.csv
+1.0758 	EXP 	Imported conditions_learning/learning_conditions_1.csv as conditions, 9 conditions, 3 params
+1.0759 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'pair_name': 'C_D', 'stim1_img': 'stimuli/banana.png', 'stim2_img': 'stimuli/face.png', 'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+1.0767 	DATA 	Keypress: space
+1.0776 	EXP 	text: autoDraw = False
+1.0776 	EXP 	fix_learn_cross: autoDraw = True
+1.6395 	EXP 	fix_learn_cross: autoDraw = False
+1.6395 	EXP 	fix_learn_cross: autoDraw = False
+1.6395 	EXP 	first_of_pair: image = 'stimuli/banana.png'
+1.6395 	EXP 	first_of_pair: autoDraw = True
+2.8837 	EXP 	first_of_pair: autoDraw = False
+2.8837 	EXP 	break_random: text = ''
+2.8837 	EXP 	break_random: autoDraw = True
+4.6891 	EXP 	break_random: autoDraw = False
+4.6891 	EXP 	break_random: autoDraw = False
+4.6891 	EXP 	second_of_pair: image = 'stimuli/face.png'
+4.6891 	EXP 	second_of_pair: autoDraw = True
+5.6827 	EXP 	second_of_pair: autoDraw = False
+5.6827 	EXP 	second_of_pair: autoDraw = False
+5.6827 	EXP 	five_s_break: autoDraw = True
+10.6718 	EXP 	New trial (rep=0, index=1): <Trial 1 (1 in rep 0) data={'pair_name': 'B_C', 'stim1_img': 'stimuli/zebra.png', 'stim2_img': 'stimuli/banana.png', 'thisN': 1, 'thisTrialN': 1, 'thisRepN': 0}>
+10.6763 	EXP 	five_s_break: autoDraw = False
+10.6763 	EXP 	five_s_break: autoDraw = False
+10.6763 	EXP 	fix_learn_cross: autoDraw = True
+10.9793 	EXP 	fix_learn_cross: autoDraw = False
+10.9793 	EXP 	fix_learn_cross: autoDraw = False
+10.9793 	EXP 	first_of_pair: image = 'stimuli/zebra.png'
+10.9793 	EXP 	first_of_pair: autoDraw = True
+12.4754 	EXP 	first_of_pair: autoDraw = False
+12.4754 	EXP 	first_of_pair: autoDraw = False
+12.4754 	EXP 	break_random: text = ''
+12.4754 	EXP 	break_random: autoDraw = True
+13.8941 	EXP 	break_random: autoDraw = False
+13.8941 	EXP 	break_random: autoDraw = False
+13.8941 	EXP 	second_of_pair: image = 'stimuli/banana.png'
+13.8941 	EXP 	second_of_pair: autoDraw = True
+14.6352 	EXP 	second_of_pair: autoDraw = False
+14.6352 	EXP 	five_s_break: autoDraw = True
+19.6235 	EXP 	New trial (rep=0, index=2): <Trial 2 (2 in rep 0) data={'pair_name': 'A_B', 'stim1_img': 'stimuli/scissor.png', 'stim2_img': 'stimuli/zebra.png', 'thisN': 2, 'thisTrialN': 2, 'thisRepN': 0}>
+19.6288 	EXP 	five_s_break: autoDraw = False
+19.6288 	EXP 	fix_learn_cross: autoDraw = True
+19.9270 	EXP 	fix_learn_cross: autoDraw = False
+19.9270 	EXP 	fix_learn_cross: autoDraw = False
+19.9270 	EXP 	first_of_pair: image = 'stimuli/scissor.png'
+19.9270 	EXP 	first_of_pair: autoDraw = True
+21.4209 	EXP 	first_of_pair: autoDraw = False
+21.4209 	EXP 	first_of_pair: autoDraw = False
+21.4209 	EXP 	break_random: text = ''
+21.4209 	EXP 	break_random: autoDraw = True
+24.0917 	EXP 	break_random: autoDraw = False
+24.0917 	EXP 	break_random: autoDraw = False
+24.0917 	EXP 	second_of_pair: image = 'stimuli/zebra.png'
+24.0917 	EXP 	second_of_pair: autoDraw = True
+25.0810 	EXP 	second_of_pair: autoDraw = False
+25.0810 	EXP 	five_s_break: autoDraw = True
+30.0689 	EXP 	New trial (rep=0, index=3): <Trial 3 (3 in rep 0) data={'pair_name': 'C_D', 'stim1_img': 'stimuli/banana.png', 'stim2_img': 'stimuli/face.png', 'thisN': 3, 'thisTrialN': 3, 'thisRepN': 0}>
+30.0747 	EXP 	five_s_break: autoDraw = False
+30.0747 	EXP 	five_s_break: autoDraw = False
+30.0747 	EXP 	fix_learn_cross: autoDraw = True
+30.6349 	EXP 	fix_learn_cross: autoDraw = False
+30.6349 	EXP 	fix_learn_cross: autoDraw = False
+30.6349 	EXP 	first_of_pair: image = 'stimuli/banana.png'
+30.6349 	EXP 	first_of_pair: autoDraw = True
+31.8875 	EXP 	first_of_pair: autoDraw = False
+31.8875 	EXP 	break_random: text = ''
+31.8875 	EXP 	break_random: autoDraw = True
+32.9080 	EXP 	break_random: autoDraw = False
+32.9080 	EXP 	break_random: autoDraw = False
+32.9080 	EXP 	second_of_pair: image = 'stimuli/face.png'
+32.9080 	EXP 	second_of_pair: autoDraw = True
+33.9017 	EXP 	second_of_pair: autoDraw = False
+33.9017 	EXP 	five_s_break: autoDraw = True
+38.8892 	EXP 	New trial (rep=0, index=4): <Trial 4 (4 in rep 0) data={'pair_name': 'C_D', 'stim1_img': 'stimuli/banana.png', 'stim2_img': 'stimuli/face.png', 'thisN': 4, 'thisTrialN': 4, 'thisRepN': 0}>
+38.8949 	EXP 	five_s_break: autoDraw = False
+38.8949 	EXP 	five_s_break: autoDraw = False
+38.8949 	EXP 	fix_learn_cross: autoDraw = True
+39.2526 	EXP 	fix_learn_cross: autoDraw = False
+39.2526 	EXP 	fix_learn_cross: autoDraw = False
+39.2526 	EXP 	first_of_pair: image = 'stimuli/banana.png'
+39.2526 	EXP 	first_of_pair: autoDraw = True
+40.7078 	EXP 	first_of_pair: autoDraw = False
+40.7078 	EXP 	break_random: text = ''
+40.7078 	EXP 	break_random: autoDraw = True
+42.5896 	EXP 	break_random: autoDraw = False
+42.5896 	EXP 	break_random: autoDraw = False
+42.5896 	EXP 	second_of_pair: image = 'stimuli/face.png'
+42.5896 	EXP 	second_of_pair: autoDraw = True
+43.5831 	EXP 	second_of_pair: autoDraw = False
+43.5831 	EXP 	second_of_pair: autoDraw = False
+43.5831 	EXP 	five_s_break: autoDraw = True
+48.5716 	EXP 	New trial (rep=0, index=5): <Trial 5 (5 in rep 0) data={'pair_name': 'A_B', 'stim1_img': 'stimuli/scissor.png', 'stim2_img': 'stimuli/zebra.png', 'thisN': 5, 'thisTrialN': 5, 'thisRepN': 0}>
+48.5771 	EXP 	five_s_break: autoDraw = False
+48.5771 	EXP 	five_s_break: autoDraw = False
+48.5771 	EXP 	fix_learn_cross: autoDraw = True
+48.8752 	EXP 	fix_learn_cross: autoDraw = False
+48.8752 	EXP 	fix_learn_cross: autoDraw = False
+48.8752 	EXP 	first_of_pair: image = 'stimuli/scissor.png'
+48.8823 	EXP 	first_of_pair: autoDraw = True
+50.3761 	EXP 	first_of_pair: autoDraw = False
+50.3761 	EXP 	first_of_pair: autoDraw = False
+50.3761 	EXP 	break_random: text = ''
+50.3761 	EXP 	break_random: autoDraw = True
+51.4825 	EXP 	break_random: autoDraw = False
+51.4825 	EXP 	break_random: autoDraw = False
+51.4825 	EXP 	second_of_pair: image = 'stimuli/zebra.png'
+51.4825 	EXP 	second_of_pair: autoDraw = True
+52.4732 	EXP 	second_of_pair: autoDraw = False
+52.4732 	EXP 	five_s_break: autoDraw = True
+57.4609 	EXP 	New trial (rep=0, index=6): <Trial 6 (6 in rep 0) data={'pair_name': 'B_C', 'stim1_img': 'stimuli/zebra.png', 'stim2_img': 'stimuli/banana.png', 'thisN': 6, 'thisTrialN': 6, 'thisRepN': 0}>
+57.4672 	EXP 	five_s_break: autoDraw = False
+57.4672 	EXP 	five_s_break: autoDraw = False
+57.4672 	EXP 	fix_learn_cross: autoDraw = True
+57.7724 	EXP 	fix_learn_cross: autoDraw = False
+57.7724 	EXP 	fix_learn_cross: autoDraw = False
+57.7724 	EXP 	first_of_pair: image = 'stimuli/zebra.png'
+57.7724 	EXP 	first_of_pair: autoDraw = True
+59.2660 	EXP 	first_of_pair: autoDraw = False
+59.2660 	EXP 	first_of_pair: autoDraw = False
+59.2660 	EXP 	break_random: text = ''
+59.2660 	EXP 	break_random: autoDraw = True
+61.2244 	EXP 	break_random: autoDraw = False
+61.2244 	EXP 	break_random: autoDraw = False
+61.2244 	EXP 	second_of_pair: image = 'stimuli/banana.png'
+61.2244 	EXP 	second_of_pair: autoDraw = True
+61.9669 	EXP 	second_of_pair: autoDraw = False
+61.9669 	EXP 	five_s_break: autoDraw = True
+66.9555 	EXP 	New trial (rep=0, index=7): <Trial 7 (7 in rep 0) data={'pair_name': 'A_B', 'stim1_img': 'stimuli/scissor.png', 'stim2_img': 'stimuli/zebra.png', 'thisN': 7, 'thisTrialN': 7, 'thisRepN': 0}>
+66.9610 	EXP 	five_s_break: autoDraw = False
+66.9610 	EXP 	fix_learn_cross: autoDraw = True
+67.2597 	EXP 	fix_learn_cross: autoDraw = False
+67.2597 	EXP 	fix_learn_cross: autoDraw = False
+67.2597 	EXP 	first_of_pair: image = 'stimuli/scissor.png'
+67.2597 	EXP 	first_of_pair: autoDraw = True
+68.7527 	EXP 	first_of_pair: autoDraw = False
+68.7527 	EXP 	first_of_pair: autoDraw = False
+68.7527 	EXP 	break_random: text = ''
+68.7527 	EXP 	break_random: autoDraw = True
+71.4050 	EXP 	break_random: autoDraw = False
+71.4050 	EXP 	break_random: autoDraw = False
+71.4050 	EXP 	second_of_pair: image = 'stimuli/zebra.png'
+71.4050 	EXP 	second_of_pair: autoDraw = True
+72.3998 	EXP 	second_of_pair: autoDraw = False
+72.3998 	EXP 	five_s_break: autoDraw = True
+75.7695 	DATA 	Mouse: Left button down, pos=(390,110)
+75.8393 	DATA 	Mouse:  Left button up, pos=(390,110)
+77.3875 	EXP 	New trial (rep=0, index=8): <Trial 8 (8 in rep 0) data={'pair_name': 'B_C', 'stim1_img': 'stimuli/zebra.png', 'stim2_img': 'stimuli/banana.png', 'thisN': 8, 'thisTrialN': 8, 'thisRepN': 0}>
+77.3931 	EXP 	five_s_break: autoDraw = False
+77.3931 	EXP 	fix_learn_cross: autoDraw = True
+77.6927 	EXP 	fix_learn_cross: autoDraw = False
+77.6927 	EXP 	fix_learn_cross: autoDraw = False
+77.6927 	EXP 	first_of_pair: image = 'stimuli/zebra.png'
+77.6927 	EXP 	first_of_pair: autoDraw = True
+79.1849 	EXP 	first_of_pair: autoDraw = False
+79.1849 	EXP 	first_of_pair: autoDraw = False
+79.1849 	EXP 	break_random: text = ''
+79.1849 	EXP 	break_random: autoDraw = True
+80.6020 	EXP 	break_random: autoDraw = False
+80.6020 	EXP 	break_random: autoDraw = False
+80.6020 	EXP 	second_of_pair: image = 'stimuli/banana.png'
+80.6020 	EXP 	second_of_pair: autoDraw = True
+81.3378 	EXP 	second_of_pair: autoDraw = False
+81.3378 	EXP 	five_s_break: autoDraw = True
+86.3316 	INFO 	Keyboard events cleared
+86.3314 	EXP 	five_s_break: autoDraw = False
+86.3314 	EXP 	five_s_break: autoDraw = False
+86.3314 	EXP 	probe_instr_text: autoDraw = True
+90.1747 	DEBUG 	Read csv file with pandas: conditions_probe/probe_learning_conditions_1.csv
+90.1751 	DEBUG 	Clearing unnamed columns from conditions_probe/probe_learning_conditions_1.csv
+90.1754 	EXP 	Imported conditions_probe/probe_learning_conditions_1.csv as conditions, 12 conditions, 4 params
+90.1759 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'target_img': 'stimuli/scissor.png', 'cue_text': '->...->...->?', 'prob_img': 'stimuli/face.png', 'corrAns': 2, 'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+90.1836 	DATA 	Keypress: space
+90.1858 	EXP 	probe_instr_text: autoDraw = False
+90.1858 	EXP 	probe_cue_1: image = 'stimuli/scissor.png'
+90.1858 	EXP 	probe_cue_1: autoDraw = True
+94.1800 	EXP 	probe_cue_1: autoDraw = False
+94.1800 	EXP 	imagination_woot: text = ''
+94.1800 	EXP 	imagination_woot: autoDraw = True
+95.4506 	EXP 	imagination_woot: autoDraw = False
+95.4506 	EXP 	imagination_woot: autoDraw = False
+95.4506 	EXP 	prob_test_img: image = 'stimuli/face.png'
+95.4506 	EXP 	prob_test_img: autoDraw = True
+97.4444 	INFO 	Keyboard events cleared
+97.4442 	EXP 	prob_test_img: autoDraw = False
+97.4442 	EXP 	prob_test_img: autoDraw = False
+101.4323 	EXP 	New trial (rep=0, index=1): <Trial 1 (1 in rep 0) data={'target_img': 'stimuli/banana.png', 'cue_text': '->...->...->?', 'prob_img': 'stimuli/banana.png', 'corrAns': 1, 'thisN': 1, 'thisTrialN': 1, 'thisRepN': 0}>
+101.7019 	EXP 	probe_cue_1: image = 'stimuli/banana.png'
+101.7019 	EXP 	probe_cue_1: autoDraw = True
+105.2046 	DATA 	Keypress: escape
+105.2944 	EXP 	learn_probe: status = STOPPED
+105.2998 	EXP 	probe_cue_1: autoDraw = False
+105.3009 	EXP 	learn_probe: status = STOPPED
+105.3045 	INFO 	saved data to 'C:\\Users\\labmp\\Desktop\\git\\replay_pain\\replay_pilot\\data/220_learn_probe_2025-06-09_10h41.55.657.csv'
+105.3050 	INFO 	saved data to C:\Users\labmp\Desktop\git\replay_pain\replay_pilot\data/220_learn_probe_2025-06-09_10h41.55.657.psydat
+105.5635 	DEBUG 	Saving data for learn_probe ExperimentHandler

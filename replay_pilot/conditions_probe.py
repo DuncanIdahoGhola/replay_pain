@@ -27,27 +27,49 @@ for files in csv_files:
 
     #create a dataframe with 12 rows of target_img = stim_1, stim_2, stim_3, stim_4 3 of each randoized order
     target_img = [stim_1, stim_2, stim_3, stim_4] * 3
-    random.shuffle(target_img)
-    df_target = pd.DataFrame({'target_img': target_img})
+    
+    match_image_1 = stim_2
+    match_image_2 = stim_3
+    match_image_3 = stim_4
+    match_image_4 = stim_1
+
+    match_img = [match_image_1, match_image_2, match_image_3, match_image_4] * 3
+
+    first_six = match_img[:6]
+    rest = match_img[6:]
+    def deranged_shuffle(lst):
+        while True:
+            shuffled = lst[:]
+            random.shuffle(shuffled)
+            # Check that no element is in its original position
+            if all(shuffled[i] != lst[i] for i in range(len(lst))):
+                return shuffled
+
+    first_six_deranged = deranged_shuffle(first_six)
+    match_img = first_six_deranged + rest
+    #create data frame with both lists
+    df_target = pd.DataFrame({'target_img': target_img, 'prob_img': match_img})
 
     #Add cue_text column with the same value for all rows
     df_target['cue_text'] = '->...->...->?'
 
-    #Create column prob_img with same value as target_img for 6 rows and 'blank' for the other 6 rows
-    prob_img = target_img[:6] + ['blank'] * 6
-    df_target['prob_img'] = prob_img
-
-    #Replace df_target blanks with random target_img which are not in target_img
-    for i in range(len(df_target)):
-        if df_target['prob_img'][i] == 'blank':
-            df_target['prob_img'][i] = random.choice([img for img in target_img if img != df_target['target_img'][i]])
-
+    #Create column prob_img with value = the image next in line to target_img for 6 rows and 'blank' for the other 6 rows
+    #Replace df_target blanks with random target_img which are not in target_img and are not next in line to target_img
+    # Create a list of images that are not the target image
     #shuffle the rows of df_target
-    df_target = df_target.sample(frac=1).reset_index(drop=True)     
+    df_target = df_target.sample(frac=1).reset_index(drop=True)
 
-    #Add a corrAns column, value = 1 if prob_img is the same as target_img, else 2
-    df_target['corrAns'] = df_target.apply(lambda row: 1 if row['prob_img'] == row['target_img'] else 2, axis=1)   
-
+    for i in range(len(df_target)):
+        if df_target.loc[i, 'target_img'] == stim_1 and df_target.loc[i, 'prob_img'] == stim_2:
+            df_target.loc[i, 'match'] = 'match'
+        elif df_target.loc[i, 'target_img'] == stim_2 and df_target.loc[i, 'prob_img'] == stim_3:
+            df_target.loc[i, 'match'] = 'match'
+        elif df_target.loc[i, 'target_img'] == stim_3 and df_target.loc[i, 'prob_img'] == stim_4:
+            df_target.loc[i, 'match'] = 'match'
+        elif df_target.loc[i, 'target_img'] == stim_4 and df_target.loc[i, 'prob_img'] == stim_1:
+            df_target.loc[i, 'match'] = 'match'
+        else:
+            df_target.loc[i, 'match'] = 'no_match'
     # Save the DataFrame to a new CSV file
     output_dir = 'conditions_probe'
     os.makedirs(output_dir, exist_ok=True)
