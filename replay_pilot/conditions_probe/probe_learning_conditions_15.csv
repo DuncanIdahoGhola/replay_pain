@@ -1,0 +1,13 @@
+target_img,cue_text,prob_img,corrAns
+stimuli/zebra.png,->...->...->?,stimuli/banana.png,2
+stimuli/face.png,->...->...->?,stimuli/scissor.png,2
+stimuli/banana.png,->...->...->?,stimuli/zebra.png,2
+stimuli/zebra.png,->...->...->?,stimuli/zebra.png,1
+stimuli/scissor.png,->...->...->?,stimuli/banana.png,2
+stimuli/scissor.png,->...->...->?,stimuli/banana.png,2
+stimuli/banana.png,->...->...->?,stimuli/banana.png,1
+stimuli/banana.png,->...->...->?,stimuli/banana.png,1
+stimuli/face.png,->...->...->?,stimuli/face.png,1
+stimuli/scissor.png,->...->...->?,stimuli/scissor.png,1
+stimuli/face.png,->...->...->?,stimuli/banana.png,2
+stimuli/zebra.png,->...->...->?,stimuli/zebra.png,1
