@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on June 04, 2025, at 15:26
+    on June 09, 2025, at 09:12
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -473,7 +473,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         ori=0.0, pos=(0, 0), draggable=False, size=(0.5, 0.5),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
-        texRes=128.0, interpolate=True, depth=0.0)
+        texRes=128.0, interpolate=True, depth=-1.0)
     
     # --- Initialize components for Routine "trials_word" ---
     stim_word = visual.TextStim(win=win, name='stim_word',
@@ -1036,6 +1036,17 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         trials_image.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
+        # Run 'Begin Routine' code from photo_sensor
+        photodiode_box = visual.Rect(
+            win=win,
+            width=50,
+            height=50,
+            fillColor='white',
+            lineColor='white',
+            pos=(-win.size[0]/2 + 25, -win.size[1]/2 + 25),
+            units='pix',
+            autoDraw=False
+        )
         stim_image.setImage(image_file)
         # store start times for trials_image
         trials_image.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
@@ -1069,6 +1080,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
+            # Run 'Each Frame' code from photo_sensor
+            if stim_image.status == STARTED:
+                photodiode_box.autoDraw = True
+            else:
+                photodiode_box.autoDraw = False
             
             # *stim_image* updates
             
@@ -1143,6 +1159,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         trials_image.tStop = globalClock.getTime(format='float')
         trials_image.tStopRefresh = tThisFlipGlobal
         thisExp.addData('trials_image.stopped', trials_image.tStop)
+        # Run 'End Routine' code from photo_sensor
+        photodiode_box.autoDraw = False
         # the Routine "trials_image" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         

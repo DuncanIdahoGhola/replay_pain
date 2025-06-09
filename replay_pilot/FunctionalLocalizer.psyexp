@@ -547,6 +547,23 @@
         <Param val="True" valType="bool" updates="None" name="disabled"/>
         <Param val="eeg_image" valType="code" updates="None" name="name"/>
       </CodeComponent>
+      <CodeComponent name="photo_sensor" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="photodiode_box = new visual.Rect({&quot;win&quot;: psychoJS.window, &quot;width&quot;: 50, &quot;height&quot;: 50, &quot;fillColor&quot;: &quot;white&quot;, &quot;lineColor&quot;: &quot;white&quot;, &quot;pos&quot;: [(((- psychoJS.window.size[0]) / 2) + 25), (((- psychoJS.window.size[1]) / 2) + 25)], &quot;units&quot;: &quot;pix&quot;, &quot;autoDraw&quot;: false});&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="photodiode_box = visual.Rect(&amp;#10;    win=win,&amp;#10;    width=50,&amp;#10;    height=50,&amp;#10;    fillColor='white',&amp;#10;    lineColor='white',&amp;#10;    pos=(-win.size[0]/2 + 25, -win.size[1]/2 + 25),&amp;#10;    units='pix',&amp;#10;    autoDraw=False&amp;#10;)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="if stim_image.status == STARTED:&amp;#10;    photodiode_box.autoDraw = True&amp;#10;else:&amp;#10;    photodiode_box.autoDraw = False" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="if ((stim_image.status === PsychoJS.Status.STARTED)) {&amp;#10;    photodiode_box.autoDraw = true;&amp;#10;} else {&amp;#10;    photodiode_box.autoDraw = false;&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="photodiode_box.autoDraw = false;&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="photodiode_box.autoDraw = False" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="photo_sensor" valType="code" updates="None" name="name"/>
+      </CodeComponent>
       <ImageComponent name="stim_image" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
