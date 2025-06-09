@@ -61,15 +61,15 @@ for files in csv_files:
 
     for i in range(len(df_target)):
         if df_target.loc[i, 'target_img'] == stim_1 and df_target.loc[i, 'prob_img'] == stim_2:
-            df_target.loc[i, 'match'] = 'match'
+            df_target.loc[i, 'is_match'] = 'match'
         elif df_target.loc[i, 'target_img'] == stim_2 and df_target.loc[i, 'prob_img'] == stim_3:
-            df_target.loc[i, 'match'] = 'match'
+            df_target.loc[i, 'is_match'] = 'match'
         elif df_target.loc[i, 'target_img'] == stim_3 and df_target.loc[i, 'prob_img'] == stim_4:
-            df_target.loc[i, 'match'] = 'match'
+            df_target.loc[i, 'is_match'] = 'match'
         elif df_target.loc[i, 'target_img'] == stim_4 and df_target.loc[i, 'prob_img'] == stim_1:
-            df_target.loc[i, 'match'] = 'match'
+            df_target.loc[i, 'is_match'] = 'match'
         else:
-            df_target.loc[i, 'match'] = 'no_match'
+            df_target.loc[i, 'is_match'] = 'no_match'
     # Save the DataFrame to a new CSV file
     output_dir = 'conditions_probe'
     os.makedirs(output_dir, exist_ok=True)

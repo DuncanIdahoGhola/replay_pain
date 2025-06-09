@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on June 09, 2025, at 11:03
+    on June 09, 2025, at 12:54
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -432,7 +432,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "instructions_learning" ---
     text = visual.TextStim(win=win, name='text',
-        text='You will now see pairs of images. Try to learn the sequence. Press space to start.',
+        text='',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -489,7 +489,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "probe_instr" ---
     probe_instr_text = visual.TextStim(win=win, name='probe_instr_text',
-        text='Add probe instr\n\nSpace to qui',
+        text=instr_message,
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
@@ -537,6 +537,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-1.0);
+    # Run 'Begin Experiment' code from save_data
+    
+    
     
     # --- Initialize components for Routine "end_of_block" ---
     text_3 = visual.TextStim(win=win, name='text_3',
@@ -720,7 +723,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # set up handler to look after randomisation of conditions etc
     blocks_loop = data.TrialHandler2(
         name='blocks_loop',
-        nReps=3.0, 
+        nReps=1.0, 
         method='random', 
         extraInfo=expInfo, 
         originPath=-1, 
@@ -757,6 +760,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         instructions_learning.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
+        text.setText('add learning instr here')
         # create starting attributes for key_resp
         key_resp.keys = []
         key_resp.rt = []
@@ -813,20 +817,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if text.status == STARTED:
                 # update params
                 pass
-            
-            # if text is stopping this frame...
-            if text.status == STARTED:
-                # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > text.tStartRefresh + 20-frameTolerance:
-                    # keep track of stop time/frame for later
-                    text.tStop = t  # not accounting for scr refresh
-                    text.tStopRefresh = tThisFlipGlobal  # on global time
-                    text.frameNStop = frameN  # exact frame index
-                    # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'text.stopped')
-                    # update status
-                    text.status = FINISHED
-                    text.setAutoDraw(False)
             
             # *key_resp* updates
             waitOnFlip = False
@@ -908,8 +898,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # set up handler to look after randomisation of conditions etc
         learn_images = data.TrialHandler2(
             name='learn_images',
-            nReps=1.0, 
-            method='sequential', 
+            nReps=3.0, 
+            method='random', 
             extraInfo=expInfo, 
             originPath=-1, 
             trialList=data.importConditions(condition_learn), 
@@ -1545,6 +1535,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             routine_5s_break.tStop = globalClock.getTime(format='float')
             routine_5s_break.tStopRefresh = tThisFlipGlobal
             thisExp.addData('routine_5s_break.stopped', routine_5s_break.tStop)
+            # Run 'End Routine' code from save_data_learn
+            # store data
+            thisExp.addData('pair_stim_1',stim1_img)
+            thisExp.addData('pair_stim_2',stim2_img)
+            thisExp.addData('random_break_dur',random_break)
+            
+            
             # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
             if routine_5s_break.maxDurationReached:
                 routineTimer.addTime(-routine_5s_break.maxDuration)
@@ -1554,7 +1551,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 routineTimer.addTime(-5.000000)
             thisExp.nextEntry()
             
-        # completed 1.0 repeats of 'learn_images'
+        # completed 3.0 repeats of 'learn_images'
         
         if thisSession is not None:
             # if running in a Session with a Liaison client, send data up to now
@@ -1707,7 +1704,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         probe_loop = data.TrialHandler2(
             name='probe_loop',
             nReps=1.0, 
-            method='sequential', 
+            method='random', 
             extraInfo=expInfo, 
             originPath=-1, 
             trialList=data.importConditions(condition_probe), 
@@ -2367,6 +2364,28 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             probe_break.tStop = globalClock.getTime(format='float')
             probe_break.tStopRefresh = tThisFlipGlobal
             thisExp.addData('probe_break.stopped', probe_break.tStop)
+            # Run 'End Routine' code from save_data
+            #store data
+            thisExp.addData('target_image', target_img)
+            thisExp.addData('probe_image', prob_img)
+            
+            if is_match == 'match':
+                correct_key = sequence_good
+            else :
+                correct_key = sequence_bad
+                
+            if probe_resp_test.keys and probe_resp_test.keys[0] == correct_key:
+                thisExp.addData('response_good_bad', 1)
+            else:
+                thisExp.addData('response_good_bad', 0)
+                
+            if probe_resp_test.keys:
+                thisExp.addData('response_given', probe_resp_test.keys[0])
+                thisExp.addData('response_rt', key_resp.rt)
+            else: 
+                thisExp.addData('response_given', None) 
+                thisExp.addData('response_rt', None)
+                
             # the Routine "probe_break" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             thisExp.nextEntry()
@@ -2525,7 +2544,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         routineTimer.reset()
         thisExp.nextEntry()
         
-    # completed 3.0 repeats of 'blocks_loop'
+    # completed 1.0 repeats of 'blocks_loop'
     
     if thisSession is not None:
         # if running in a Session with a Liaison client, send data up to now
