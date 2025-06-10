@@ -303,7 +303,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="port.write([0]);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="port.write([0x00])" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="None" name="disabled"/>
         <Param val="eeg_fix" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
@@ -338,7 +338,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="port.write([0]);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="port.write([0x00])" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="None" name="disabled"/>
         <Param val="eeg_image_1" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <ImageComponent name="first_of_pair" plugin="None">
@@ -384,7 +384,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="photodiode_box.autoDraw = false;&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="photodiode_box.autoDraw = False" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="None" name="disabled"/>
         <Param val="photo_sensor" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
@@ -419,7 +419,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="port.write([0]);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="port.write([0x00])" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="None" name="disabled"/>
         <Param val="eeg_blank" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <CodeComponent name="random_break_timer" plugin="None">
@@ -527,7 +527,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="port.write([0]);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="port.write([0x00])" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="None" name="disabled"/>
         <Param val="eeg_image_2" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <CodeComponent name="photo_sensor_2" plugin="None">
@@ -544,7 +544,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="photodiode_box.autoDraw = false;&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="photodiode_box.autoDraw = False" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="None" name="disabled"/>
         <Param val="photo_sensor_2" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
@@ -735,7 +735,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="port.write([0]);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="port.write([0x00])" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="None" name="disabled"/>
         <Param val="eeg_prob_1" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <CodeComponent name="photo_sensor_3" plugin="None">
@@ -752,7 +752,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="photodiode_box.autoDraw = false;&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="photodiode_box.autoDraw = False" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="None" name="disabled"/>
         <Param val="photo_sensor_3" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
@@ -878,7 +878,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="port.write([0]);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="port.write([0x00])" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="None" name="disabled"/>
         <Param val="eeg_probe_2" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <CodeComponent name="photo_sensor_4" plugin="None">
@@ -895,7 +895,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="photodiode_box.autoDraw = false;&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="photodiode_box.autoDraw = False" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="None" name="disabled"/>
         <Param val="photo_sensor_4" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
@@ -1073,7 +1073,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="port.write([0]);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="port.write([0x00])" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="None" name="disabled"/>
         <Param val="eeg_blank_2" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
@@ -1319,7 +1319,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="None" name="disabled"/>
         <Param val="start_eeg_1" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>

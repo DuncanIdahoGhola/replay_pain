@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on June 09, 2025, at 09:12
+    on June 10, 2025, at 10:47
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -119,7 +119,7 @@ def setupData(expInfo, dataDir=None):
     # data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc
     if dataDir is None:
         dataDir = _thisDir
-    filename = u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])
+    filename = u'data/%s/func_loc/%s_%s_%s' % (expInfo['participant'], expInfo['participant'], expName, expInfo['date'])
     # make sure filename is relative to dataDir
     if os.path.isabs(filename):
         dataDir = os.path.commonprefix([dataDir, filename])
@@ -1019,6 +1019,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         fixation_2.tStop = globalClock.getTime(format='float')
         fixation_2.tStopRefresh = tThisFlipGlobal
         thisExp.addData('fixation_2.stopped', fixation_2.tStop)
+        # Run 'End Routine' code from trial_code
+        print(image_file)
         # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
         if fixation_2.maxDurationReached:
             routineTimer.addTime(-fixation_2.maxDuration)
