@@ -2,76 +2,118 @@ import pandas as pd
 import random
 import os
 
-#we want to find for each learning conditions what order the stimuli is in 
-#Find path to the conditions_learning folders
+# --- Configuration ---
+# Define the input and output directories here.
+# This makes it easy to change them later.
+LEARNING_CONDITIONS_DIR = 'conditions_learning'
+PROBE_CONDITIONS_DIR = 'conditions_probe'
 
-cond_learning_path = os.path.join(os.getcwd(), 'conditions_learning')
-
-# Get a list of all files in the conditions_learning directory
-files = os.listdir(cond_learning_path)
-# Filter the list to include only .csv files
-csv_files = [f for f in files if f.endswith('.csv')]
-
-
-#to make it easy get only the first file
-for files in csv_files:
-    # Read the CSV file into a DataFrame
-    random.seed(files)
-    df = pd.read_csv(os.path.join(cond_learning_path, files))
+def generate_mock_learning_files(num_files=100):
+    """
+    Generates mock learning condition files into the specified directory.
+    This is for demonstration if you don't have the files yet.
+    """
+    print(f"--- Generating {num_files} mock learning files for demonstration ---")
     
-    #make a list of the order of the stimuli (A_B_C_D)
-    stim_1 = df['stim1_img'][0]
-    stim_2 = df['stim1_img'][1]
-    stim_3 = df['stim1_img'][2]
-    stim_4 = df['stim2_img'][2]
+    # Create the learning directory if it doesn't exist
+    os.makedirs(LEARNING_CONDITIONS_DIR, exist_ok=True)
 
-    #create a dataframe with 12 rows of target_img = stim_1, stim_2, stim_3, stim_4 3 of each randoized order
-    target_img = [stim_1, stim_2, stim_3, stim_4] * 3
+    base_stimuli = [
+        'stimuli/face.png', 'stimuli/scissor.png',
+        'stimuli/zebra.png', 'stimuli/banana.png'
+    ]
+
+    for i in range(1, num_files + 1):
+        random.shuffle(base_stimuli)
+        pairs = [
+            {'pair_name': 'A_B', 'stim1_img': base_stimuli[0], 'stim2_img': base_stimuli[1]},
+            {'pair_name': 'B_C', 'stim1_img': base_stimuli[1], 'stim2_img': base_stimuli[2]},
+            {'pair_name': 'C_D', 'stim1_img': base_stimuli[2], 'stim2_img': base_stimuli[3]}
+        ]
+        df = pd.DataFrame(pairs)
+        
+        # *** CHANGE: Use os.path.join to save into the correct folder ***
+        filename = os.path.join(LEARNING_CONDITIONS_DIR, f'learning_conditions_{i}.csv')
+        df.to_csv(filename, index=False)
+        
+    print(f"--- Mock files generated in '{LEARNING_CONDITIONS_DIR}/' folder. ---\n")
+
+
+def create_probe_file_for_participant(participant_id):
+    """
+    Reads a learning file from the input directory and creates a 
+    corresponding probe file in the output directory.
+    """
+    # *** CHANGE: Build the full path for the input file ***
+    learning_file = os.path.join(LEARNING_CONDITIONS_DIR, f'learning_conditions_{participant_id}.csv')
     
-    match_image_1 = stim_2
-    match_image_2 = stim_3
-    match_image_3 = stim_4
-    match_image_4 = stim_1
+    # *** CHANGE: Build the full path for the output file ***
+    output_file = os.path.join(PROBE_CONDITIONS_DIR, f'probe_conditions_{participant_id}.csv')
 
-    match_img = [match_image_1, match_image_2, match_image_3, match_image_4] * 3
+    if not os.path.exists(learning_file):
+        print(f"Warning: {learning_file} not found. Skipping participant {participant_id}.")
+        return
 
-    first_six = match_img[:6]
-    rest = match_img[6:]
-    def deranged_shuffle(lst):
-        while True:
-            shuffled = lst[:]
-            random.shuffle(shuffled)
-            # Check that no element is in its original position
-            if all(shuffled[i] != lst[i] for i in range(len(lst))):
-                return shuffled
+    # 1. Read the learning file and determine the sequence
+    df_learn = pd.read_csv(learning_file)
+    sequence = [df_learn['stim1_img'][0]] + df_learn['stim2_img'].tolist()
+    all_stimuli_set = set(sequence)
+    possible_targets = sequence[:-1]
 
-    first_six_deranged = deranged_shuffle(first_six)
-    match_img = first_six_deranged + rest
-    #create data frame with both lists
-    df_target = pd.DataFrame({'target_img': target_img, 'prob_img': match_img})
+    trials = []
+    cue_text = "What comes next?"
 
-    #Add cue_text column with the same value for all rows
-    df_target['cue_text'] = '->...->...->?'
+    # 2. Generate 6 MATCH trials
+    for _ in range(2):
+        for i, target_img in enumerate(possible_targets):
+            correct_probe_img = sequence[i + 1]
+            trials.append({
+                'target_img': target_img, 'probe_img': correct_probe_img,
+                'cue_text': cue_text, 'is_match': 'match'
+            })
 
-    #Create column prob_img with value = the image next in line to target_img for 6 rows and 'blank' for the other 6 rows
-    #Replace df_target blanks with random target_img which are not in target_img and are not next in line to target_img
-    # Create a list of images that are not the target image
-    #shuffle the rows of df_target
-    df_target = df_target.sample(frac=1).reset_index(drop=True)
+    # 3. Generate 6 NON-MATCH trials
+    for i, target_img in enumerate(possible_targets):
+        correct_probe_img = sequence[i + 1]
+        possible_non_matches = list(all_stimuli_set - {target_img, correct_probe_img})
+        trials.append({
+            'target_img': target_img, 'probe_img': possible_non_matches[0],
+            'cue_text': cue_text, 'is_match': 'non-match'
+        })
+        trials.append({
+            'target_img': target_img, 'probe_img': possible_non_matches[1],
+            'cue_text': cue_text, 'is_match': 'non-match'
+        })
+        
+    # 4. Randomize the order of all 12 trials
+    random.shuffle(trials)
 
-    for i in range(len(df_target)):
-        if df_target.loc[i, 'target_img'] == stim_1 and df_target.loc[i, 'prob_img'] == stim_2:
-            df_target.loc[i, 'is_match'] = 'match'
-        elif df_target.loc[i, 'target_img'] == stim_2 and df_target.loc[i, 'prob_img'] == stim_3:
-            df_target.loc[i, 'is_match'] = 'match'
-        elif df_target.loc[i, 'target_img'] == stim_3 and df_target.loc[i, 'prob_img'] == stim_4:
-            df_target.loc[i, 'is_match'] = 'match'
-        elif df_target.loc[i, 'target_img'] == stim_4 and df_target.loc[i, 'prob_img'] == stim_1:
-            df_target.loc[i, 'is_match'] = 'match'
-        else:
-            df_target.loc[i, 'is_match'] = 'no_match'
-    # Save the DataFrame to a new CSV file
-    output_dir = 'conditions_probe'
-    os.makedirs(output_dir, exist_ok=True)
-    output_file = os.path.join(output_dir, f'probe_{files}')
-    df_target.to_csv(output_file, index=False)
+    # 5. Create a DataFrame and save to the specified output CSV
+    df_probe = pd.DataFrame(trials)
+    df_probe.to_csv(output_file, index=False)
+    
+    print(f"Successfully created {output_file} from {learning_file}.")
+
+
+# --- Main Execution ---
+if __name__ == "__main__":
+    # If you need to generate test files, uncomment the next line.
+    # generate_mock_learning_files(num_files=100)
+
+    # *** CHANGE: Create the output directory before starting the loop. ***
+    # The exist_ok=True argument prevents an error if the folder already exists.
+    print(f"Ensuring output directory '{PROBE_CONDITIONS_DIR}/' exists...")
+    os.makedirs(PROBE_CONDITIONS_DIR, exist_ok=True)
+    print("...directory ready.\n")
+
+    # Now, loop through all participants and generate their probe files
+    for i in range(1, 101):
+        create_probe_file_for_participant(i)
+
+    print("\n--- All probe condition files have been generated. ---")
+    
+    # You can inspect one of the generated files to see the output
+    example_file_path = os.path.join(PROBE_CONDITIONS_DIR, 'probe_conditions_1.csv')
+    print(f"\nExample output from '{example_file_path}':")
+    if os.path.exists(example_file_path):
+        print(pd.read_csv(example_file_path))

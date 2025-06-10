@@ -1,0 +1,13 @@
+target_img,probe_img,cue_text,is_match
+stimuli/zebra.png,stimuli/face.png,What comes next?,match
+stimuli/zebra.png,stimuli/face.png,What comes next?,match
+stimuli/scissor.png,stimuli/face.png,What comes next?,non-match
+stimuli/zebra.png,stimuli/scissor.png,What comes next?,non-match
+stimuli/banana.png,stimuli/zebra.png,What comes next?,match
+stimuli/banana.png,stimuli/scissor.png,What comes next?,non-match
+stimuli/banana.png,stimuli/face.png,What comes next?,non-match
+stimuli/scissor.png,stimuli/zebra.png,What comes next?,non-match
+stimuli/zebra.png,stimuli/banana.png,What comes next?,non-match
+stimuli/scissor.png,stimuli/banana.png,What comes next?,match
+stimuli/banana.png,stimuli/zebra.png,What comes next?,match
+stimuli/scissor.png,stimuli/banana.png,What comes next?,match

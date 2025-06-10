@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on June 09, 2025, at 12:54
+    on June 10, 2025, at 08:08
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -116,7 +116,7 @@ def setupData(expInfo, dataDir=None):
     # data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc
     if dataDir is None:
         dataDir = _thisDir
-    filename = u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])
+    filename = u'data/%s/learn_prob/%s_%s_%s' % (expInfo['participant'], expInfo['participant'], expName, expInfo['date'])
     # make sure filename is relative to dataDir
     if os.path.isabs(filename):
         dataDir = os.path.commonprefix([dataDir, filename])
@@ -528,6 +528,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "probe_resp" ---
     probe_resp_test = keyboard.Keyboard(deviceName='probe_resp_test')
+    text_4 = visual.TextStim(win=win, name='text_4',
+        text='answer',
+        font='Arial',
+        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-1.0);
     
     # --- Initialize components for Routine "probe_break" ---
     text_2 = visual.TextStim(win=win, name='text_2',
@@ -1556,6 +1563,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if thisSession is not None:
             # if running in a Session with a Liaison client, send data up to now
             thisSession.sendExperimentData()
+        # get names of stimulus parameters
+        if learn_images.trialList in ([], [None], None):
+            params = []
+        else:
+            params = learn_images.trialList[0].keys()
+        # save data for this loop
+        learn_images.saveAsText(filename + 'learn_images.csv', delim=',',
+            stimOut=params,
+            dataOut=['n','all_mean','all_std', 'all_raw'])
         
         # --- Prepare to start Routine "probe_instr" ---
         # create an object to store info about Routine probe_instr
@@ -2106,7 +2122,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine probe_resp
             probe_resp = data.Routine(
                 name='probe_resp',
-                components=[probe_resp_test],
+                components=[probe_resp_test, text_4],
             )
             probe_resp.status = NOT_STARTED
             continueRoutine = True
@@ -2189,6 +2205,40 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         probe_resp_test.duration = _probe_resp_test_allKeys[-1].duration
                         # a response ends the routine
                         continueRoutine = False
+                
+                # *text_4* updates
+                
+                # if text_4 is starting this frame...
+                if text_4.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    text_4.frameNStart = frameN  # exact frame index
+                    text_4.tStart = t  # local t and not account for scr refresh
+                    text_4.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(text_4, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'text_4.started')
+                    # update status
+                    text_4.status = STARTED
+                    text_4.setAutoDraw(True)
+                
+                # if text_4 is active this frame...
+                if text_4.status == STARTED:
+                    # update params
+                    pass
+                
+                # if text_4 is stopping this frame...
+                if text_4.status == STARTED:
+                    # is it time to stop? (based on global clock, using actual start)
+                    if tThisFlipGlobal > text_4.tStartRefresh + 4-frameTolerance:
+                        # keep track of stop time/frame for later
+                        text_4.tStop = t  # not accounting for scr refresh
+                        text_4.tStopRefresh = tThisFlipGlobal  # on global time
+                        text_4.frameNStop = frameN  # exact frame index
+                        # add timestamp to datafile
+                        thisExp.timestampOnFlip(win, 'text_4.stopped')
+                        # update status
+                        text_4.status = FINISHED
+                        text_4.setAutoDraw(False)
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2395,6 +2445,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if thisSession is not None:
             # if running in a Session with a Liaison client, send data up to now
             thisSession.sendExperimentData()
+        # get names of stimulus parameters
+        if probe_loop.trialList in ([], [None], None):
+            params = []
+        else:
+            params = probe_loop.trialList[0].keys()
+        # save data for this loop
+        probe_loop.saveAsText(filename + 'probe_loop.csv', delim=',',
+            stimOut=params,
+            dataOut=['n','all_mean','all_std', 'all_raw'])
         
         # --- Prepare to start Routine "end_of_block" ---
         # create an object to store info about Routine end_of_block
@@ -2549,6 +2608,15 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     if thisSession is not None:
         # if running in a Session with a Liaison client, send data up to now
         thisSession.sendExperimentData()
+    # get names of stimulus parameters
+    if blocks_loop.trialList in ([], [None], None):
+        params = []
+    else:
+        params = blocks_loop.trialList[0].keys()
+    # save data for this loop
+    blocks_loop.saveAsText(filename + 'blocks_loop.csv', delim=',',
+        stimOut=params,
+        dataOut=['n','all_mean','all_std', 'all_raw'])
     
     # mark experiment as finished
     endExperiment(thisExp, win=win)
