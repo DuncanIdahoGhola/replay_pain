@@ -1,0 +1,39 @@
+# 0 - b'\x01'
+# 1 - b'\x02'
+# 2 - b'\x04'
+# 3 - b'\x08'
+# 4 - b'\x20'
+# 5 - b'\x40'
+# 6 - b'\x80'
+
+0 - fix
+1 - blank
+2 - stimulis
+3- resp
+4- Word
+5- Kreark
+6- 
+7 - photosensor
+
+
+Func localizer trigg 
+
+Fix - Stim - Word - Blank - Resp (add something for feedback routine?) 
+
+
+
+
+
+Task learn prob -
+
+Learning triggers should be in order 
+
+Fix - Stim - Blank - Word - Kreak
+
+probe triggers
+
+Stim-Blank-Word-resp-Kreak
+
+Cued-Mental 
+
+Word - Fix - Stimuli - Reponse 

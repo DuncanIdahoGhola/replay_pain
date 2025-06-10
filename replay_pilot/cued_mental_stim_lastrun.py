@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on June 10, 2025, at 10:59
+    on June 10, 2025, at 11:33
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -126,7 +126,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\labmp\\Desktop\\git\\replay_pain\\replay_pilot\\cued_mental_stim_lastrun.py',
+        originPath='E:\\replay_pilot_eeg\\replay_pilot\\cued_mental_stim_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -706,7 +706,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         continueRoutine = True
         # update component parameters for each repeat
         cue_stim.setText(cue_text)
-        probe_image.setImage(probe_image)
+        probe_image.setImage(probe_image_file)
         # create starting attributes for key_resp_probe
         key_resp_probe.keys = []
         key_resp_probe.rt = []

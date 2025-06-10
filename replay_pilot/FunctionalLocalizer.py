@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on June 04, 2025, at 14:53
+    on June 10, 2025, at 11:27
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -119,7 +119,7 @@ def setupData(expInfo, dataDir=None):
     # data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc
     if dataDir is None:
         dataDir = _thisDir
-    filename = u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])
+    filename = u'data/%s/func_loc/%s_%s_%s' % (expInfo['participant'], expInfo['participant'], expName, expInfo['date'])
     # make sure filename is relative to dataDir
     if os.path.isabs(filename):
         dataDir = os.path.commonprefix([dataDir, filename])
@@ -129,7 +129,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\labmp\\Desktop\\git\\replay_pain\\replay_pilot\\FunctionalLocalizer.py',
+        originPath='E:\\replay_pilot_eeg\\replay_pilot\\FunctionalLocalizer.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -473,7 +473,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         ori=0.0, pos=(0, 0), draggable=False, size=(0.5, 0.5),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
-        texRes=128.0, interpolate=True, depth=0.0)
+        texRes=128.0, interpolate=True, depth=-1.0)
     
     # --- Initialize components for Routine "trials_word" ---
     stim_word = visual.TextStim(win=win, name='stim_word',
@@ -872,7 +872,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         method='sequential', 
         extraInfo=expInfo, 
         originPath=-1, 
-        trialList=data.importConditions('condition_path'), 
+        trialList=data.importConditions(condition_path), 
         seed=None, 
     )
     thisExp.addLoop(inside_loop_trials)  # add the loop to the experiment
@@ -1036,6 +1036,17 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         trials_image.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
+        # Run 'Begin Routine' code from photo_sensor
+        photodiode_box = visual.Rect(
+            win=win,
+            width=50,
+            height=50,
+            fillColor='white',
+            lineColor='white',
+            pos=(-win.size[0]/2 + 25, -win.size[1]/2 + 25),
+            units='pix',
+            autoDraw=False
+        )
         stim_image.setImage(image_file)
         # store start times for trials_image
         trials_image.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
@@ -1069,6 +1080,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
+            # Run 'Each Frame' code from photo_sensor
+            if stim_image.status == STARTED:
+                photodiode_box.autoDraw = True
+            else:
+                photodiode_box.autoDraw = False
             
             # *stim_image* updates
             
@@ -1143,6 +1159,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         trials_image.tStop = globalClock.getTime(format='float')
         trials_image.tStopRefresh = tThisFlipGlobal
         thisExp.addData('trials_image.stopped', trials_image.tStop)
+        # Run 'End Routine' code from photo_sensor
+        photodiode_box.autoDraw = False
         # the Routine "trials_image" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         

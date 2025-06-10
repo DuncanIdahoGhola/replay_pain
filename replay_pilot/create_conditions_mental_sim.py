@@ -87,7 +87,7 @@ for p_id in range(1, NUM_PARTICIPANTS + 1):
                 'block': block_num,
                 'cue_direction': cue_dir,
                 'cue_text': cue_text,
-                'probe_image': probe_image,
+                'probe_image_file': probe_image,
                 'correct_response': correct_response
             })
         else : 
@@ -103,14 +103,14 @@ for p_id in range(1, NUM_PARTICIPANTS + 1):
                 'block': block_num,
                 'cue_direction': cue_dir,
                 'cue_text': cue_text,
-                'probe_image': probe_image,
+                'probe_image_file': probe_image,
                 'correct_response': correct_response
             })
 
     # Write all trials to a single CSV in the main /conditions folder
     output_filename = output_conditions_path / f'p{p_id}_mental_sim_conditions.csv'
     with open(output_filename, 'w', newline='') as f:
-        fieldnames = ['block', 'cue_direction', 'cue_text', 'probe_image', 'correct_response']
+        fieldnames = ['block', 'cue_direction', 'cue_text', 'probe_image_file', 'correct_response']
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(final_trials)
