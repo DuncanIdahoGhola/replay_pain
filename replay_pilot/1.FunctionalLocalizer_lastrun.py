@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on June 10, 2025, at 14:12
+    on June 10, 2025, at 15:24
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -126,7 +126,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='E:\\replay_pilot_eeg\\replay_pilot\\FunctionalLocalizer.py',
+        originPath='E:\\replay_pilot_eeg\\replay_pilot\\1.FunctionalLocalizer_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -1425,7 +1425,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # update/draw components on each frame
             # Run 'Each Frame' code from eeg_word
             if stim_word.status == STARTED and wait_sent == 0: #If the stimulus component has started and the trigger has not yet been sent. Change 'stimulus' to match the name of the component you want the trigger to be sent at the same time as
-                win.callOnFlip(port.write, data=b'\x20') #Send the trigger, synced to the screen refresh
+                win.callOnFlip(port.write, data=b'\x10') #Send the trigger, synced to the screen refresh
                 #win.callOnFlip(eci_client.send_event, event_type = 'wait') #Send the trigger, synced to the screen refresh
                 wait_sent = 1 #The wait has now been sent, so we set this to true to avoid a trigger being sent on each frame
             

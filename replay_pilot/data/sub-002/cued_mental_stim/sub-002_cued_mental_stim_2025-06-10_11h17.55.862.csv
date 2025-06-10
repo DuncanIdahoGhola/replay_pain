@@ -1,3 +1,0 @@
-﻿block,cue_direction,cue_text,probe_image,correct_response,thisN,thisTrialN,thisRepN,trials_loop.thisRepN,trials_loop.thisTrialN,trials_loop.thisN,trials_loop.thisIndex,thisRow.t,notes,instr_task.started,task_instr_text.started,quit_instr.started,instr_task.stopped,quit_instr.keys,quit_instr.rt,quit_instr.duration,participant,session,date,expName,psychopyVersion,frameRate,sequence_good_key,sequence_bad_key,allowed_keys_list,expStart,
-,,,,,,,,,,,,,,0.026389700000436278,0.031577600000673556,0.031577600000673556,1.0791715000004842,space,1.0321796999996877,None,sub-002,001,2025-06-10_11h17.55.862,cued_mental_stim,2024.2.4,60.099585012188925,1,2,"['1', '2']",2025-06-10 11h18.03.790585 -0400,
-1,backward,<- 4,stimuli/new3.png,2,0,0,0,0,0,0,2,,,,,,,,,,,,,,,,,,,,

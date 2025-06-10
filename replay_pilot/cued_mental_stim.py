@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on June 10, 2025, at 11:30
+    on June 10, 2025, at 14:18
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -266,6 +266,12 @@ def setupDevices(expInfo, thisExp, win):
             deviceClass='keyboard',
             deviceName='quit_instr',
         )
+    if deviceManager.getDevice('exit_eeg_text') is None:
+        # initialise exit_eeg_text
+        exit_eeg_text = deviceManager.addDevice(
+            deviceClass='keyboard',
+            deviceName='exit_eeg_text',
+        )
     if deviceManager.getDevice('key_resp_probe') is None:
         # initialise key_resp_probe
         key_resp_probe = deviceManager.addDevice(
@@ -392,6 +398,48 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Start Code - component code to be run after the window creation
     
     # --- Initialize components for Routine "instr_task" ---
+    # Run 'Begin Experiment' code from init_eeg
+    
+    # EEG
+    import struct
+    import serial
+    import time
+    # Trigger box Plus COM port
+    adress = 'COM17'
+    def init_port(adress):
+        port = serial.Serial(adress, baudrate=2000000)
+        time.sleep(1) # Wait to make sure it's open
+        return port
+    
+    def write_port(port, pin):
+        """
+        Turn on one of the ditigal pin
+        pin: integer in range 2-13
+        """
+        # Convert to string
+        string = b'' + struct.pack('!B', pin)
+        # Write
+        port.write(string)
+        
+    port = init_port(adress)
+    port.write([0x00])
+    
+    # Init EEG
+    from psychopy.hardware import brainproducts
+    rcs = brainproducts.RemoteControlServer(host='192.168.1.2',timeout=5)
+    
+    rcs.openRecorder()
+    time.sleep(2)
+    rcs.workspace = 'C:/Users/labmp-eeg/Desktop/antoine_cognitivemaps/antoine_cognitivemaps.rwksp'
+    rcs.participant = expInfo['participant'] + '_' + expInfo['date']
+    rcs.expName = 'cmapsfuncloc'
+    time.sleep(5)
+    rcs.mode = 'monitor' 
+    time.sleep(2)
+    
+    
+    
+    
     # Run 'Begin Experiment' code from start_code
     import random
     import pandas as pd
@@ -430,8 +478,31 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-1.0);
+        depth=-2.0);
     quit_instr = keyboard.Keyboard(deviceName='quit_instr')
+    
+    # --- Initialize components for Routine "start_eeg" ---
+    # Run 'Begin Experiment' code from start_eeg_1
+    rec_start = core.monotonicClock.getTime()
+    rcs.startRecording()
+    EEG_start_text = visual.TextStim(win=win, name='EEG_start_text',
+        text='Check EEG recording',
+        font='Arial',
+        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-1.0);
+    exit_eeg_text = keyboard.Keyboard(deviceName='exit_eeg_text')
+    
+    # --- Initialize components for Routine "image_load" ---
+    image_load_text = visual.TextStim(win=win, name='image_load_text',
+        text=None,
+        font='Arial',
+        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=0.0);
+    imag_loader = clock.StaticPeriod(win=win, screenHz=expInfo['frameRate'], name='imag_loader')
     
     # --- Initialize components for Routine "trial" ---
     cue_stim = visual.TextStim(win=win, name='cue_stim',
@@ -440,14 +511,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=0.0);
+        depth=-3.0);
     fixation_stim = visual.TextStim(win=win, name='fixation_stim',
         text='+',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-1.0);
+        depth=-4.0);
     probe_image = visual.ImageStim(
         win=win,
         name='probe_image', 
@@ -455,7 +526,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         ori=0.0, pos=(0, 0), draggable=False, size=(0.5, 0.5),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
-        texRes=128.0, interpolate=True, depth=-2.0)
+        texRes=128.0, interpolate=True, depth=-5.0)
     key_resp_probe = keyboard.Keyboard(deviceName='key_resp_probe')
     
     # --- Initialize components for Routine "rating" ---
@@ -665,6 +736,161 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # the Routine "instr_task" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
+    # --- Prepare to start Routine "start_eeg" ---
+    # create an object to store info about Routine start_eeg
+    start_eeg = data.Routine(
+        name='start_eeg',
+        components=[EEG_start_text, exit_eeg_text],
+    )
+    start_eeg.status = NOT_STARTED
+    continueRoutine = True
+    # update component parameters for each repeat
+    # create starting attributes for exit_eeg_text
+    exit_eeg_text.keys = []
+    exit_eeg_text.rt = []
+    _exit_eeg_text_allKeys = []
+    # store start times for start_eeg
+    start_eeg.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+    start_eeg.tStart = globalClock.getTime(format='float')
+    start_eeg.status = STARTED
+    thisExp.addData('start_eeg.started', start_eeg.tStart)
+    start_eeg.maxDuration = None
+    # keep track of which components have finished
+    start_eegComponents = start_eeg.components
+    for thisComponent in start_eeg.components:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    frameN = -1
+    
+    # --- Run Routine "start_eeg" ---
+    start_eeg.forceEnded = routineForceEnded = not continueRoutine
+    while continueRoutine:
+        # get current time
+        t = routineTimer.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *EEG_start_text* updates
+        
+        # if EEG_start_text is starting this frame...
+        if EEG_start_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            EEG_start_text.frameNStart = frameN  # exact frame index
+            EEG_start_text.tStart = t  # local t and not account for scr refresh
+            EEG_start_text.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(EEG_start_text, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'EEG_start_text.started')
+            # update status
+            EEG_start_text.status = STARTED
+            EEG_start_text.setAutoDraw(True)
+        
+        # if EEG_start_text is active this frame...
+        if EEG_start_text.status == STARTED:
+            # update params
+            pass
+        
+        # if EEG_start_text is stopping this frame...
+        if EEG_start_text.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > EEG_start_text.tStartRefresh + 5-frameTolerance:
+                # keep track of stop time/frame for later
+                EEG_start_text.tStop = t  # not accounting for scr refresh
+                EEG_start_text.tStopRefresh = tThisFlipGlobal  # on global time
+                EEG_start_text.frameNStop = frameN  # exact frame index
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'EEG_start_text.stopped')
+                # update status
+                EEG_start_text.status = FINISHED
+                EEG_start_text.setAutoDraw(False)
+        
+        # *exit_eeg_text* updates
+        waitOnFlip = False
+        
+        # if exit_eeg_text is starting this frame...
+        if exit_eeg_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            exit_eeg_text.frameNStart = frameN  # exact frame index
+            exit_eeg_text.tStart = t  # local t and not account for scr refresh
+            exit_eeg_text.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(exit_eeg_text, 'tStartRefresh')  # time at next scr refresh
+            # add timestamp to datafile
+            thisExp.timestampOnFlip(win, 'exit_eeg_text.started')
+            # update status
+            exit_eeg_text.status = STARTED
+            # keyboard checking is just starting
+            waitOnFlip = True
+            win.callOnFlip(exit_eeg_text.clock.reset)  # t=0 on next screen flip
+            win.callOnFlip(exit_eeg_text.clearEvents, eventType='keyboard')  # clear events on next screen flip
+        if exit_eeg_text.status == STARTED and not waitOnFlip:
+            theseKeys = exit_eeg_text.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+            _exit_eeg_text_allKeys.extend(theseKeys)
+            if len(_exit_eeg_text_allKeys):
+                exit_eeg_text.keys = _exit_eeg_text_allKeys[-1].name  # just the last key pressed
+                exit_eeg_text.rt = _exit_eeg_text_allKeys[-1].rt
+                exit_eeg_text.duration = _exit_eeg_text_allKeys[-1].duration
+                # a response ends the routine
+                continueRoutine = False
+        
+        # check for quit (typically the Esc key)
+        if defaultKeyboard.getKeys(keyList=["escape"]):
+            thisExp.status = FINISHED
+        if thisExp.status == FINISHED or endExpNow:
+            endExperiment(thisExp, win=win)
+            return
+        # pause experiment here if requested
+        if thisExp.status == PAUSED:
+            pauseExperiment(
+                thisExp=thisExp, 
+                win=win, 
+                timers=[routineTimer], 
+                playbackComponents=[]
+            )
+            # skip the frame we paused on
+            continue
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            start_eeg.forceEnded = routineForceEnded = True
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in start_eeg.components:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # --- Ending Routine "start_eeg" ---
+    for thisComponent in start_eeg.components:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    # store stop times for start_eeg
+    start_eeg.tStop = globalClock.getTime(format='float')
+    start_eeg.tStopRefresh = tThisFlipGlobal
+    thisExp.addData('start_eeg.stopped', start_eeg.tStop)
+    # check responses
+    if exit_eeg_text.keys in ['', [], None]:  # No response was made
+        exit_eeg_text.keys = None
+    thisExp.addData('exit_eeg_text.keys',exit_eeg_text.keys)
+    if exit_eeg_text.keys != None:  # we had a response
+        thisExp.addData('exit_eeg_text.rt', exit_eeg_text.rt)
+        thisExp.addData('exit_eeg_text.duration', exit_eeg_text.duration)
+    thisExp.nextEntry()
+    # the Routine "start_eeg" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
+    
     # set up handler to look after randomisation of conditions etc
     trials_loop = data.TrialHandler2(
         name='trials_loop',
@@ -696,6 +922,150 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             for paramName in thisTrials_loop:
                 globals()[paramName] = thisTrials_loop[paramName]
         
+        # --- Prepare to start Routine "image_load" ---
+        # create an object to store info about Routine image_load
+        image_load = data.Routine(
+            name='image_load',
+            components=[image_load_text, imag_loader],
+        )
+        image_load.status = NOT_STARTED
+        continueRoutine = True
+        # update component parameters for each repeat
+        # store start times for image_load
+        image_load.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+        image_load.tStart = globalClock.getTime(format='float')
+        image_load.status = STARTED
+        thisExp.addData('image_load.started', image_load.tStart)
+        image_load.maxDuration = None
+        # keep track of which components have finished
+        image_loadComponents = image_load.components
+        for thisComponent in image_load.components:
+            thisComponent.tStart = None
+            thisComponent.tStop = None
+            thisComponent.tStartRefresh = None
+            thisComponent.tStopRefresh = None
+            if hasattr(thisComponent, 'status'):
+                thisComponent.status = NOT_STARTED
+        # reset timers
+        t = 0
+        _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+        frameN = -1
+        
+        # --- Run Routine "image_load" ---
+        # if trial has changed, end Routine now
+        if isinstance(trials_loop, data.TrialHandler2) and thisTrials_loop.thisN != trials_loop.thisTrial.thisN:
+            continueRoutine = False
+        image_load.forceEnded = routineForceEnded = not continueRoutine
+        while continueRoutine and routineTimer.getTime() < 0.3:
+            # get current time
+            t = routineTimer.getTime()
+            tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+            tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+            frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+            # update/draw components on each frame
+            
+            # *image_load_text* updates
+            
+            # if image_load_text is starting this frame...
+            if image_load_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                image_load_text.frameNStart = frameN  # exact frame index
+                image_load_text.tStart = t  # local t and not account for scr refresh
+                image_load_text.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(image_load_text, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'image_load_text.started')
+                # update status
+                image_load_text.status = STARTED
+                image_load_text.setAutoDraw(True)
+            
+            # if image_load_text is active this frame...
+            if image_load_text.status == STARTED:
+                # update params
+                pass
+            
+            # if image_load_text is stopping this frame...
+            if image_load_text.status == STARTED:
+                # is it time to stop? (based on global clock, using actual start)
+                if tThisFlipGlobal > image_load_text.tStartRefresh + 0.3-frameTolerance:
+                    # keep track of stop time/frame for later
+                    image_load_text.tStop = t  # not accounting for scr refresh
+                    image_load_text.tStopRefresh = tThisFlipGlobal  # on global time
+                    image_load_text.frameNStop = frameN  # exact frame index
+                    # add timestamp to datafile
+                    thisExp.timestampOnFlip(win, 'image_load_text.stopped')
+                    # update status
+                    image_load_text.status = FINISHED
+                    image_load_text.setAutoDraw(False)
+            # *imag_loader* period
+            
+            # if imag_loader is starting this frame...
+            if imag_loader.status == NOT_STARTED and t >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                imag_loader.frameNStart = frameN  # exact frame index
+                imag_loader.tStart = t  # local t and not account for scr refresh
+                imag_loader.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(imag_loader, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.addData('imag_loader.started', t)
+                # update status
+                imag_loader.status = STARTED
+                imag_loader.start(0.3)
+            elif imag_loader.status == STARTED:  # one frame should pass before updating params and completing
+                # Updating other components during *imag_loader*
+                cue_stim.setText(cue_text)
+                probe_image.setImage(probe_image_file)
+                # Component updates done
+                imag_loader.complete()  # finish the static period
+                imag_loader.tStop = imag_loader.tStart + 0.3  # record stop time
+            
+            # check for quit (typically the Esc key)
+            if defaultKeyboard.getKeys(keyList=["escape"]):
+                thisExp.status = FINISHED
+            if thisExp.status == FINISHED or endExpNow:
+                endExperiment(thisExp, win=win)
+                return
+            # pause experiment here if requested
+            if thisExp.status == PAUSED:
+                pauseExperiment(
+                    thisExp=thisExp, 
+                    win=win, 
+                    timers=[routineTimer], 
+                    playbackComponents=[]
+                )
+                # skip the frame we paused on
+                continue
+            
+            # check if all components have finished
+            if not continueRoutine:  # a component has requested a forced-end of Routine
+                image_load.forceEnded = routineForceEnded = True
+                break
+            continueRoutine = False  # will revert to True if at least one component still running
+            for thisComponent in image_load.components:
+                if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                    continueRoutine = True
+                    break  # at least one component has not yet finished
+            
+            # refresh the screen
+            if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                win.flip()
+        
+        # --- Ending Routine "image_load" ---
+        for thisComponent in image_load.components:
+            if hasattr(thisComponent, "setAutoDraw"):
+                thisComponent.setAutoDraw(False)
+        # store stop times for image_load
+        image_load.tStop = globalClock.getTime(format='float')
+        image_load.tStopRefresh = tThisFlipGlobal
+        thisExp.addData('image_load.stopped', image_load.tStop)
+        # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
+        if image_load.maxDurationReached:
+            routineTimer.addTime(-image_load.maxDuration)
+        elif image_load.forceEnded:
+            routineTimer.reset()
+        else:
+            routineTimer.addTime(-0.300000)
+        
         # --- Prepare to start Routine "trial" ---
         # create an object to store info about Routine trial
         trial = data.Routine(
@@ -705,15 +1075,17 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         trial.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
-        cue_stim.setText(cue_text)
-        probe_image.setImage(probe_image)
-        # create starting attributes for key_resp_probe
-        key_resp_probe.keys = []
-        key_resp_probe.rt = []
-        _key_resp_probe_allKeys = []
-        # allowedKeys looks like a variable, so make sure it exists locally
-        if 'allowed_keys_list' in globals():
-            allowed_keys_list = globals()['allowed_keys_list']
+        # Run 'Begin Routine' code from photo_sensor
+        photodiode_box = visual.Rect(
+            win=win,
+            width=50,
+            height=50,
+            fillColor='white',
+            lineColor='white',
+            pos=(-win.size[0]/2 + 25, -win.size[1]/2 + 25),
+            units='pix',
+            autoDraw=False
+        )
         # Run 'Begin Routine' code from trial_code
         # This code runs before each trial starts.
         # It calculates the random ISI and sets the start time for the probe.
@@ -721,6 +1093,19 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         probe_start_time = 2.0 + 10.0 + isi_duration # cue_dur + sim_dur + isi_dur
         
         
+        # Run 'Begin Routine' code from eeg_triggers
+        wait_sent_fix = 0
+        wait_sent_img = 0
+        wait_sent_cue = 0
+        
+        #trigger 0 = fixation cross for learning
+        # create starting attributes for key_resp_probe
+        key_resp_probe.keys = []
+        key_resp_probe.rt = []
+        _key_resp_probe_allKeys = []
+        # allowedKeys looks like a variable, so make sure it exists locally
+        if 'allowed_keys_list' in globals():
+            allowed_keys_list = globals()['allowed_keys_list']
         # store start times for trial
         trial.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
         trial.tStart = globalClock.getTime(format='float')
@@ -753,6 +1138,32 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
+            # Run 'Each Frame' code from photo_sensor
+            if probe_image.status == STARTED:
+                photodiode_box.autoDraw = True
+            else:
+                photodiode_box.autoDraw = False
+            # Run 'Each Frame' code from eeg_triggers
+            if cue_stim.status == STARTED and wait_sent_cue == 0: #If the stimulus component has started and the trigger has not yet been sent. Change 'stimulus' to match the name of the component you want the trigger to be sent at the same time as
+                win.callOnFlip(port.write, data=b'\x20') #Send the trigger, synced to the screen refresh
+                #win.callOnFlip(eci_client.send_event, event_type = 'wait') #Send the trigger, synced to the screen refresh
+                wait_sent_cue = 1 #The wait has now been sent, so we set this to true to avoid a trigger being sent on each frame
+                port.write([0x00])
+            
+            
+            if fixation_stim.status == STARTED and wait_sent_fix = 0: #If the stimulus component has started and the trigger has not yet been sent. Change 'stimulus' to match the name of the component you want the trigger to be sent at the same time as
+                win.callOnFlip(port.write, data=b'\x01') #Send the trigger, synced to the screen refresh
+                #win.callOnFlip(eci_client.send_event, event_type = 'wait') #Send the trigger, synced to the screen refresh
+                wait_sent_fix = 1 #The wait has now been sent, so we set this to true to avoid a trigger being sent on each frame
+                port.write([0x00])
+            
+            
+            if prob_image.status == STARTED and wait_sent_img = 0: #If the stimulus component has started and the trigger has not yet been sent. Change 'stimulus' to match the name of the component you want the trigger to be sent at the same time as
+                win.callOnFlip(port.write, data=b'\x04') #Send the trigger, synced to the screen refresh
+                #win.callOnFlip(eci_client.send_event, event_type = 'wait') #Send the trigger, synced to the screen refresh
+                wait_sent_img = 1 #The wait has now been sent, so we set this to true to avoid a trigger being sent on each frame
+                port.write([0x00])
+            
             
             # *cue_stim* updates
             
@@ -936,6 +1347,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         trial.tStop = globalClock.getTime(format='float')
         trial.tStopRefresh = tThisFlipGlobal
         thisExp.addData('trial.stopped', trial.tStop)
+        # Run 'End Routine' code from photo_sensor
+        photodiode_box.autoDraw = False
+        # Run 'End Routine' code from eeg_triggers
+        port.write([0x00])
         # check responses
         if key_resp_probe.keys in ['', [], None]:  # No response was made
             key_resp_probe.keys = None
@@ -967,6 +1382,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         key_resp_rating.keys = []
         key_resp_rating.rt = []
         _key_resp_rating_allKeys = []
+        # Run 'Begin Routine' code from eeg_resp
+        wait_sent = 0 
         # store start times for rating
         rating.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
         rating.tStart = globalClock.getTime(format='float')
@@ -1071,6 +1488,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     key_resp_rating.duration = _key_resp_rating_allKeys[-1].duration
                     # a response ends the routine
                     continueRoutine = False
+            # Run 'Each Frame' code from eeg_resp
+            if text_rating_question.status == STARTED and wait_sent == 0: #If the stimulus component has started and the trigger has not yet been sent. Change 'stimulus' to match the name of the component you want the trigger to be sent at the same time as
+                win.callOnFlip(port.write, data=b'\x08') #Send the trigger, synced to the screen refresh
+                #win.callOnFlip(eci_client.send_event, event_type = 'wait') #Send the trigger, synced to the screen refresh
+                wait_sent = 1 #The wait has now been sent, so we set this to true to avoid a trigger being sent on each frame
+            
             
             # check for quit (typically the Esc key)
             if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1120,6 +1543,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if key_resp_rating.keys != None:  # we had a response
             trials_loop.addData('key_resp_rating.rt', key_resp_rating.rt)
             trials_loop.addData('key_resp_rating.duration', key_resp_rating.duration)
+        # Run 'End Routine' code from eeg_resp
+        port.write([0x00])
         # the Routine "rating" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         

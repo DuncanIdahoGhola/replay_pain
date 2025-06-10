@@ -1,3 +1,0 @@
-﻿block,cue_direction,cue_text,probe_image,correct_response,thisN,thisTrialN,thisRepN,trials_loop.thisRepN,trials_loop.thisTrialN,trials_loop.thisN,trials_loop.thisIndex,thisRow.t,notes,instr_task.started,task_instr_text.started,quit_instr.started,instr_task.stopped,quit_instr.keys,quit_instr.rt,quit_instr.duration,participant,session,date,expName,psychopyVersion,frameRate,sequence_good_key,sequence_bad_key,allowed_keys_list,expStart,
-,,,,,,,,,,,,,,0.012361699999928533,0.013845699999819772,0.013845699999819772,0.41151209999998173,space,0.392974299999878,None,sub-001,001,2025-06-10_10h59.48.290,cued_mental_stim,2024.2.4,143.5700708087684,2,1,"['2', '1']",2025-06-10 10h59.51.138581 -0400,
-3,forward,1 ->,stimuli/scissor.png,2,0,0,0,0,0,0,75,,,,,,,,,,,,,,,,,,,,
