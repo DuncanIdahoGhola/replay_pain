@@ -18,6 +18,13 @@ eeg_files = [f for f in os.listdir(data_path) if '.vhdr' in f]
 # Read the EEG data and specify channel types
 raw = mne.io.read_raw(os.path.join(data_path, eeg_files[0]), eog=['HEOG', 'VEOG'], misc=['ECG'] , preload=True)
 
+# Load the behavioral data
+behav_file = pd.read_csv("../sourcedata/sub-088/func_loc/sub-088_FunctionalLocalizer_2025-06-10_15h24.05.961.csv")
+
+# Drop the rows that are not trials (no image_file)
+behav_file = behav_file.dropna(subset=['image_file'])
+
+
 # Set the montage for the EEG data
 raw.set_montage('easycap-M1')
 
@@ -73,11 +80,6 @@ events_stimuli[:, 0] += 9
 
 
 
-# Load the behavioral data
-behav_file = pd.read_csv("../sourcedata/sub-088/func_loc/sub-088_FunctionalLocalizer_2025-06-10_15h24.05.961.csv")
-
-# Drop the rows that are not trials (no image_file)
-behav_file = behav_file.dropna(subset=['image_file'])
 
 # Make sure we have the same number of events as trials
 if len(events_stimuli) != len(behav_file):
