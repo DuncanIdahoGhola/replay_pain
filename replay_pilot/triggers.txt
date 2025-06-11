@@ -1,3 +1,8 @@
+This a text file to use as reference for the eeg triggers used. 
+
+
+
+Triggers number - code sent to port
 # 0 - b'\x01'
 # 1 - b'\x02'
 # 2 - b'\x04'
@@ -6,6 +11,8 @@
 # 5 - b'\x20'
 # 6 - b'\x40'
 
+
+Trigger names 
 0 - fix
 1 - blank
 2 - stimulis
@@ -16,26 +23,23 @@
 7 - photosensor
 
 
-Func localizer trigg 
+Triggers for Func localizer  
 
-Fix - Stim - Word - Blank - Resp (add something for feedback routine?) 
-
-
+Fix - Stim - Word - Blank - Resp
 
 
 
-Task learn prob -
+Trigger for Task learn prob 
 
-Learning triggers should be in order 
-
+Learn phase
 Fix - Stim - Blank - Word - Kreak
 
-probe triggers
+probe phase
 
 Stim-Blank-Word-resp-Kreak
 
 
 
-Cued-Mental 
+Triggers for cued mental stim 
 
 Word - Fix - Stimuli - Reponse 
