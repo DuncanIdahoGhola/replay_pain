@@ -1,13 +1,13 @@
 target_img,probe_img,cue_text,is_match
-stimuli/scissor.png,stimuli/zebra.png,What comes next?,non-match
-stimuli/scissor.png,stimuli/face.png,What comes next?,non-match
-stimuli/zebra.png,stimuli/banana.png,What comes next?,non-match
-stimuli/face.png,stimuli/banana.png,What comes next?,non-match
-stimuli/zebra.png,stimuli/face.png,What comes next?,match
-stimuli/scissor.png,stimuli/banana.png,What comes next?,match
-stimuli/face.png,stimuli/zebra.png,What comes next?,non-match
-stimuli/face.png,stimuli/scissor.png,What comes next?,match
-stimuli/face.png,stimuli/scissor.png,What comes next?,match
-stimuli/zebra.png,stimuli/face.png,What comes next?,match
-stimuli/zebra.png,stimuli/scissor.png,What comes next?,non-match
-stimuli/scissor.png,stimuli/banana.png,What comes next?,match
+stimuli/ciseau.png,stimuli/banane.png,Qu'est-ce qui vient ensuite ?,match
+stimuli/face.png,stimuli/ciseau.png,Qu'est-ce qui vient ensuite ?,match
+stimuli/zèbre.png,stimuli/face.png,Qu'est-ce qui vient ensuite ?,match
+stimuli/zèbre.png,stimuli/face.png,Qu'est-ce qui vient ensuite ?,match
+stimuli/face.png,stimuli/zèbre.png,Qu'est-ce qui vient ensuite ?,non-match
+stimuli/ciseau.png,stimuli/zèbre.png,Qu'est-ce qui vient ensuite ?,non-match
+stimuli/face.png,stimuli/ciseau.png,Qu'est-ce qui vient ensuite ?,match
+stimuli/zèbre.png,stimuli/banane.png,Qu'est-ce qui vient ensuite ?,non-match
+stimuli/ciseau.png,stimuli/face.png,Qu'est-ce qui vient ensuite ?,non-match
+stimuli/face.png,stimuli/banane.png,Qu'est-ce qui vient ensuite ?,non-match
+stimuli/ciseau.png,stimuli/banane.png,Qu'est-ce qui vient ensuite ?,match
+stimuli/zèbre.png,stimuli/ciseau.png,Qu'est-ce qui vient ensuite ?,non-match

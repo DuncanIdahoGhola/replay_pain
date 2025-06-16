@@ -8,10 +8,10 @@ import os
 
 # name the 4 stimuli
 
-zebra = 'stimuli/zebra.png'
+zebra = 'stimuli/zèbre.png'
 face = 'stimuli/face.png'
-banana = 'stimuli/banana.png'
-scissor = 'stimuli/scissor.png'
+banana = 'stimuli/banane.png'
+scissor = 'stimuli/ciseau.png'
 
 
 

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on June 11, 2025, at 08:55
+    on juin 16, 2025, at 10:13
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -126,7 +126,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\labmp\\Desktop\\git\\replay_pain\\replay_pilot\\1.FunctionalLocalizer_lastrun.py',
+        originPath='C:\\Users\\cbant\\OneDrive\\Bureau\\git\\replay_pain\\replay_pilot\\1.FunctionalLocalizer_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -420,7 +420,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     #open condition file to create list of match per trials
     import pandas as pd
     
-    condition_path = f"output_localizers/localizer_conditions_{last_three_digits}.csv"
+    condition_path = f"output_localizers_eff_v2/localizer_conditions_{last_three_digits}.csv"
     
     df_condition = pd.read_csv(condition_path)
     
@@ -456,9 +456,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # --- Initialize components for Routine "load_images" ---
     preload_current_image_2 = clock.StaticPeriod(win=win, screenHz=expInfo['frameRate'], name='preload_current_image_2')
     text_3 = visual.TextStim(win=win, name='text_3',
-        text=None,
+        text='+',
         font='Arial',
-        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0, 0), draggable=False, height=0.15, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-1.0);
@@ -486,7 +486,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     stim_word = visual.TextStim(win=win, name='stim_word',
         text='',
         font='Arial',
-        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0, 0), draggable=False, height=0.1, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);

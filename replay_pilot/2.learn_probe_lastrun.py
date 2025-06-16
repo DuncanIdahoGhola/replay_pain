@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on June 10, 2025, at 13:52
+    on juin 16, 2025, at 10:15
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -126,7 +126,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='E:\\replay_pilot_eeg\\replay_pilot\\2.learn_probe_lastrun.py',
+        originPath='C:\\Users\\cbant\\OneDrive\\Bureau\\git\\replay_pain\\replay_pilot\\2.learn_probe_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -404,55 +404,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Start Code - component code to be run after the window creation
     
     # --- Initialize components for Routine "instructions" ---
-    # Run 'Begin Experiment' code from init_eeg
-    
-    # EEG
-    import struct
-    import serial
-    import time
-    # Trigger box Plus COM port
-    adress = 'COM17'
-    def init_port(adress):
-        port = serial.Serial(adress, baudrate=2000000)
-        time.sleep(1) # Wait to make sure it's open
-        return port
-    
-    def write_port(port, pin):
-        """
-        Turn on one of the ditigal pin
-        pin: integer in range 2-13
-        """
-        # Convert to string
-        string = b'' + struct.pack('!B', pin)
-        # Write
-        port.write(string)
-        
-    port = init_port(adress)
-    port.write([0x00])
-    
-    # Init EEG
-    from psychopy.hardware import brainproducts
-    rcs = brainproducts.RemoteControlServer(host='192.168.1.2',timeout=5)
-    
-    rcs.openRecorder()
-    time.sleep(2)
-    rcs.workspace = 'C:/Users/labmp-eeg/Desktop/antoine_cognitivemaps/antoine_cognitivemaps.rwksp'
-    rcs.participant = expInfo['participant'] + '_' + expInfo['date']
-    rcs.expName = 'cmapsfuncloc'
-    time.sleep(5)
-    rcs.mode = 'monitor' 
-    time.sleep(2)
-    
-    
-    
-    
     instructions_main = visual.TextStim(win=win, name='instructions_main',
         text='Add instructions here\n\nspace to end',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-1.0);
+        depth=0.0);
     instr_end = keyboard.Keyboard(deviceName='instr_end')
     # Run 'Begin Experiment' code from exp_beginning
     import random
@@ -495,9 +453,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         languageStyle='LTR',
         depth=0.0);
     exit_eeg_text = keyboard.Keyboard(deviceName='exit_eeg_text')
-    # Run 'Begin Experiment' code from start_eeg_1
-    rec_start = core.monotonicClock.getTime()
-    rcs.startRecording()
     
     # --- Initialize components for Routine "instructions_learning" ---
     text = visual.TextStim(win=win, name='text',
@@ -511,9 +466,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "image_load_2" ---
     Image_load_text = visual.TextStim(win=win, name='Image_load_text',
-        text=None,
+        text='+',
         font='Arial',
-        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0, 0), draggable=False, height=0.15, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
@@ -523,7 +478,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     fix_learn_cross = visual.TextStim(win=win, name='fix_learn_cross',
         text='+',
         font='Arial',
-        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0, 0), draggable=False, height=0.15, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
@@ -536,7 +491,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         ori=0.0, pos=(0, 0), draggable=False, size=(0.5, 0.5),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
-        texRes=128.0, interpolate=True, depth=-1.0)
+        texRes=128.0, interpolate=True, depth=0.0)
     
     # --- Initialize components for Routine "break_img_learn" ---
     break_random = visual.TextStim(win=win, name='break_random',
@@ -545,7 +500,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-2.0);
+        depth=-1.0);
     
     # --- Initialize components for Routine "image_learn_2" ---
     second_of_pair = visual.ImageStim(
@@ -578,9 +533,9 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "image_loader" ---
     empty_text = visual.TextStim(win=win, name='empty_text',
-        text=None,
+        text='+',
         font='Arial',
-        pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0, 0), draggable=False, height=0.15, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
@@ -623,7 +578,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-2.0);
+        depth=-1.0);
     
     # --- Initialize components for Routine "probe_break" ---
     text_2 = visual.TextStim(win=win, name='text_2',
@@ -1346,10 +1301,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fix_learning.status = NOT_STARTED
             continueRoutine = True
             # update component parameters for each repeat
-            # Run 'Begin Routine' code from eeg_fix
-            wait_sent = 0
-            
-            #trigger 0 = fixation cross for learning
             # store start times for fix_learning
             fix_learning.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             fix_learning.tStart = globalClock.getTime(format='float')
@@ -1416,12 +1367,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         fix_learn_cross.status = FINISHED
                         fix_learn_cross.setAutoDraw(False)
-                # Run 'Each Frame' code from eeg_fix
-                if fix_learn_cross.status == STARTED and wait_sent == 0: #If the stimulus component has started and the trigger has not yet been sent. Change 'stimulus' to match the name of the component you want the trigger to be sent at the same time as
-                    win.callOnFlip(port.write, data=b'\x01') #Send the trigger, synced to the screen refresh
-                    #win.callOnFlip(eci_client.send_event, event_type = 'wait') #Send the trigger, synced to the screen refresh
-                    wait_sent = 1 #The wait has now been sent, so we set this to true to avoid a trigger being sent on each frame
-                
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1462,8 +1407,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             fix_learning.tStop = globalClock.getTime(format='float')
             fix_learning.tStopRefresh = tThisFlipGlobal
             thisExp.addData('fix_learning.stopped', fix_learning.tStop)
-            # Run 'End Routine' code from eeg_fix
-            port.write([0x00])
             # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
             if fix_learning.maxDurationReached:
                 routineTimer.addTime(-fix_learning.maxDuration)
@@ -1481,19 +1424,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             image_learn_1.status = NOT_STARTED
             continueRoutine = True
             # update component parameters for each repeat
-            # Run 'Begin Routine' code from eeg_image_1
-            wait_sent = 0
-            # Run 'Begin Routine' code from photo_sensor
-            photodiode_box = visual.Rect(
-                win=win,
-                width=50,
-                height=50,
-                fillColor='white',
-                lineColor='white',
-                pos=(-win.size[0]/2 + 25, -win.size[1]/2 + 25),
-                units='pix',
-                autoDraw=False
-            )
             # store start times for image_learn_1
             image_learn_1.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             image_learn_1.tStart = globalClock.getTime(format='float')
@@ -1526,12 +1456,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 tThisFlipGlobal = win.getFutureFlipTime(clock=None)
                 frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
                 # update/draw components on each frame
-                # Run 'Each Frame' code from eeg_image_1
-                if first_of_pair.status == STARTED and wait_sent == 0: #If the stimulus component has started and the trigger has not yet been sent. Change 'stimulus' to match the name of the component you want the trigger to be sent at the same time as
-                    win.callOnFlip(port.write, data=b'\x04') #Send the trigger, synced to the screen refresh
-                    #win.callOnFlip(eci_client.send_event, event_type = 'wait') #Send the trigger, synced to the screen refresh
-                    wait_sent = 1 #The wait has now been sent, so we set this to true to avoid a trigger being sent on each frame
-                
                 
                 # *first_of_pair* updates
                 
@@ -1566,11 +1490,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         first_of_pair.status = FINISHED
                         first_of_pair.setAutoDraw(False)
-                # Run 'Each Frame' code from photo_sensor
-                if first_of_pair.status == STARTED:
-                    photodiode_box.autoDraw = True
-                else:
-                    photodiode_box.autoDraw = False
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1611,10 +1530,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             image_learn_1.tStop = globalClock.getTime(format='float')
             image_learn_1.tStopRefresh = tThisFlipGlobal
             thisExp.addData('image_learn_1.stopped', image_learn_1.tStop)
-            # Run 'End Routine' code from eeg_image_1
-            port.write([0x00])
-            # Run 'End Routine' code from photo_sensor
-            photodiode_box.autoDraw = False
             # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
             if image_learn_1.maxDurationReached:
                 routineTimer.addTime(-image_learn_1.maxDuration)
@@ -1632,8 +1547,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             break_img_learn.status = NOT_STARTED
             continueRoutine = True
             # update component parameters for each repeat
-            # Run 'Begin Routine' code from eeg_blank
-            wait_sent = 0
             # Run 'Begin Routine' code from random_break_timer
             import random 
             
@@ -1670,12 +1583,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 tThisFlipGlobal = win.getFutureFlipTime(clock=None)
                 frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
                 # update/draw components on each frame
-                # Run 'Each Frame' code from eeg_blank
-                if break_random.status == STARTED and wait_sent == 0: #If the stimulus component has started and the trigger has not yet been sent. Change 'stimulus' to match the name of the component you want the trigger to be sent at the same time as
-                    win.callOnFlip(port.write, data=b'\x02') #Send the trigger, synced to the screen refresh
-                    #win.callOnFlip(eci_client.send_event, event_type = 'wait') #Send the trigger, synced to the screen refresh
-                    wait_sent = 1 #The wait has now been sent, so we set this to true to avoid a trigger being sent on each frame
-                
                 
                 # *break_random* updates
                 
@@ -1750,8 +1657,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             break_img_learn.tStop = globalClock.getTime(format='float')
             break_img_learn.tStopRefresh = tThisFlipGlobal
             thisExp.addData('break_img_learn.stopped', break_img_learn.tStop)
-            # Run 'End Routine' code from eeg_blank
-            port.write([0x00])
             # the Routine "break_img_learn" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -1764,22 +1669,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             image_learn_2.status = NOT_STARTED
             continueRoutine = True
             # update component parameters for each repeat
-            # Run 'Begin Routine' code from eeg_image_2
-            wait_sent = 0
-            
-            #this trigger corresponds to word trigger in code 1
-            
-            # Run 'Begin Routine' code from photo_sensor_2
-            photodiode_box = visual.Rect(
-                win=win,
-                width=50,
-                height=50,
-                fillColor='white',
-                lineColor='white',
-                pos=(-win.size[0]/2 + 25, -win.size[1]/2 + 25),
-                units='pix',
-                autoDraw=False
-            )
             # store start times for image_learn_2
             image_learn_2.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             image_learn_2.tStart = globalClock.getTime(format='float')
@@ -1846,17 +1735,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         second_of_pair.status = FINISHED
                         second_of_pair.setAutoDraw(False)
-                # Run 'Each Frame' code from eeg_image_2
-                if second_of_pair.status == STARTED and wait_sent == 0: #If the stimulus component has started and the trigger has not yet been sent. Change 'stimulus' to match the name of the component you want the trigger to be sent at the same time as
-                    win.callOnFlip(port.write, data=b'\x20') #Send the trigger, synced to the screen refresh
-                    #win.callOnFlip(eci_client.send_event, event_type = 'wait') #Send the trigger, synced to the screen refresh
-                    wait_sent = 1 #The wait has now been sent, so we set this to true to avoid a trigger being sent on each frame
-                
-                # Run 'Each Frame' code from photo_sensor_2
-                if second_of_pair.status == STARTED:
-                    photodiode_box.autoDraw = True
-                else:
-                    photodiode_box.autoDraw = False
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1897,10 +1775,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             image_learn_2.tStop = globalClock.getTime(format='float')
             image_learn_2.tStopRefresh = tThisFlipGlobal
             thisExp.addData('image_learn_2.stopped', image_learn_2.tStop)
-            # Run 'End Routine' code from eeg_image_2
-            port.write([0x00])
-            # Run 'End Routine' code from photo_sensor_2
-            photodiode_box.autoDraw = False
             # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
             if image_learn_2.maxDurationReached:
                 routineTimer.addTime(-image_learn_2.maxDuration)
@@ -1986,7 +1860,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         five_s_break.setAutoDraw(False)
                 # Run 'Each Frame' code from save_data_learn
                 if fix_learn_cross.status == STARTED and wait_sent == 0: #If the stimulus component has started and the trigger has not yet been sent. Change 'stimulus' to match the name of the component you want the trigger to be sent at the same time as
-                    win.callOnFlip(port.write, data=b'\x40') #Send the trigger, synced to the screen refresh
+                    win.callOnFlip(port.write, data=b'\x20') #Send the trigger, synced to the screen refresh
                     #win.callOnFlip(eci_client.send_event, event_type = 'wait') #Send the trigger, synced to the screen refresh
                     wait_sent = 1 #The wait has now been sent, so we set this to true to avoid a trigger being sent on each frame
                 
@@ -2388,19 +2262,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             probe_cue.status = NOT_STARTED
             continueRoutine = True
             # update component parameters for each repeat
-            # Run 'Begin Routine' code from eeg_prob_1
-            wait_sent = 0
-            # Run 'Begin Routine' code from photo_sensor_3
-            photodiode_box = visual.Rect(
-                win=win,
-                width=50,
-                height=50,
-                fillColor='white',
-                lineColor='white',
-                pos=(-win.size[0]/2 + 25, -win.size[1]/2 + 25),
-                units='pix',
-                autoDraw=False
-            )
             # store start times for probe_cue
             probe_cue.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             probe_cue.tStart = globalClock.getTime(format='float')
@@ -2467,22 +2328,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         probe_cue_1.status = FINISHED
                         probe_cue_1.setAutoDraw(False)
-                # Run 'Each Frame' code from eeg_prob_1
-                
-                #Check trigger 5
-                
-                
-                if probe_cue_1.status == STARTED and wait_sent == 0: #If the stimulus component has started and the trigger has not yet been sent. Change 'stimulus' to match the name of the component you want the trigger to be sent at the same time as
-                    win.callOnFlip(port.write, data=b'\x04') #Send the trigger, synced to the screen refresh
-                    #win.callOnFlip(eci_client.send_event, event_type = 'wait') #Send the trigger, synced to the screen refresh
-                    wait_sent = 1 #The wait has now been sent, so we set this to true to avoid a trigger being sent on each frame
-                
-                
-                # Run 'Each Frame' code from photo_sensor_3
-                if probe_cue_1.status == STARTED:
-                    photodiode_box.autoDraw = True
-                else:
-                    photodiode_box.autoDraw = False
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2523,10 +2368,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             probe_cue.tStop = globalClock.getTime(format='float')
             probe_cue.tStopRefresh = tThisFlipGlobal
             thisExp.addData('probe_cue.stopped', probe_cue.tStop)
-            # Run 'End Routine' code from eeg_prob_1
-            port.write([0x00])
-            # Run 'End Routine' code from photo_sensor_3
-            photodiode_box.autoDraw = False
             # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
             if probe_cue.maxDurationReached:
                 routineTimer.addTime(-probe_cue.maxDuration)
@@ -2549,8 +2390,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             prob_imagination_dur = random.uniform(1.0, 3.0)
             imagination_woot.setText('')
-            # Run 'Begin Routine' code from eeg_blank_3
-            wait_sent = 0
             # store start times for probe_imagination
             probe_imagination.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             probe_imagination.tStart = globalClock.getTime(format='float')
@@ -2617,14 +2456,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         imagination_woot.status = FINISHED
                         imagination_woot.setAutoDraw(False)
-                # Run 'Each Frame' code from eeg_blank_3
-                
-                if probe_cue_1.status == STARTED and wait_sent == 0: #If the stimulus component has started and the trigger has not yet been sent. Change 'stimulus' to match the name of the component you want the trigger to be sent at the same time as
-                    win.callOnFlip(port.write, data=b'\x02') #Send the trigger, synced to the screen refresh
-                    #win.callOnFlip(eci_client.send_event, event_type = 'wait') #Send the trigger, synced to the screen refresh
-                    wait_sent = 1 #The wait has now been sent, so we set this to true to avoid a trigger being sent on each frame
-                
-                
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2665,8 +2496,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             probe_imagination.tStop = globalClock.getTime(format='float')
             probe_imagination.tStopRefresh = tThisFlipGlobal
             thisExp.addData('probe_imagination.stopped', probe_imagination.tStop)
-            # Run 'End Routine' code from eeg_blank_3
-            port.write([0x00])
             # the Routine "probe_imagination" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             
@@ -2679,19 +2508,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             probe_test.status = NOT_STARTED
             continueRoutine = True
             # update component parameters for each repeat
-            # Run 'Begin Routine' code from eeg_probe_2
-            wait_sent = 0
-            # Run 'Begin Routine' code from photo_sensor_4
-            photodiode_box = visual.Rect(
-                win=win,
-                width=50,
-                height=50,
-                fillColor='white',
-                lineColor='white',
-                pos=(-win.size[0]/2 + 25, -win.size[1]/2 + 25),
-                units='pix',
-                autoDraw=False
-            )
             # store start times for probe_test
             probe_test.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             probe_test.tStart = globalClock.getTime(format='float')
@@ -2758,20 +2574,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         prob_test_img.status = FINISHED
                         prob_test_img.setAutoDraw(False)
-                # Run 'Each Frame' code from eeg_probe_2
-                #check trigger 6
-                
-                if prob_test_img.status == STARTED and wait_sent == 0: #If the stimulus component has started and the trigger has not yet been sent. Change 'stimulus' to match the name of the component you want the trigger to be sent at the same time as
-                    win.callOnFlip(port.write, data=b'\x20') #Send the trigger, synced to the screen refresh
-                    #win.callOnFlip(eci_client.send_event, event_type = 'wait') #Send the trigger, synced to the screen refresh
-                    wait_sent = 1 #The wait has now been sent, so we set this to true to avoid a trigger being sent on each frame
-                
-                
-                # Run 'Each Frame' code from photo_sensor_4
-                if prob_test_img.status == STARTED:
-                    photodiode_box.autoDraw = True
-                else:
-                    photodiode_box.autoDraw = False
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2812,10 +2614,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             probe_test.tStop = globalClock.getTime(format='float')
             probe_test.tStopRefresh = tThisFlipGlobal
             thisExp.addData('probe_test.stopped', probe_test.tStop)
-            # Run 'End Routine' code from eeg_probe_2
-            port.write([0x00])
-            # Run 'End Routine' code from photo_sensor_4
-            photodiode_box.autoDraw = False
             # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
             if probe_test.maxDurationReached:
                 routineTimer.addTime(-probe_test.maxDuration)
@@ -2833,8 +2631,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             probe_resp.status = NOT_STARTED
             continueRoutine = True
             # update component parameters for each repeat
-            # Run 'Begin Routine' code from eeg_resp
-            wait_sent = 0
             # create starting attributes for probe_resp_test
             probe_resp_test.keys = []
             probe_resp_test.rt = []
@@ -2871,13 +2667,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 tThisFlipGlobal = win.getFutureFlipTime(clock=None)
                 frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
                 # update/draw components on each frame
-                # Run 'Each Frame' code from eeg_resp
-                if text_4.status == STARTED and wait_sent == 0: #If the stimulus component has started and the trigger has not yet been sent. Change 'stimulus' to match the name of the component you want the trigger to be sent at the same time as
-                    win.callOnFlip(port.write, data=b'\x08') #Send the trigger, synced to the screen refresh
-                    #win.callOnFlip(eci_client.send_event, event_type = 'wait') #Send the trigger, synced to the screen refresh
-                    wait_sent = 1 #The wait has now been sent, so we set this to true to avoid a trigger being sent on each frame
-                
-                
                 
                 # *probe_resp_test* updates
                 waitOnFlip = False
@@ -2994,8 +2783,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             probe_resp.tStop = globalClock.getTime(format='float')
             probe_resp.tStopRefresh = tThisFlipGlobal
             thisExp.addData('probe_resp.stopped', probe_resp.tStop)
-            # Run 'End Routine' code from eeg_resp
-            port.write([0x00])
             # check responses
             if probe_resp_test.keys in ['', [], None]:  # No response was made
                 probe_resp_test.keys = None
@@ -3025,8 +2812,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             prob_break = random.uniform(1.0, 3.0)
             text_2.setText('')
-            # Run 'Begin Routine' code from eeg_blank_2
-            wait_sent = 0
             # store start times for probe_break
             probe_break.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             probe_break.tStart = globalClock.getTime(format='float')
@@ -3093,12 +2878,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         text_2.status = FINISHED
                         text_2.setAutoDraw(False)
-                # Run 'Each Frame' code from eeg_blank_2
-                if break_random.status == STARTED and wait_sent == 0: #If the stimulus component has started and the trigger has not yet been sent. Change 'stimulus' to match the name of the component you want the trigger to be sent at the same time as
-                    win.callOnFlip(port.write, data=b'\x40') #Send the trigger, synced to the screen refresh
-                    #win.callOnFlip(eci_client.send_event, event_type = 'wait') #Send the trigger, synced to the screen refresh
-                    wait_sent = 1 #The wait has now been sent, so we set this to true to avoid a trigger being sent on each frame
-                
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -3163,8 +2942,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 thisExp.addData('response_rt', None)
                 
             thisExp.addData('good_answer_counter', answer_counter)
-            # Run 'End Routine' code from eeg_blank_2
-            port.write([0x00])
             # the Routine "probe_break" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
             thisExp.nextEntry()
@@ -3197,9 +2974,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         key_resp_2.keys = []
         key_resp_2.rt = []
         _key_resp_2_allKeys = []
-        # Run 'Begin Routine' code from end_of_block_shuffler
-        
-        
         # store start times for end_of_block
         end_of_block.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
         end_of_block.tStart = globalClock.getTime(format='float')

@@ -19,8 +19,8 @@ def generate_mock_learning_files(num_files=100):
     os.makedirs(LEARNING_CONDITIONS_DIR, exist_ok=True)
 
     base_stimuli = [
-        'stimuli/face.png', 'stimuli/scissor.png',
-        'stimuli/zebra.png', 'stimuli/banana.png'
+        'stimuli/face.png', 'stimuli/ciseau.png',
+        'stimuli/zèbre.png', 'stimuli/banane.png'
     ]
 
     for i in range(1, num_files + 1):
@@ -61,7 +61,7 @@ def create_probe_file_for_participant(participant_id):
     possible_targets = sequence[:-1]
 
     trials = []
-    cue_text = "What comes next?"
+    cue_text = "Qu'est-ce qui vient ensuite ?"
 
     # 2. Generate 6 MATCH trials
     for _ in range(2):

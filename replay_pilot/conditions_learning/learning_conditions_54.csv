@@ -1,4 +1,4 @@
 pair_name,stim1_img,stim2_img
-A_B,stimuli/zebra.png,stimuli/banana.png
-B_C,stimuli/banana.png,stimuli/face.png
-C_D,stimuli/face.png,stimuli/scissor.png
+A_B,stimuli/zèbre.png,stimuli/banane.png
+B_C,stimuli/banane.png,stimuli/face.png
+C_D,stimuli/face.png,stimuli/ciseau.png

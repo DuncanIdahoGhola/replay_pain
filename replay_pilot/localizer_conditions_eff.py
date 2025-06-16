@@ -5,7 +5,7 @@ import os
 
 # --- Configuration ---
 NUM_FILES_TO_GENERATE = 100
-IMAGES = ['face', 'zebra', 'banana', 'scissor']
+IMAGES = ['face', 'zèbre', 'banane', 'ciseau']
 TRIALS_PER_IMAGE_TYPE = 36 # 36 for match, 36 for mismatch
 MAX_CONSECUTIVE_IDENTICAL_IMAGES = 2
 MAX_CONSECUTIVE_MATCH_MISMATCH = 2 # New constraint: no more than 2 match or mismatch in a row
