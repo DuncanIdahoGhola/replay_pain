@@ -70,7 +70,7 @@
     <Param val="1000" valType="num" updates="None" name="plPupilRemoteTimeoutMs"/>
     <Param val="False" valType="bool" updates="None" name="plPupillometryOnly"/>
     <Param val="psychopy_iohub_surface" valType="str" updates="None" name="plSurfaceName"/>
-    <Param val="0" valType="code" updates="None" name="runMode"/>
+    <Param val="1" valType="code" updates="None" name="runMode"/>
     <Param val="False" valType="bool" updates="None" name="rush"/>
     <Param val="time" valType="str" updates="None" name="sortColumns"/>
     <Param val="" valType="str" updates="None" name="tbLicenseFile"/>
@@ -100,7 +100,7 @@
       <CodeComponent name="init_eeg" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="&amp;#10;# EEG&amp;#10;import struct&amp;#10;import serial&amp;#10;import time&amp;#10;# Trigger box Plus COM port&amp;#10;adress = 'COM17'&amp;#10;def init_port(adress):&amp;#10;    port = serial.Serial(adress, baudrate=2000000)&amp;#10;    time.sleep(1) # Wait to make sure it's open&amp;#10;    return port&amp;#10;&amp;#10;def write_port(port, pin):&amp;#10;    &quot;&quot;&quot;&amp;#10;    Turn on one of the ditigal pin&amp;#10;    pin: integer in range 2-13&amp;#10;    &quot;&quot;&quot;&amp;#10;    # Convert to string&amp;#10;    string = b'' + struct.pack('!B', pin)&amp;#10;    # Write&amp;#10;    port.write(string)&amp;#10;    &amp;#10;port = init_port(adress)&amp;#10;port.write([0x00])&amp;#10;&amp;#10;# Init EEG&amp;#10;from psychopy.hardware import brainproducts&amp;#10;rcs = brainproducts.RemoteControlServer(host='192.168.1.2',timeout=5)&amp;#10;&amp;#10;rcs.openRecorder()&amp;#10;time.sleep(2)&amp;#10;rcs.workspace = 'C:/Users/labmp-eeg/Desktop/antoine_cognitivemaps/antoine_cognitivemaps.rwksp'&amp;#10;rcs.participant = expInfo['participant'] + '_' + expInfo['date']&amp;#10;rcs.expName = 'cmapsfuncloc'&amp;#10;time.sleep(5)&amp;#10;rcs.mode = 'monitor' &amp;#10;time.sleep(2)&amp;#10;&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="&amp;#10;# EEG&amp;#10;import struct&amp;#10;import serial&amp;#10;import time&amp;#10;# Trigger box Plus COM port&amp;#10;adress = 'COM17'&amp;#10;def init_port(adress):&amp;#10;    port = serial.Serial(adress, baudrate=2000000)&amp;#10;    time.sleep(1) # Wait to make sure it's open&amp;#10;    return port&amp;#10;&amp;#10;def write_port(port, pin):&amp;#10;    &quot;&quot;&quot;&amp;#10;    Turn on one of the ditigal pin&amp;#10;    pin: integer in range 2-13&amp;#10;    &quot;&quot;&quot;&amp;#10;    # Convert to string&amp;#10;    string = b'' + struct.pack('!B', pin)&amp;#10;    # Write&amp;#10;    port.write(string)&amp;#10;    &amp;#10;port = init_port(adress)&amp;#10;port.write([0x00])&amp;#10;&amp;#10;# Init EEG&amp;#10;from psychopy.hardware import brainproducts&amp;#10;rcs = brainproducts.RemoteControlServer(host='192.168.1.2',timeout=5)&amp;#10;&amp;#10;rcs.openRecorder()&amp;#10;time.sleep(2)&amp;#10;rcs.workspace = 'C:/Users/labmp-eeg/Desktop/antoine_cognitivemaps/antoine_cognitivemaps.rwksp'&amp;#10;rcs.participant = expInfo['participant'] + '_' + expInfo['date']&amp;#10;rcs.expName = 'cmaps_cued_stim'&amp;#10;time.sleep(5)&amp;#10;rcs.mode = 'monitor' &amp;#10;time.sleep(2)&amp;#10;&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="/* Syntax Error: Fix Python code */" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
@@ -111,7 +111,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="init_eeg" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <CodeComponent name="start_code" plugin="None">
@@ -210,7 +210,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="photodiode_box.autoDraw = false;&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="photodiode_box.autoDraw = False" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="photo_sensor" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <CodeComponent name="trial_code" plugin="None">
@@ -229,23 +229,6 @@
         <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="trial_code" valType="code" updates="None" name="name"/>
-      </CodeComponent>
-      <CodeComponent name="eeg_triggers" plugin="None">
-        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="wait_sent_fix = 0;&amp;#10;wait_sent_img = 0;&amp;#10;wait_sent_cue = 0;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="wait_sent_fix = 0&amp;#10;wait_sent_img = 0&amp;#10;wait_sent_cue = 0&amp;#10;&amp;#10;#trigger 0 = fixation cross for learning" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="if cue_stim.status == STARTED and wait_sent_cue == 0: #If the stimulus component has started and the trigger has not yet been sent. Change 'stimulus' to match the name of the component you want the trigger to be sent at the same time as&amp;#10;    win.callOnFlip(port.write, data=b'\x10') #Send the trigger, synced to the screen refresh&amp;#10;    #win.callOnFlip(eci_client.send_event, event_type = 'wait') #Send the trigger, synced to the screen refresh&amp;#10;    wait_sent_cue = 1 #The wait has now been sent, so we set this to true to avoid a trigger being sent on each frame&amp;#10;    port.write([0x00])&amp;#10;&amp;#10;&amp;#10;if fixation_stim.status == STARTED and wait_sent_fix = 0: #If the stimulus component has started and the trigger has not yet been sent. Change 'stimulus' to match the name of the component you want the trigger to be sent at the same time as&amp;#10;    win.callOnFlip(port.write, data=b'\x01') #Send the trigger, synced to the screen refresh&amp;#10;    #win.callOnFlip(eci_client.send_event, event_type = 'wait') #Send the trigger, synced to the screen refresh&amp;#10;    wait_sent_fix = 1 #The wait has now been sent, so we set this to true to avoid a trigger being sent on each frame&amp;#10;    port.write([0x00])&amp;#10;&amp;#10;&amp;#10;if prob_image.status == STARTED and wait_sent_img = 0: #If the stimulus component has started and the trigger has not yet been sent. Change 'stimulus' to match the name of the component you want the trigger to be sent at the same time as&amp;#10;    win.callOnFlip(port.write, data=b'\x04') #Send the trigger, synced to the screen refresh&amp;#10;    #win.callOnFlip(eci_client.send_event, event_type = 'wait') #Send the trigger, synced to the screen refresh&amp;#10;    wait_sent_img = 1 #The wait has now been sent, so we set this to true to avoid a trigger being sent on each frame&amp;#10;    port.write([0x00])&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="/* Syntax Error: Fix Python code */" valType="extendedCode" updates="constant" name="Each JS Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="port.write([0]);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="port.write([0x00])" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
-        <Param val="eeg_triggers" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <TextComponent name="cue_stim" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
@@ -377,6 +360,23 @@
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
+      <CodeComponent name="eeg_triggers" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="wait_sent_fix = 0;&amp;#10;wait_sent_img = 0;&amp;#10;wait_sent_cue = 0;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="wait_sent_fix = 0&amp;#10;wait_sent_img = 0&amp;#10;wait_sent_cue = 0&amp;#10;&amp;#10;#trigger 0 = fixation cross for learning" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="if cue_stim.status == STARTED and wait_sent_cue == 0: #If the stimulus component has started and the trigger has not yet been sent. Change 'stimulus' to match the name of the component you want the trigger to be sent at the same time as&amp;#10;    win.callOnFlip(port.write, data=b'\x10') #Send the trigger, synced to the screen refresh&amp;#10;    #win.callOnFlip(eci_client.send_event, event_type = 'wait') #Send the trigger, synced to the screen refresh&amp;#10;    wait_sent_cue = 1 #The wait has now been sent, so we set this to true to avoid a trigger being sent on each frame&amp;#10;    port.write([0x00])&amp;#10;&amp;#10;&amp;#10;if fixation_stim.status == STARTED and wait_sent_fix == 0: #If the stimulus component has started and the trigger has not yet been sent. Change 'stimulus' to match the name of the component you want the trigger to be sent at the same time as&amp;#10;    win.callOnFlip(port.write, data=b'\x01') #Send the trigger, synced to the screen refresh&amp;#10;    #win.callOnFlip(eci_client.send_event, event_type = 'wait') #Send the trigger, synced to the screen refresh&amp;#10;    wait_sent_fix = 1 #The wait has now been sent, so we set this to true to avoid a trigger being sent on each frame&amp;#10;    port.write([0x00])&amp;#10;&amp;#10;&amp;#10;if probe_image.status == STARTED and wait_sent_img == 0: #If the stimulus component has started and the trigger has not yet been sent. Change 'stimulus' to match the name of the component you want the trigger to be sent at the same time as&amp;#10;    win.callOnFlip(port.write, data=b'\x04') #Send the trigger, synced to the screen refresh&amp;#10;    #win.callOnFlip(eci_client.send_event, event_type = 'wait') #Send the trigger, synced to the screen refresh&amp;#10;    wait_sent_img = 1 #The wait has now been sent, so we set this to true to avoid a trigger being sent on each frame&amp;#10;    port.write([0x00])&amp;#10;" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="/* Syntax Error: Fix Python code */" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="port.write([0]);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="port.write([0x00])" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="eeg_triggers" valType="code" updates="None" name="name"/>
+      </CodeComponent>
     </Routine>
     <Routine name="rating">
       <RoutineSettingsComponent name="rating" plugin="None">
@@ -493,7 +493,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="port.write([0]);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="port.write([0x00])" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="eeg_resp" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
@@ -675,7 +675,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="start_eeg_1" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <TextComponent name="EEG_start_text" plugin="None">

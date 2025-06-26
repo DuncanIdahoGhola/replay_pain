@@ -1,0 +1,31 @@
+2.5339 	WARNING 	Failed to set VLC plugins path. This is only important for MovieStim2 movies (the OpenCV backend)
+20.1144 	INFO 	Loaded monitor calibration from ['2023_05_19 22:50']
+20.2502 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000019E3198B070>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000019E31985FD0>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=True, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000019E33EF5BB0>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+20.2502 	EXP 	window1: backgroundImage = ''
+20.2502 	EXP 	window1: backgroundFit = 'none'
+20.2909 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+20.2910 	EXP 	window1: recordFrameIntervals = False
+20.4624 	EXP 	window1: recordFrameIntervals = True
+20.5652 	EXP 	Screen (0) actual frame rate measured at 218.61Hz
+20.5652 	EXP 	window1: recordFrameIntervals = False
+22.3393 	INFO 	keyboard.Keyboard is using iohub backend.
+22.3394 	INFO 	keyboard.Keyboard is using iohub backend.
+22.3394 	INFO 	keyboard.Keyboard is using iohub backend.
+22.3394 	INFO 	keyboard.Keyboard is using iohub backend.
+22.3394 	INFO 	keyboard.Keyboard is using iohub backend.
+22.3394 	INFO 	keyboard.Keyboard is using iohub backend.
+22.3395 	INFO 	keyboard.Keyboard is using iohub backend.
+22.3395 	INFO 	keyboard.Keyboard is using iohub backend.
+22.3395 	INFO 	keyboard.Keyboard is using iohub backend.
+22.3395 	EXP 	learn_probe: status = STARTED
+24.5327 	INFO 	RCS Recorder app is now OPEN
+24.5807 	INFO 	RCS Recorder State is now IDLE
+24.6635 	INFO 	RCS Acq is now STOPPED
+36.3708 	INFO 	RCS Acq is now ERROR
+36.3709 	INFO 	RCS Acq is now STOPPED
+46.3361 	WARNING 	RCS recordingState not achieved: expected states ['Monitoring'] but state is Idle
+56.3398 	WARNING 	RCS acquisitionState not achieved: expected states ['Running'] but state is Stopped
+58.4104 	EXP 	Created instructions_main = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='instructions_main', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+58.4134 	EXP 	Created eeg_start_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='eeg_start_text', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Vérifier EEG', units='height', win=Window(...), wrapWidth=1)
+58.5615 	INFO 	saved data to C:\Users\labmp-psychopy\Desktop\replay_pilot\data/sub-098/learn_prob/sub-098_learn_probe_2025-06-25_14h37.04.676.psydat
+58.5619 	INFO 	saved data to 'C:\\Users\\labmp-psychopy\\Desktop\\replay_pilot\\data/sub-098/learn_prob/sub-098_learn_probe_2025-06-25_14h37.04.676.csv'

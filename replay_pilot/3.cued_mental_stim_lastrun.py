@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on juin 16, 2025, at 10:30
+    on June 25, 2025, at 15:10
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -126,7 +126,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\cbant\\OneDrive\\Bureau\\git\\replay_pain\\replay_pilot\\3.cued_mental_stim_lastrun.py',
+        originPath='C:\\Users\\labmp-psychopy\\Desktop\\replay_pilot\\3.cued_mental_stim_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -398,6 +398,48 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # Start Code - component code to be run after the window creation
     
     # --- Initialize components for Routine "instr_task" ---
+    # Run 'Begin Experiment' code from init_eeg
+    
+    # EEG
+    import struct
+    import serial
+    import time
+    # Trigger box Plus COM port
+    adress = 'COM17'
+    def init_port(adress):
+        port = serial.Serial(adress, baudrate=2000000)
+        time.sleep(1) # Wait to make sure it's open
+        return port
+    
+    def write_port(port, pin):
+        """
+        Turn on one of the ditigal pin
+        pin: integer in range 2-13
+        """
+        # Convert to string
+        string = b'' + struct.pack('!B', pin)
+        # Write
+        port.write(string)
+        
+    port = init_port(adress)
+    port.write([0x00])
+    
+    # Init EEG
+    from psychopy.hardware import brainproducts
+    rcs = brainproducts.RemoteControlServer(host='192.168.1.2',timeout=5)
+    
+    rcs.openRecorder()
+    time.sleep(2)
+    rcs.workspace = 'C:/Users/labmp-eeg/Desktop/antoine_cognitivemaps/antoine_cognitivemaps.rwksp'
+    rcs.participant = expInfo['participant'] + '_' + expInfo['date']
+    rcs.expName = 'cmaps_cued_stim'
+    time.sleep(5)
+    rcs.mode = 'monitor' 
+    time.sleep(2)
+    
+    
+    
+    
     # Run 'Begin Experiment' code from start_code
     import random
     import pandas as pd
@@ -436,17 +478,20 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-1.0);
+        depth=-2.0);
     quit_instr = keyboard.Keyboard(deviceName='quit_instr')
     
     # --- Initialize components for Routine "start_eeg" ---
+    # Run 'Begin Experiment' code from start_eeg_1
+    rec_start = core.monotonicClock.getTime()
+    rcs.startRecording()
     EEG_start_text = visual.TextStim(win=win, name='EEG_start_text',
-        text='Check EEG recording',
+        text='Vérifier EEG',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=0.0);
+        depth=-1.0);
     exit_eeg_text = keyboard.Keyboard(deviceName='exit_eeg_text')
     
     # --- Initialize components for Routine "image_load" ---
@@ -466,14 +511,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-1.0);
+        depth=-2.0);
     fixation_stim = visual.TextStim(win=win, name='fixation_stim',
         text='+',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.15, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-2.0);
+        depth=-3.0);
     probe_image = visual.ImageStim(
         win=win,
         name='probe_image', 
@@ -481,7 +526,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         ori=0.0, pos=(0, 0), draggable=False, size=(0.5, 0.5),
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
-        texRes=128.0, interpolate=True, depth=-3.0)
+        texRes=128.0, interpolate=True, depth=-4.0)
     key_resp_probe = keyboard.Keyboard(deviceName='key_resp_probe')
     resp_instr = visual.TextStim(win=win, name='resp_instr',
         text='',
@@ -489,7 +534,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-5.0);
+        depth=-6.0);
     
     # --- Initialize components for Routine "rating" ---
     rating_vividness = visual.Slider(win=win, name='rating_vividness',
@@ -1037,6 +1082,17 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         trial.status = NOT_STARTED
         continueRoutine = True
         # update component parameters for each repeat
+        # Run 'Begin Routine' code from photo_sensor
+        photodiode_box = visual.Rect(
+            win=win,
+            width=18,
+            height=25,
+            fillColor='white',
+            lineColor='white',
+            pos=(-win.size[0]/2 + 25, -win.size[1]/2 + 25),
+            units='pix',
+            autoDraw=False
+        )
         # Run 'Begin Routine' code from trial_code
         
         # This code runs before each trial starts.
@@ -1053,7 +1109,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # allowedKeys looks like a variable, so make sure it exists locally
         if 'allowed_keys_list' in globals():
             allowed_keys_list = globals()['allowed_keys_list']
-        resp_instr.setText('add instr')
+        resp_instr.setText("Est-ce que l'image fait partie de ceux que vous venez d'imaginer ?\n\nIndiquer cela à l'aide du boitier de réponse (gauche - droite)")
+        # Run 'Begin Routine' code from eeg_triggers
+        wait_sent_fix = 0
+        wait_sent_img = 0
+        wait_sent_cue = 0
+        
+        #trigger 0 = fixation cross for learning
         # store start times for trial
         trial.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
         trial.tStart = globalClock.getTime(format='float')
@@ -1086,6 +1148,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
+            # Run 'Each Frame' code from photo_sensor
+            if probe_image.status == STARTED:
+                photodiode_box.autoDraw = True
+            else:
+                photodiode_box.autoDraw = False
             
             # *cue_stim* updates
             
@@ -1249,6 +1316,27 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             if resp_instr.status == STARTED:
                 # update params
                 pass
+            # Run 'Each Frame' code from eeg_triggers
+            if cue_stim.status == STARTED and wait_sent_cue == 0: #If the stimulus component has started and the trigger has not yet been sent. Change 'stimulus' to match the name of the component you want the trigger to be sent at the same time as
+                win.callOnFlip(port.write, data=b'\x10') #Send the trigger, synced to the screen refresh
+                #win.callOnFlip(eci_client.send_event, event_type = 'wait') #Send the trigger, synced to the screen refresh
+                wait_sent_cue = 1 #The wait has now been sent, so we set this to true to avoid a trigger being sent on each frame
+                port.write([0x00])
+            
+            
+            if fixation_stim.status == STARTED and wait_sent_fix == 0: #If the stimulus component has started and the trigger has not yet been sent. Change 'stimulus' to match the name of the component you want the trigger to be sent at the same time as
+                win.callOnFlip(port.write, data=b'\x01') #Send the trigger, synced to the screen refresh
+                #win.callOnFlip(eci_client.send_event, event_type = 'wait') #Send the trigger, synced to the screen refresh
+                wait_sent_fix = 1 #The wait has now been sent, so we set this to true to avoid a trigger being sent on each frame
+                port.write([0x00])
+            
+            
+            if probe_image.status == STARTED and wait_sent_img == 0: #If the stimulus component has started and the trigger has not yet been sent. Change 'stimulus' to match the name of the component you want the trigger to be sent at the same time as
+                win.callOnFlip(port.write, data=b'\x04') #Send the trigger, synced to the screen refresh
+                #win.callOnFlip(eci_client.send_event, event_type = 'wait') #Send the trigger, synced to the screen refresh
+                wait_sent_img = 1 #The wait has now been sent, so we set this to true to avoid a trigger being sent on each frame
+                port.write([0x00])
+            
             
             # check for quit (typically the Esc key)
             if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1289,6 +1377,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         trial.tStop = globalClock.getTime(format='float')
         trial.tStopRefresh = tThisFlipGlobal
         thisExp.addData('trial.stopped', trial.tStop)
+        # Run 'End Routine' code from photo_sensor
+        photodiode_box.autoDraw = False
         # check responses
         if key_resp_probe.keys in ['', [], None]:  # No response was made
             key_resp_probe.keys = None
@@ -1303,6 +1393,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if key_resp_probe.keys != None:  # we had a response
             trials_loop.addData('key_resp_probe.rt', key_resp_probe.rt)
             trials_loop.addData('key_resp_probe.duration', key_resp_probe.duration)
+        # Run 'End Routine' code from eeg_triggers
+        port.write([0x00])
         # the Routine "trial" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         
@@ -1320,6 +1412,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         key_resp_rating.keys = []
         key_resp_rating.rt = []
         _key_resp_rating_allKeys = []
+        # Run 'Begin Routine' code from eeg_resp
+        wait_sent = 0 
         # store start times for rating
         rating.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
         rating.tStart = globalClock.getTime(format='float')
@@ -1424,6 +1518,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     key_resp_rating.duration = _key_resp_rating_allKeys[-1].duration
                     # a response ends the routine
                     continueRoutine = False
+            # Run 'Each Frame' code from eeg_resp
+            if text_rating_question.status == STARTED and wait_sent == 0: #If the stimulus component has started and the trigger has not yet been sent. Change 'stimulus' to match the name of the component you want the trigger to be sent at the same time as
+                win.callOnFlip(port.write, data=b'\x08') #Send the trigger, synced to the screen refresh
+                #win.callOnFlip(eci_client.send_event, event_type = 'wait') #Send the trigger, synced to the screen refresh
+                wait_sent = 1 #The wait has now been sent, so we set this to true to avoid a trigger being sent on each frame
+            
             
             # check for quit (typically the Esc key)
             if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1473,6 +1573,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         if key_resp_rating.keys != None:  # we had a response
             trials_loop.addData('key_resp_rating.rt', key_resp_rating.rt)
             trials_loop.addData('key_resp_rating.duration', key_resp_rating.duration)
+        # Run 'End Routine' code from eeg_resp
+        port.write([0x00])
         # the Routine "rating" was not non-slip safe, so reset the non-slip timer
         routineTimer.reset()
         

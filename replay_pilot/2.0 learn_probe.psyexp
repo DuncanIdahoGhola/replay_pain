@@ -70,7 +70,7 @@
     <Param val="1000" valType="num" updates="None" name="plPupilRemoteTimeoutMs"/>
     <Param val="False" valType="bool" updates="None" name="plPupillometryOnly"/>
     <Param val="psychopy_iohub_surface" valType="str" updates="None" name="plSurfaceName"/>
-    <Param val="0" valType="code" updates="None" name="runMode"/>
+    <Param val="1" valType="code" updates="None" name="runMode"/>
     <Param val="False" valType="bool" updates="None" name="rush"/>
     <Param val="time" valType="str" updates="None" name="sortColumns"/>
     <Param val="" valType="str" updates="None" name="tbLicenseFile"/>
@@ -118,7 +118,7 @@
       <CodeComponent name="init_eeg" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="&amp;#10;# EEG&amp;#10;import struct&amp;#10;import serial&amp;#10;import time&amp;#10;# Trigger box Plus COM port&amp;#10;adress = 'COM17'&amp;#10;def init_port(adress):&amp;#10;    port = serial.Serial(adress, baudrate=2000000)&amp;#10;    time.sleep(1) # Wait to make sure it's open&amp;#10;    return port&amp;#10;&amp;#10;def write_port(port, pin):&amp;#10;    &quot;&quot;&quot;&amp;#10;    Turn on one of the ditigal pin&amp;#10;    pin: integer in range 2-13&amp;#10;    &quot;&quot;&quot;&amp;#10;    # Convert to string&amp;#10;    string = b'' + struct.pack('!B', pin)&amp;#10;    # Write&amp;#10;    port.write(string)&amp;#10;    &amp;#10;port = init_port(adress)&amp;#10;port.write([0x00])&amp;#10;&amp;#10;# Init EEG&amp;#10;from psychopy.hardware import brainproducts&amp;#10;rcs = brainproducts.RemoteControlServer(host='192.168.1.2',timeout=5)&amp;#10;&amp;#10;rcs.openRecorder()&amp;#10;time.sleep(2)&amp;#10;rcs.workspace = 'C:/Users/labmp-eeg/Desktop/antoine_cognitivemaps/antoine_cognitivemaps.rwksp'&amp;#10;rcs.participant = expInfo['participant'] + '_' + expInfo['date']&amp;#10;rcs.expName = 'cmapsfuncloc'&amp;#10;time.sleep(5)&amp;#10;rcs.mode = 'monitor' &amp;#10;time.sleep(2)&amp;#10;&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="&amp;#10;# EEG&amp;#10;import struct&amp;#10;import serial&amp;#10;import time&amp;#10;# Trigger box Plus COM port&amp;#10;adress = 'COM17'&amp;#10;def init_port(adress):&amp;#10;    port = serial.Serial(adress, baudrate=2000000)&amp;#10;    time.sleep(1) # Wait to make sure it's open&amp;#10;    return port&amp;#10;&amp;#10;def write_port(port, pin):&amp;#10;    &quot;&quot;&quot;&amp;#10;    Turn on one of the ditigal pin&amp;#10;    pin: integer in range 2-13&amp;#10;    &quot;&quot;&quot;&amp;#10;    # Convert to string&amp;#10;    string = b'' + struct.pack('!B', pin)&amp;#10;    # Write&amp;#10;    port.write(string)&amp;#10;    &amp;#10;port = init_port(adress)&amp;#10;port.write([0x00])&amp;#10;&amp;#10;# Init EEG&amp;#10;from psychopy.hardware import brainproducts&amp;#10;rcs = brainproducts.RemoteControlServer(host='192.168.1.2',timeout=5)&amp;#10;&amp;#10;rcs.openRecorder()&amp;#10;time.sleep(2)&amp;#10;rcs.workspace = 'C:/Users/labmp-eeg/Desktop/antoine_cognitivemaps/antoine_cognitivemaps.rwksp'&amp;#10;rcs.participant = expInfo['participant'] + '_' + expInfo['date']&amp;#10;rcs.expName = 'cmaps_learn_prob'&amp;#10;time.sleep(5)&amp;#10;rcs.mode = 'monitor' &amp;#10;time.sleep(2)&amp;#10;&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="/* Syntax Error: Fix Python code */" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
@@ -129,7 +129,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="init_eeg" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <TextComponent name="instructions_main" plugin="None">
@@ -182,8 +182,8 @@
       <CodeComponent name="exp_beginning" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="import random&amp;#10;&amp;#10;#add counterbalance and allowed keys&amp;#10;participant_id = expInfo['participant']&amp;#10;last_three_digits = int(participant_id[-3:])&amp;#10;&amp;#10;if last_three_digits % 2 == 0:&amp;#10;    sequence_good = '1'&amp;#10;    sequence_bad = '2'&amp;#10;    instr_message = &quot; Vous verrez une image. Vous devrez ensuite vous imaginer la séquence complète des images qui la suivent. Une seconde image apparaîtra ensuite. Appuyez sur '1' si cette image est la prochaine dans la séquence, et sur '2' si ce n’est pas le cas. Appuyez sur la barre d’espace pour commencer.&quot;&amp;#10;else : &amp;#10;    sequence_good = '2'&amp;#10;    sequence_bad = '1'&amp;#10;    instr_message = &quot; Vous verrez une image. Vous devrez ensuite vous imaginer la séquence complète des images qui la suivent. Une seconde image apparaîtra ensuite. Appuyez sur '2' si cette image est la prochaine dans la séquence, et sur '1' si ce n’est pas le cas. Appuyez sur la barre d’espace pour commencer.&quot;&amp;#10;&amp;#10;allowed_keys_list = [sequence_good, sequence_bad]&amp;#10;&amp;#10;# Store these for later use in routines&amp;#10;expInfo['sequence_good_key'] = sequence_good&amp;#10;expInfo['sequence_bad_key'] = sequence_bad&amp;#10;expInfo['allowed_keys_list'] = allowed_keys_list&amp;#10;&amp;#10;#open condition file to create list of sequence_good per trials&amp;#10;import pandas as pd&amp;#10;&amp;#10;condition_probe = f&quot;conditions_probe/probe_learning_conditions_{last_three_digits}.csv&quot;&amp;#10;&amp;#10;condition_learn = f&quot;conditions_learning/learning_conditions_{last_three_digits}.csv&quot;&amp;#10;&amp;#10;answer_counter = 0" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="import * as random from 'random';&amp;#10;import * as pd from 'pandas';&amp;#10;participant_id = expInfo[&quot;participant&quot;];&amp;#10;last_three_digits = Number.parseInt(participant_id.slice((- 3)));&amp;#10;if (((last_three_digits % 2) === 0)) {&amp;#10;    sequence_good = &quot;1&quot;;&amp;#10;    sequence_bad = &quot;2&quot;;&amp;#10;    instr_message = &quot; Vous verrez une image. Vous devrez ensuite vous imaginer la s\u00e9quence compl\u00e8te des images qui la suivent. Une seconde image appara\u00eetra ensuite. Appuyez sur '1' si cette image est la prochaine dans la s\u00e9quence, et sur '2' si ce n\u2019est pas le cas. Appuyez sur la barre d\u2019espace pour commencer.&quot;;&amp;#10;} else {&amp;#10;    sequence_good = &quot;2&quot;;&amp;#10;    sequence_bad = &quot;1&quot;;&amp;#10;    instr_message = &quot; Vous verrez une image. Vous devrez ensuite vous imaginer la s\u00e9quence compl\u00e8te des images qui la suivent. Une seconde image appara\u00eetra ensuite. Appuyez sur '2' si cette image est la prochaine dans la s\u00e9quence, et sur '1' si ce n\u2019est pas le cas. Appuyez sur la barre d\u2019espace pour commencer.&quot;;&amp;#10;}&amp;#10;allowed_keys_list = [sequence_good, sequence_bad];&amp;#10;expInfo[&quot;sequence_good_key&quot;] = sequence_good;&amp;#10;expInfo[&quot;sequence_bad_key&quot;] = sequence_bad;&amp;#10;expInfo[&quot;allowed_keys_list&quot;] = allowed_keys_list;&amp;#10;condition_probe = `conditions_probe/probe_learning_conditions_${last_three_digits}.csv`;&amp;#10;condition_learn = `conditions_learning/learning_conditions_${last_three_digits}.csv`;&amp;#10;answer_counter = 0;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="import random&amp;#10;&amp;#10;#add counterbalance and allowed keys&amp;#10;participant_id = expInfo['participant']&amp;#10;last_three_digits = int(participant_id[-3:])&amp;#10;&amp;#10;if last_three_digits % 2 == 0:&amp;#10;    sequence_good = '1'&amp;#10;    sequence_bad = '2'&amp;#10;    instr_message = &quot; Vous verrez une image. Vous devrez ensuite vous imaginer la séquence complète des images qui la suivent. Une seconde image apparaîtra ensuite. Appuyez sur '1' si cette image est la prochaine dans la séquence, et sur '2' si ce n’est pas le cas. Appuyez sur la barre d’espace pour commencer.&quot;&amp;#10;else : &amp;#10;    sequence_good = '2'&amp;#10;    sequence_bad = '1'&amp;#10;    instr_message = &quot; Vous verrez une image. Vous devrez ensuite vous imaginer la séquence complète des images qui la suivent. Une seconde image apparaîtra ensuite. Appuyez sur '2' si cette image est la prochaine dans la séquence, et sur '1' si ce n’est pas le cas. Appuyez sur la barre d’espace pour commencer.&quot;&amp;#10;&amp;#10;allowed_keys_list = [sequence_good, sequence_bad]&amp;#10;&amp;#10;# Store these for later use in routines&amp;#10;expInfo['sequence_good_key'] = sequence_good&amp;#10;expInfo['sequence_bad_key'] = sequence_bad&amp;#10;expInfo['allowed_keys_list'] = allowed_keys_list&amp;#10;&amp;#10;#open condition file to create list of sequence_good per trials&amp;#10;import pandas as pd&amp;#10;&amp;#10;condition_probe = f&quot;conditions_probe/probe_conditions_{last_three_digits}.csv&quot;&amp;#10;&amp;#10;condition_learn = f&quot;conditions_learning/learning_conditions_{last_three_digits}.csv&quot;&amp;#10;&amp;#10;answer_counter = 0" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="import * as random from 'random';&amp;#10;import * as pd from 'pandas';&amp;#10;participant_id = expInfo[&quot;participant&quot;];&amp;#10;last_three_digits = Number.parseInt(participant_id.slice((- 3)));&amp;#10;if (((last_three_digits % 2) === 0)) {&amp;#10;    sequence_good = &quot;1&quot;;&amp;#10;    sequence_bad = &quot;2&quot;;&amp;#10;    instr_message = &quot; Vous verrez une image. Vous devrez ensuite vous imaginer la s\u00e9quence compl\u00e8te des images qui la suivent. Une seconde image appara\u00eetra ensuite. Appuyez sur '1' si cette image est la prochaine dans la s\u00e9quence, et sur '2' si ce n\u2019est pas le cas. Appuyez sur la barre d\u2019espace pour commencer.&quot;;&amp;#10;} else {&amp;#10;    sequence_good = &quot;2&quot;;&amp;#10;    sequence_bad = &quot;1&quot;;&amp;#10;    instr_message = &quot; Vous verrez une image. Vous devrez ensuite vous imaginer la s\u00e9quence compl\u00e8te des images qui la suivent. Une seconde image appara\u00eetra ensuite. Appuyez sur '2' si cette image est la prochaine dans la s\u00e9quence, et sur '1' si ce n\u2019est pas le cas. Appuyez sur la barre d\u2019espace pour commencer.&quot;;&amp;#10;}&amp;#10;allowed_keys_list = [sequence_good, sequence_bad];&amp;#10;expInfo[&quot;sequence_good_key&quot;] = sequence_good;&amp;#10;expInfo[&quot;sequence_bad_key&quot;] = sequence_bad;&amp;#10;expInfo[&quot;allowed_keys_list&quot;] = allowed_keys_list;&amp;#10;condition_probe = `conditions_probe/probe_conditions_${last_three_digits}.csv`;&amp;#10;condition_learn = `conditions_learning/learning_conditions_${last_three_digits}.csv`;&amp;#10;answer_counter = 0;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
@@ -320,7 +320,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="port.write([0]);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="port.write([0x00])" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="eeg_fix" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
@@ -355,7 +355,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="port.write([0]);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="port.write([0x00])" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="eeg_image_1" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <ImageComponent name="first_of_pair" plugin="None">
@@ -401,7 +401,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="photodiode_box.autoDraw = false;&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="photodiode_box.autoDraw = False" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="photo_sensor" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
@@ -436,7 +436,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="port.write([0]);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="port.write([0x00])" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="eeg_blank" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <CodeComponent name="random_break_timer" plugin="None">
@@ -544,7 +544,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="port.write([0]);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="port.write([0x00])" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="eeg_image_2" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <CodeComponent name="photo_sensor_2" plugin="None">
@@ -561,7 +561,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="photodiode_box.autoDraw = false;&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="photodiode_box.autoDraw = False" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="photo_sensor_2" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
@@ -752,7 +752,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="port.write([0]);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="port.write([0x00])" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="eeg_prob_1" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <CodeComponent name="photo_sensor_3" plugin="None">
@@ -769,7 +769,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="photodiode_box.autoDraw = false;&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="photodiode_box.autoDraw = False" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="photo_sensor_3" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
@@ -848,7 +848,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="port.write([0]);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="port.write([0x00])" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="eeg_blank_3" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
@@ -879,7 +879,7 @@
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
         <Param val="False" valType="bool" updates="constant" name="flipVert"/>
-        <Param val="$prob_img" valType="file" updates="set during: image_loader.image_load" name="image"/>
+        <Param val="$probe_img" valType="file" updates="set during: image_loader.image_load" name="image"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
         <Param val="" valType="str" updates="constant" name="mask"/>
         <Param val="prob_test_img" valType="code" updates="None" name="name"/>
@@ -912,7 +912,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="port.write([0]);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="port.write([0x00])" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="eeg_probe_2" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <CodeComponent name="photo_sensor_4" plugin="None">
@@ -929,7 +929,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="photodiode_box.autoDraw = false;&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="photodiode_box.autoDraw = False" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="photo_sensor_4" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
@@ -964,7 +964,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="port.write([0]);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="port.write([0x00])" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="eeg_resp" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <KeyboardComponent name="probe_resp_test" plugin="None">
@@ -1088,8 +1088,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="psychoJS.experiment.addData(&quot;target_image&quot;, target_img);&amp;#10;psychoJS.experiment.addData(&quot;probe_image&quot;, prob_img);&amp;#10;if ((is_match === &quot;match&quot;)) {&amp;#10;    correct_key = sequence_good;&amp;#10;} else {&amp;#10;    correct_key = sequence_bad;&amp;#10;}&amp;#10;if ((probe_resp_test.keys &amp;&amp; (probe_resp_test.keys[0] === correct_key))) {&amp;#10;    psychoJS.experiment.addData(&quot;response_good_bad&quot;, 1);&amp;#10;    answer_counter = (answer_counter + 1);&amp;#10;} else {&amp;#10;    psychoJS.experiment.addData(&quot;response_good_bad&quot;, 0);&amp;#10;}&amp;#10;if (probe_resp_test.keys) {&amp;#10;    psychoJS.experiment.addData(&quot;response_given&quot;, probe_resp_test.keys[0]);&amp;#10;    psychoJS.experiment.addData(&quot;response_rt&quot;, key_resp.rt);&amp;#10;} else {&amp;#10;    psychoJS.experiment.addData(&quot;response_given&quot;, null);&amp;#10;    psychoJS.experiment.addData(&quot;response_rt&quot;, null);&amp;#10;}&amp;#10;psychoJS.experiment.addData(&quot;good_answer_counter&quot;, answer_counter);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="#store data&amp;#10;thisExp.addData('target_image', target_img)&amp;#10;thisExp.addData('probe_image', prob_img)&amp;#10;&amp;#10;if is_match == 'match':&amp;#10;    correct_key = sequence_good&amp;#10;else :&amp;#10;    correct_key = sequence_bad&amp;#10;    &amp;#10;if probe_resp_test.keys and probe_resp_test.keys[0] == correct_key:&amp;#10;    thisExp.addData('response_good_bad', 1)&amp;#10;    answer_counter = answer_counter + 1&amp;#10;else:&amp;#10;    thisExp.addData('response_good_bad', 0)&amp;#10;    &amp;#10;if probe_resp_test.keys:&amp;#10;    thisExp.addData('response_given', probe_resp_test.keys[0])&amp;#10;    thisExp.addData('response_rt', key_resp.rt)&amp;#10;else: &amp;#10;    thisExp.addData('response_given', None) &amp;#10;    thisExp.addData('response_rt', None)&amp;#10;    &amp;#10;thisExp.addData('good_answer_counter', answer_counter)" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="psychoJS.experiment.addData(&quot;target_image&quot;, target_img);&amp;#10;psychoJS.experiment.addData(&quot;probe_image&quot;, probe_img);&amp;#10;if ((is_match === &quot;match&quot;)) {&amp;#10;    correct_key = sequence_good;&amp;#10;} else {&amp;#10;    correct_key = sequence_bad;&amp;#10;}&amp;#10;if ((probe_resp_test.keys &amp;&amp; (probe_resp_test.keys[0] === correct_key))) {&amp;#10;    psychoJS.experiment.addData(&quot;response_good_bad&quot;, 1);&amp;#10;    answer_counter = (answer_counter + 1);&amp;#10;} else {&amp;#10;    psychoJS.experiment.addData(&quot;response_good_bad&quot;, 0);&amp;#10;}&amp;#10;if (probe_resp_test.keys) {&amp;#10;    psychoJS.experiment.addData(&quot;response_given&quot;, probe_resp_test.keys[0]);&amp;#10;    psychoJS.experiment.addData(&quot;response_rt&quot;, key_resp.rt);&amp;#10;} else {&amp;#10;    psychoJS.experiment.addData(&quot;response_given&quot;, null);&amp;#10;    psychoJS.experiment.addData(&quot;response_rt&quot;, null);&amp;#10;}&amp;#10;psychoJS.experiment.addData(&quot;good_answer_counter&quot;, answer_counter);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="#store data&amp;#10;thisExp.addData('target_image', target_img)&amp;#10;thisExp.addData('probe_image', probe_img)&amp;#10;&amp;#10;if is_match == 'match':&amp;#10;    correct_key = sequence_good&amp;#10;else :&amp;#10;    correct_key = sequence_bad&amp;#10;    &amp;#10;if probe_resp_test.keys and probe_resp_test.keys[0] == correct_key:&amp;#10;    thisExp.addData('response_good_bad', 1)&amp;#10;    answer_counter = answer_counter + 1&amp;#10;else:&amp;#10;    thisExp.addData('response_good_bad', 0)&amp;#10;    &amp;#10;if probe_resp_test.keys:&amp;#10;    thisExp.addData('response_given', probe_resp_test.keys[0])&amp;#10;    thisExp.addData('response_rt', key_resp.rt)&amp;#10;else: &amp;#10;    thisExp.addData('response_given', None) &amp;#10;    thisExp.addData('response_rt', None)&amp;#10;    &amp;#10;thisExp.addData('good_answer_counter', answer_counter)" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="save_data" valType="code" updates="None" name="name"/>
       </CodeComponent>
@@ -1107,7 +1107,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="port.write([0]);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="port.write([0x00])" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="eeg_blank_2" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
@@ -1336,7 +1336,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="start_eeg_1" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
@@ -1579,7 +1579,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="port.write([0]);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="port.write([0x00])" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="eeg_fix_2" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>

@@ -70,7 +70,7 @@
     <Param val="1000" valType="num" updates="None" name="plPupilRemoteTimeoutMs"/>
     <Param val="False" valType="bool" updates="None" name="plPupillometryOnly"/>
     <Param val="psychopy_iohub_surface" valType="str" updates="None" name="plSurfaceName"/>
-    <Param val="0" valType="code" updates="None" name="runMode"/>
+    <Param val="1" valType="code" updates="None" name="runMode"/>
     <Param val="False" valType="bool" updates="None" name="rush"/>
     <Param val="time" valType="str" updates="None" name="sortColumns"/>
     <Param val="" valType="str" updates="None" name="tbLicenseFile"/>
@@ -175,7 +175,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="init_eeg" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
@@ -428,7 +428,7 @@
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="20" valType="code" updates="constant" name="stopVal"/>
         <Param val="last key" valType="str" updates="constant" name="store"/>
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
@@ -509,7 +509,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="port.write([0]);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="port.write([0x00])" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="eeg_fix" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
@@ -544,7 +544,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="port.write([0]);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="port.write([0x00])" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="eeg_image" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <CodeComponent name="photo_sensor" plugin="None">
@@ -561,7 +561,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="photodiode_box.autoDraw = false;&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="photodiode_box.autoDraw = False" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="photo_sensor" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <ImageComponent name="stim_image" plugin="None">
@@ -625,7 +625,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="port.write([0]);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="port.write([0x00])" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="eeg_word" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <TextComponent name="stim_word" plugin="None">
@@ -705,7 +705,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="port.write([0]);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="port.write([0x00])" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="eeg_blank" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <CodeComponent name="code_2" plugin="None">
@@ -784,7 +784,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="port.write([0]);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="port.write([0x00])" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="eeg_resp" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <KeyboardComponent name="key_resp" plugin="None">
@@ -1029,7 +1029,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="start_eeg_2" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>

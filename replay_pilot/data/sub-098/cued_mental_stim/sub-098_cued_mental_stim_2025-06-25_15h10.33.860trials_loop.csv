@@ -1,0 +1,109 @@
+﻿block,cue_direction,cue_text,probe_image_file,correct_response,block_raw,correct_response_raw,cue_direction_raw,cue_text_raw,key_resp_break.duration_raw,key_resp_break.keys_raw,key_resp_break.rt_raw,key_resp_probe.corr_raw,key_resp_probe.duration_raw,key_resp_probe.keys_raw,key_resp_probe.rt_raw,key_resp_rating.duration_raw,key_resp_rating.keys_raw,key_resp_rating.rt_raw,probe_image_file_raw,rating_vividness.response_raw,rating_vividness.rt_raw,thisN_raw,thisRepN_raw,thisTrialN_raw
+1,forward,1 ->,stimuli/zèbre.png,1,1,2,backward,<- 4,nan,,nan,1,,2,3.865201100008562,,2,3.758410600014031,stimuli/new3.png,,,0,0,0
+1,forward,1 ->,stimuli/face.png,1,3,2,backward,<- 4,nan,,nan,1,,2,2.460838200058788,,3,1.4613316000904888,stimuli/new4.png,,,1,0,1
+1,backward,<- 4,stimuli/new3.png,2,1,1,forward,1 ->,nan,,nan,1,,1,2.4732766998931766,,3,1.1897078000474721,stimuli/banane.png,,,2,0,2
+1,forward,1 ->,stimuli/face.png,1,2,2,backward,<- 4,nan,,nan,1,,2,2.6375631999690086,,3,0.8059809000696987,stimuli/new2.png,,,3,0,3
+1,backward,<- 4,stimuli/new2.png,2,3,1,forward,1 ->,nan,,nan,1,,1,2.2875196000095457,,3,1.4860406999941915,stimuli/zèbre.png,,,4,0,4
+1,forward,1 ->,stimuli/banane.png,1,1,2,backward,<- 4,nan,,nan,1,,2,2.4524393000174314,,2,1.0417923000641167,stimuli/scissor_lure.png,,,5,0,5
+1,forward,1 ->,stimuli/face.png,1,1,1,forward,1 ->,nan,,nan,1,,1,2.3191321999765933,,4,1.0941262999549508,stimuli/zèbre.png,,,6,0,6
+1,forward,1 ->,stimuli/ciseau.png,1,2,1,forward,1 ->,nan,,nan,1,,1,2.258479399839416,,4,0.3469291999936104,stimuli/banane.png,,,7,0,7
+1,backward,<- 4,stimuli/zebra_lure.png,2,2,1,forward,1 ->,nan,,nan,1,,1,2.3149075000546873,,4,0.9420058000832796,stimuli/ciseau.png,,,8,0,8
+1,backward,<- 4,stimuli/banana_lure.png,2,1,1,forward,1 ->,nan,,nan,1,,1,4.2703837000299245,,2,1.797735899919644,stimuli/zèbre.png,,,9,0,9
+1,backward,<- 4,stimuli/new3.png,2,2,1,forward,1 ->,nan,,nan,1,,1,2.2874046999495476,,4,0.7271979001816362,stimuli/banane.png,,,10,0,10
+1,forward,1 ->,stimuli/banane.png,1,3,2,backward,<- 4,nan,,nan,1,,2,1.6853233000729233,,2,1.1135362000204623,stimuli/scissor_lure.png,,,11,0,11
+1,backward,<- 4,stimuli/banana_lure.png,2,1,2,backward,<- 4,nan,,nan,1,,2,3.2919926999602467,,3,2.698802299797535,stimuli/zebra_lure.png,,,12,0,12
+1,forward,1 ->,stimuli/face.png,1,1,2,backward,<- 4,nan,,nan,1,,2,2.3040642000269145,,3,1.1167347999289632,stimuli/banana_lure.png,,,13,0,13
+1,forward,1 ->,stimuli/face.png,1,1,1,forward,1 ->,nan,,nan,1,,1,2.2411846998147666,,4,0.30695090000517666,stimuli/face.png,,,14,0,14
+1,forward,1 ->,stimuli/banane.png,1,1,2,backward,<- 4,nan,,nan,1,,2,2.5151213000062853,,2,1.7803488001227379,stimuli/new3.png,,,15,0,15
+1,backward,<- 4,stimuli/new3.png,2,2,2,backward,<- 4,nan,,nan,1,,2,2.3610626000445336,,2,1.2064567999914289,stimuli/zebra_lure.png,,,16,0,16
+1,forward,1 ->,stimuli/zèbre.png,1,2,2,backward,<- 4,nan,,nan,1,,2,2.4110246999189258,,3,1.0812355000525713,stimuli/scissor_lure.png,,,17,0,17
+1,forward,1 ->,stimuli/ciseau.png,1,1,1,forward,1 ->,nan,,nan,1,,1,2.3334782999008894,,4,0.978364699985832,stimuli/face.png,,,18,0,18
+1,forward,1 ->,stimuli/ciseau.png,1,1,2,backward,<- 4,nan,,nan,1,,2,2.4377673999406397,,2,0.8485416998155415,stimuli/new2.png,,,19,0,19
+1,forward,1 ->,stimuli/zèbre.png,1,1,1,forward,1 ->,nan,,nan,1,,1,2.4458516999147832,,4,1.0142686001490802,stimuli/face.png,,,20,0,20
+1,backward,<- 4,stimuli/face_lure.png,2,3,1,forward,1 ->,nan,,nan,1,,1,2.4373186000157148,,4,0.7628538999706507,stimuli/face.png,,,21,0,21
+1,backward,<- 4,stimuli/new4.png,2,2,2,backward,<- 4,nan,,nan,1,,2,4.9738863001111895,,2,0.8901581999380141,stimuli/scissor_lure.png,,,22,0,22
+1,backward,<- 4,stimuli/new4.png,2,1,1,forward,1 ->,nan,,nan,1,,1,2.2360044999513775,,1,1.0451585999689996,stimuli/banane.png,,,23,0,23
+1,backward,<- 4,stimuli/new4.png,2,2,2,backward,<- 4,nan,,nan,1,,2,2.2820593998767436,,1,0.23799529997631907,stimuli/new1.png,,,24,0,24
+1,forward,1 ->,stimuli/ciseau.png,1,2,2,backward,<- 4,nan,,nan,1,,2,2.294402200030163,,3,0.08955249981954694,stimuli/new3.png,,,25,0,25
+1,backward,<- 4,stimuli/new2.png,2,3,2,backward,<- 4,nan,,nan,1,,2,2.236515900120139,,3,0.9133156999014318,stimuli/scissor_lure.png,,,26,0,26
+1,backward,<- 4,stimuli/zebra_lure.png,2,3,2,backward,<- 4,nan,,nan,1,,2,2.2454033999238163,,3,0.24357259995304048,stimuli/new2.png,,,27,0,27
+1,forward,1 ->,stimuli/zèbre.png,1,2,2,backward,<- 4,nan,,nan,1,,2,2.472485800040886,,2,0.6208103999961168,stimuli/new3.png,,,28,0,28
+1,forward,1 ->,stimuli/banane.png,1,3,1,forward,1 ->,nan,,nan,1,,1,2.286834000144154,,4,0.1835539999883622,stimuli/ciseau.png,,,29,0,29
+1,backward,<- 4,stimuli/new1.png,2,3,1,forward,1 ->,nan,,nan,1,,1,2.266174100106582,,2,0.25445540016517043,stimuli/banane.png,,,30,0,30
+1,backward,<- 4,stimuli/scissor_lure.png,2,1,1,forward,1 ->,nan,space,1.6277107999194413,1,,1,2.2555169998668134,,3,0.2005362999625504,stimuli/zèbre.png,,,31,0,31
+2,forward,1 ->,stimuli/ciseau.png,1,1,2,backward,<- 4,nan,,nan,1,,2,2.2522211000323296,,2,0.39207500009797513,stimuli/new4.png,,,32,0,32
+2,backward,<- 4,stimuli/scissor_lure.png,2,3,2,backward,<- 4,nan,,nan,1,,2,2.209916800027713,,2,0.15558809996582568,stimuli/new2.png,,,33,0,33
+2,backward,<- 4,stimuli/scissor_lure.png,2,1,2,backward,<- 4,nan,,nan,1,,2,2.42305069998838,,2,0.31320639979094267,stimuli/face_lure.png,,,34,0,34
+2,forward,1 ->,stimuli/zèbre.png,1,1,1,forward,1 ->,nan,,nan,1,,1,2.2212539000902325,,2,0.25613339990377426,stimuli/banane.png,,,35,0,35
+2,backward,<- 4,stimuli/banana_lure.png,2,3,1,forward,1 ->,nan,,nan,1,,1,2.261972500011325,,2,0.5797168998979032,stimuli/zèbre.png,,,36,0,36
+2,forward,1 ->,stimuli/ciseau.png,1,2,1,forward,1 ->,nan,,nan,1,,1,2.885671899886802,,3,0.7333839999046177,stimuli/banane.png,,,37,0,37
+2,forward,1 ->,stimuli/face.png,1,2,1,forward,1 ->,nan,,nan,1,,1,2.234729499788955,,4,0.20829360000789165,stimuli/ciseau.png,,,38,0,38
+2,forward,1 ->,stimuli/face.png,1,3,1,forward,1 ->,nan,,nan,1,,1,2.3729405000340194,,4,0.6674627000465989,stimuli/banane.png,,,39,0,39
+2,backward,<- 4,stimuli/scissor_lure.png,2,3,2,backward,<- 4,nan,,nan,1,,2,2.3726145999971777,,2,0.5665029000956565,stimuli/new2.png,,,40,0,40
+2,backward,<- 4,stimuli/zebra_lure.png,2,2,2,backward,<- 4,nan,,nan,1,,2,3.1579758001025766,,2,0.7097164001315832,stimuli/banana_lure.png,,,41,0,41
+2,forward,1 ->,stimuli/ciseau.png,1,1,1,forward,1 ->,nan,,nan,1,,1,2.2270368000026792,,4,0.18201500014401972,stimuli/face.png,,,42,0,42
+2,forward,1 ->,stimuli/ciseau.png,1,3,2,backward,<- 4,nan,,nan,1,,2,2.2306399000808597,,3,0.07619219995103776,stimuli/scissor_lure.png,,,43,0,43
+2,backward,<- 4,stimuli/new2.png,2,1,1,forward,1 ->,nan,,nan,1,,1,2.359209200134501,,3,0.8644490998703986,stimuli/ciseau.png,,,44,0,44
+2,backward,<- 4,stimuli/face_lure.png,2,3,2,backward,<- 4,nan,,nan,1,,2,2.3055172997992486,,4,0.44424920016899705,stimuli/face_lure.png,,,45,0,45
+2,forward,1 ->,stimuli/ciseau.png,1,2,2,backward,<- 4,nan,,nan,1,,2,2.480722100008279,,2,0.6889932998456061,stimuli/scissor_lure.png,,,46,0,46
+2,backward,<- 4,stimuli/zebra_lure.png,2,2,1,forward,1 ->,nan,,nan,1,,1,2.2379474001936615,,3,0.6819855999201536,stimuli/zèbre.png,,,47,0,47
+2,backward,<- 4,stimuli/new3.png,2,1,1,forward,1 ->,nan,,nan,1,,1,2.2262181998230517,,3,0.5973086999729276,stimuli/ciseau.png,,,48,0,48
+2,forward,1 ->,stimuli/face.png,1,3,2,backward,<- 4,nan,,nan,1,,2,2.32943160017021,,2,0.629260600078851,stimuli/new4.png,,,49,0,49
+2,backward,<- 4,stimuli/new1.png,2,1,1,forward,1 ->,nan,,nan,1,,1,2.2861061000730842,,3,0.7063157998491079,stimuli/face.png,,,50,0,50
+2,forward,1 ->,stimuli/zèbre.png,1,3,2,backward,<- 4,nan,,nan,1,,2,2.376016699941829,,2,0.527132699964568,stimuli/banana_lure.png,,,51,0,51
+2,forward,1 ->,stimuli/banane.png,1,1,1,forward,1 ->,nan,,nan,1,,1,2.274366900091991,,1,0.26306600007228553,stimuli/banane.png,,,52,0,52
+2,backward,<- 4,stimuli/new3.png,2,2,2,backward,<- 4,nan,,nan,1,,2,2.248612000141293,,2,0.308740499895066,stimuli/new3.png,,,53,0,53
+2,backward,<- 4,stimuli/new3.png,2,3,2,backward,<- 4,nan,,nan,1,,2,2.5113486000336707,,2,0.5865629999898374,stimuli/zebra_lure.png,,,54,0,54
+2,backward,<- 4,stimuli/scissor_lure.png,2,3,2,backward,<- 4,nan,,nan,1,,2,2.207578199915588,,3,0.2430451000109315,stimuli/zebra_lure.png,,,55,0,55
+2,forward,1 ->,stimuli/banane.png,1,2,1,forward,1 ->,nan,,nan,1,,1,2.3327728000003844,,3,0.6470145999919623,stimuli/ciseau.png,,,56,0,56
+2,backward,<- 4,stimuli/scissor_lure.png,2,3,2,backward,<- 4,nan,,nan,1,,2,2.229986400110647,,3,0.15809540008194745,stimuli/banana_lure.png,,,57,0,57
+2,forward,1 ->,stimuli/face.png,1,2,1,forward,1 ->,nan,,nan,1,,1,2.4250037998426706,,2,0.71528339991346,stimuli/face.png,,,58,0,58
+2,forward,1 ->,stimuli/banane.png,1,1,2,backward,<- 4,nan,,nan,1,,2,2.4378142999485135,,2,1.3877898000646383,stimuli/zebra_lure.png,,,59,0,59
+2,backward,<- 4,stimuli/new1.png,2,2,2,backward,<- 4,nan,,nan,1,,2,2.33654380007647,,2,0.8688815999776125,stimuli/face_lure.png,,,60,0,60
+2,forward,1 ->,stimuli/face.png,1,2,1,forward,1 ->,nan,,nan,1,,1,2.327462499961257,,1,0.25360949989408255,stimuli/face.png,,,61,0,61
+2,forward,1 ->,stimuli/zèbre.png,1,2,2,backward,<- 4,nan,,nan,1,,2,2.285953199956566,,2,0.25978370010852814,stimuli/zebra_lure.png,,,62,0,62
+2,backward,<- 4,stimuli/new3.png,2,1,1,forward,1 ->,nan,space,6.799459800124168,1,,1,2.388065999839455,,2,1.251191799994558,stimuli/ciseau.png,,,63,0,63
+3,forward,1 ->,stimuli/ciseau.png,1,3,1,forward,1 ->,nan,,nan,1,,1,2.2330335997976363,,3,0.16353629995137453,stimuli/ciseau.png,,,64,0,64
+3,backward,<- 4,stimuli/scissor_lure.png,2,2,1,forward,1 ->,nan,,nan,1,,1,2.2104452999774367,,3,0.07358630001544952,stimuli/face.png,,,65,0,65
+3,backward,<- 4,stimuli/scissor_lure.png,2,2,1,forward,1 ->,nan,,nan,1,,1,2.2320304999593645,,4,0.14629200007766485,stimuli/zèbre.png,,,66,0,66
+3,forward,1 ->,stimuli/banane.png,1,3,2,backward,<- 4,nan,,nan,1,,2,2.601922799833119,,2,1.0176602001301944,stimuli/new1.png,,,67,0,67
+3,backward,<- 4,stimuli/face_lure.png,2,3,1,forward,1 ->,nan,,nan,1,,1,2.211384699912742,,2,1.287537100026384,stimuli/banane.png,,,68,0,68
+3,forward,1 ->,stimuli/face.png,1,2,1,forward,1 ->,nan,,nan,1,,1,2.222111999988556,,4,0.1124418000690639,stimuli/face.png,,,69,0,69
+3,backward,<- 4,stimuli/new2.png,2,2,1,forward,1 ->,nan,,nan,1,,1,2.3125846998300403,,3,0.6229409999214113,stimuli/face.png,,,70,0,70
+3,forward,1 ->,stimuli/zèbre.png,1,3,2,backward,<- 4,nan,,nan,1,,2,2.8593401000835,,2,0.6140653998591006,stimuli/face_lure.png,,,71,0,71
+3,backward,<- 4,stimuli/face_lure.png,2,2,2,backward,<- 4,nan,,nan,1,,2,2.2198175999801606,,2,0.15711889998055995,stimuli/scissor_lure.png,,,72,0,72
+3,backward,<- 4,stimuli/new2.png,2,3,2,backward,<- 4,nan,,nan,1,,2,2.465294500114396,,2,0.5402334001846611,stimuli/face_lure.png,,,73,0,73
+3,forward,1 ->,stimuli/face.png,1,3,1,forward,1 ->,nan,,nan,1,,1,2.232631399994716,,2,0.2810172000899911,stimuli/ciseau.png,,,74,0,74
+3,backward,<- 4,stimuli/banana_lure.png,2,3,1,forward,1 ->,nan,,nan,1,,1,2.2394044001121074,,2,0.1975235000718385,stimuli/zèbre.png,,,75,0,75
+3,backward,<- 4,stimuli/banana_lure.png,2,3,1,forward,1 ->,nan,,nan,1,,1,2.297650699969381,,3,0.6559365000575781,stimuli/face.png,,,76,0,76
+3,backward,<- 4,stimuli/scissor_lure.png,2,3,1,forward,1 ->,nan,,nan,1,,1,2.2607048000209033,,4,0.18025989993475378,stimuli/face.png,,,77,0,77
+3,backward,<- 4,stimuli/new4.png,2,2,2,backward,<- 4,nan,,nan,1,,2,2.47002729983069,,3,1.3231828000862151,stimuli/scissor_lure.png,,,78,0,78
+3,forward,1 ->,stimuli/ciseau.png,1,1,2,backward,<- 4,nan,,nan,1,,2,2.300549300154671,,2,0.6275770000647753,stimuli/new4.png,,,79,0,79
+3,backward,<- 4,stimuli/new4.png,2,2,2,backward,<- 4,nan,,nan,1,,2,2.7380532000679523,,3,0.5106424998957664,stimuli/new1.png,,,80,0,80
+3,forward,1 ->,stimuli/banane.png,1,3,1,forward,1 ->,nan,,nan,1,,1,2.1786122999619693,,3,0.5955988001078367,stimuli/banane.png,,,81,0,81
+3,backward,<- 4,stimuli/new2.png,2,3,1,forward,1 ->,nan,,nan,1,,1,2.736637599999085,,3,1.3346681999973953,stimuli/zèbre.png,,,82,0,82
+3,backward,<- 4,stimuli/new1.png,2,1,2,backward,<- 4,nan,,nan,1,,2,2.5260917998384684,,2,0.5888624000363052,stimuli/new2.png,,,83,0,83
+3,forward,1 ->,stimuli/banane.png,1,1,2,backward,<- 4,nan,,nan,1,,2,2.231361099984497,,2,0.5486779999919236,stimuli/new3.png,,,84,0,84
+3,backward,<- 4,stimuli/banana_lure.png,2,3,1,forward,1 ->,nan,,nan,1,,1,2.206171599915251,,4,0.1062685998622328,stimuli/ciseau.png,,,85,0,85
+3,forward,1 ->,stimuli/zèbre.png,1,2,1,forward,1 ->,nan,,nan,1,,1,0.5073589999228716,,3,1.865985699929297,stimuli/ciseau.png,,,86,0,86
+3,forward,1 ->,stimuli/zèbre.png,1,1,2,backward,<- 4,nan,,nan,1,,2,0.6893239999189973,,2,0.5606444000732154,stimuli/new4.png,,,87,0,87
+3,forward,1 ->,stimuli/face.png,1,2,2,backward,<- 4,nan,,nan,1,,2,1.3445083999540657,,2,0.5171445999294519,stimuli/new3.png,,,88,0,88
+3,forward,1 ->,stimuli/banane.png,1,2,1,forward,1 ->,nan,,nan,1,,1,0.5423560999333858,,3,0.7283530998975039,stimuli/ciseau.png,,,89,0,89
+3,forward,1 ->,stimuli/ciseau.png,1,1,1,forward,1 ->,nan,,nan,1,,1,0.9800263999495655,,3,0.5239601999055594,stimuli/zèbre.png,,,90,0,90
+3,backward,<- 4,stimuli/zebra_lure.png,2,2,1,forward,1 ->,nan,,nan,1,,1,0.8506968000438064,,3,0.43799180001951754,stimuli/zèbre.png,,,91,0,91
+3,backward,<- 4,stimuli/zebra_lure.png,2,1,2,backward,<- 4,nan,,nan,1,,2,0.9995836999733001,,2,0.5586981000378728,stimuli/banana_lure.png,,,92,0,92
+3,forward,1 ->,stimuli/zèbre.png,1,3,2,backward,<- 4,nan,,nan,1,,2,0.7245871000923216,,2,0.6786206997931004,stimuli/banana_lure.png,,,93,0,93
+3,backward,<- 4,stimuli/face_lure.png,2,1,1,forward,1 ->,nan,,nan,1,,1,0.6831784001551569,,2,1.5522175999358296,stimuli/ciseau.png,,,94,0,94
+3,forward,1 ->,stimuli/ciseau.png,1,1,2,backward,<- 4,nan,,nan,1,,2,0.5977891001384705,,2,0.6014824998565018,stimuli/new1.png,,,95,0,95
+
+extraInfo
+participant,sub-098
+session,001
+date,2025-06-25_15h10.33.860
+expName,cued_mental_stim
+psychopyVersion,2024.2.4
+frameRate,120.81292601824202
+sequence_good_key,1
+sequence_bad_key,2
+allowed_keys_list,"['1', '2']"
+expStart,2025-06-25 15h10.56.758963 -0400
