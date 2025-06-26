@@ -1,5 +1,0 @@
-﻿thisRow.t,notes,trial.started,instr_rest_state.started,key_resp.started,trial.stopped,key_resp.keys,key_resp.rt,key_resp.duration,start_eeg.started,check_eeg.started,key_resp_2.started,start_eeg.stopped,key_resp_2.keys,key_resp_2.rt,key_resp_2.duration,rest_state.started,text.started,text.stopped,rest_state.stopped,end.started,text_2.started,participant,session,date,expName,psychopyVersion,frameRate,expStart,
-,,0.06507449992932379,0.07569679990410805,0.07569679990410805,3.0735100000165403,space,2.952344400109723,None,,,,,,,,,,,,,,sub-098,001,2025-06-25_13h43.59.221,2. rest_state,2024.2.4,113.21604901354357,2025-06-25 13h45.43.316542 -0400,
-,,,,,,,,,3.180099399993196,3.1925728998612612,3.1925728998612612,4.017904599895701,space,0.8189572000410408,None,,,,,,,sub-098,001,2025-06-25_13h43.59.221,2. rest_state,2024.2.4,113.21604901354357,2025-06-25 13h45.43.316542 -0400,
-,,,,,,,,,,,,,,,,4.017930199857801,4.025796700036153,304.02276490000077,304.0149095999077,,,sub-098,001,2025-06-25_13h43.59.221,2. rest_state,2024.2.4,113.21604901354357,2025-06-25 13h45.43.316542 -0400,
-,,,,,,,,,,,,,,,,,,,,304.015475000022,304.02276490000077,,,,,,,,
